@@ -1,0 +1,1042 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Gleb Makarov\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: et_EE\n"
+"X-Generator: Poedit 2.2\n"
+
+#: admin/settings.php:25
+msgid "Settings updated"
+msgstr "Seaded uuendatud"
+
+#: admin/settings.php:127
+msgid "-- Select page --"
+msgstr "- Valige leht -"
+
+#: admin/settings.php:156 admin/settings.php:275
+msgid "Save settings"
+msgstr "Salvesta seaded"
+
+#: admin/settings.php:194 include/class-job-posting-helper.php:636
+msgid "Upload/Select file"
+msgstr "Laadi üles / vali fail"
+
+msgctxt "job-message"
+msgid "Currently no job offers available."
+msgstr "Hetkel pole tööpakkumisi saadaval."
+
+#: class-job-postings.php:69
+msgctxt "jobs-field"
+msgid "Position"
+msgstr "Positsioon"
+
+#: class-job-postings.php:72 class-job-postings.php:81
+#: class-job-postings.php:105 class-job-postings.php:113
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Start typing or double click to open suggestions"
+msgstr "Alusta tippimist või soovituste avamiseks topeltklõpsake"
+
+#: class-job-postings.php:79
+msgctxt "jobs-field"
+msgid "Employment Type"
+msgstr "Töösuhte tüüp"
+
+#: class-job-postings.php:87
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Beginning of employment"
+msgstr "Tööhõive algus"
+
+#: class-job-postings.php:89
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input beginning of employment"
+msgstr "Tööhõive alguse sisestamine"
+
+#: class-job-postings.php:95
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Duration of employment"
+msgstr "Tööhõive kestus"
+
+#: class-job-postings.php:97
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input duration of employment"
+msgstr "Tööhõive sisendkestus"
+
+#: class-job-postings.php:103
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Industry"
+msgstr "Tööstus"
+
+#: class-job-postings.php:111
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Job Location"
+msgstr "Töökoha asukoht"
+
+#: class-job-postings.php:119
+msgctxt "jobs-field"
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: class-job-postings.php:122
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position description"
+msgstr "Sisendi asukoha kirjeldus"
+
+#: class-job-postings.php:128
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Responsibilities"
+msgstr "Kohustused"
+
+#: class-job-postings.php:131
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position responsibilities"
+msgstr "Sisendi positsiooni kohustused"
+
+#: class-job-postings.php:137
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Qualifications"
+msgstr "Kvalifikatsioonid"
+
+#: class-job-postings.php:140
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position qualifications"
+msgstr "Sisendasendi kvalifikatsioon"
+
+#: class-job-postings.php:146
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Job Benefits"
+msgstr "Tööhüvitised"
+
+#: class-job-postings.php:149
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position benefits"
+msgstr "Sisendi positsiooni eelised"
+
+#: class-job-postings.php:155
+msgctxt "jobs-field"
+msgid "Contacts"
+msgstr "Kontaktid"
+
+#: class-job-postings.php:158
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position contacts"
+msgstr "Sisendasendi kontaktid"
+
+#: class-job-postings.php:164
+msgctxt "jobs-field"
+msgid "Working Hours"
+msgstr "Tööaeg"
+
+#: class-job-postings.php:166
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position working hours"
+msgstr "Sisendasendi töötundide arv"
+
+#: class-job-postings.php:173
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Base Salary"
+msgstr "Baasipalk"
+
+#: class-job-postings.php:175
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position base salary"
+msgstr "Sisendipositsiooni põhipalk"
+
+#: class-job-postings.php:176
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Currency can be changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Valuutat saab muuta <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">seadetes</a> ."
+
+#: class-job-postings.php:183 class-job-postings.php:918
+#: include/class-pdf-export.php:348
+#, fuzzy
+msgctxt "apply-now"
+msgid "Date posted"
+msgstr "Postitamise kuupäev"
+
+#: class-job-postings.php:185
+#, fuzzy
+msgctxt "jobs-field"
+msgid "No settings for this field"
+msgstr "Selle välja kohta pole seadeid"
+
+#: class-job-postings.php:191 class-job-postings.php:940
+#: class-job-postings.php:1147
+#, fuzzy
+msgctxt "apply-now"
+msgid "PDF Export"
+msgstr "PDF-faili eksportimine"
+
+#: class-job-postings.php:193 class-job-postings.php:948
+#: class-job-postings.php:1151
+#, fuzzy
+msgctxt "apply-now"
+msgid "Export as PDF"
+msgstr "Ekspordi PDF-vormingus"
+
+#: class-job-postings.php:199 class-job-postings.php:963
+#, fuzzy
+msgctxt "apply-now"
+msgid "Apply now"
+msgstr "Taotlege kohe"
+
+#: class-job-postings.php:201
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Button that open modal window"
+msgstr "Nupp, mis avab modaalset akent"
+
+#: class-job-postings.php:202
+#, fuzzy
+msgctxt "jobs-field"
+msgid "If you like to change button text, just edit it below."
+msgstr "Kui soovite nupu teksti muuta, muutke seda allpool."
+
+#: class-job-postings.php:209
+msgctxt "jobs-field"
+msgid "Attachment"
+msgstr "Manus"
+
+#: class-job-postings.php:217
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 1"
+msgstr "Kohandatud tekst 1"
+
+#: class-job-postings.php:226
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 2"
+msgstr "Kohandatud tekst 2"
+
+#: class-job-postings.php:235
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 3"
+msgstr "Kohandatud tekst 3"
+
+msgctxt "jobs-field"
+msgid "Button"
+msgstr "Nupp"
+
+msgctxt "jobs-field"
+msgid "Link target"
+msgstr "Lingi sihtpunkt"
+
+msgctxt "jobs-field"
+msgid "Style"
+msgstr "Stiil"
+
+#: class-job-postings.php:257
+msgid "Name"
+msgstr "Nimi"
+
+#: class-job-postings.php:258
+msgid "E-mail"
+msgstr "E-post"
+
+#: class-job-postings.php:259
+msgid "Phone"
+msgstr "Telefon"
+
+#: class-job-postings.php:260
+#, fuzzy
+msgid "Letter"
+msgstr "Kiri"
+
+#: class-job-postings.php:261
+msgid "Documents"
+msgstr "Tooteinfo ja brožüürid"
+
+#: class-job-postings.php:295 class-job-postings.php:308
+msgid "Attachment"
+msgstr "Manus"
+
+#: class-job-postings.php:388
+msgctxt "job-postings"
+msgid "View"
+msgstr "Vaata"
+
+#: class-job-postings.php:433
+#, fuzzy
+msgid "Position details"
+msgstr "Asukoha üksikasjad"
+
+#: class-job-postings.php:442
+#, fuzzy
+msgid "Inactive widgets"
+msgstr "Mitteaktiivsed vidinad"
+
+#: class-job-postings.php:451
+#, fuzzy
+msgid "Entry details"
+msgstr "Sisestamise andmed"
+
+#: class-job-postings.php:473
+#, fuzzy
+msgctxt "job-meta-box"
+msgid "Position details"
+msgstr "Asukoha üksikasjad"
+
+#: class-job-postings.php:474
+msgctxt "job-meta-box"
+msgid "Settings"
+msgstr "Seaded"
+
+#: class-job-postings.php:1187
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Apply now"
+msgstr "Taotlege kohe"
+
+#: class-job-postings.php:1188
+msgctxt "jobs-modal"
+msgid "Position: "
+msgstr "Ametikoht:"
+
+#: class-job-postings.php:1192
+msgctxt "jobs-modal"
+msgid "Name"
+msgstr "Nimi"
+
+#: class-job-postings.php:1193
+msgctxt "jobs-modal"
+msgid "Your name"
+msgstr "Sinu nimi"
+
+#: class-job-postings.php:1202
+msgctxt "jobs-modal"
+msgid "E-mail"
+msgstr "E-post"
+
+#: class-job-postings.php:1203
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your e-mail address"
+msgstr "Sinu emaili aadress"
+
+#: class-job-postings.php:1211
+msgctxt "jobs-modal"
+msgid "Phone"
+msgstr "Telefon"
+
+#: class-job-postings.php:1212
+msgctxt "jobs-modal"
+msgid "Your phone number"
+msgstr "Telefoninumber"
+
+#: class-job-postings.php:1225
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Letter"
+msgstr "Kiri"
+
+#: class-job-postings.php:1226
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your letter"
+msgstr "Sinu kiri"
+
+#: class-job-postings.php:1229 class-job-postings.php:1242
+msgctxt "jobs-modal"
+msgid "Add"
+msgstr "Lisa"
+
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Add file"
+msgstr "Lisa fail"
+
+#: class-job-postings.php:1238
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "CV & Documents"
+msgstr "CV ja dokumendid"
+
+#: class-job-postings.php:1239
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your CV & Documents"
+msgstr "Teie CV ja dokumendid"
+
+#: class-job-postings.php:1252
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Send Application"
+msgstr "Saada taotlus"
+
+#: class-job-postings.php:1318
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Select file"
+msgstr "Vali fail"
+
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Required fields"
+msgstr "Nõutud väljad"
+
+#: class-job-postings.php:1373
+#, fuzzy
+msgctxt "jobs-entry"
+msgid "New entry: "
+msgstr "Uus sissekanne:"
+
+#, fuzzy
+msgid "recommended by Google"
+msgstr "Google soovitas"
+
+msgctxt "jobs-field"
+msgid "Postal Code"
+msgstr "Postiindeks"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Valid through"
+msgstr "Kehtib kuni"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Skills"
+msgstr "Oskused"
+
+msgctxt "jobs-field"
+msgid "Experience"
+msgstr "Töökogemused"
+
+msgctxt "jobs-field"
+msgid "Education"
+msgstr "Haridus"
+
+msgctxt "jobs-field"
+msgid "Street Address"
+msgstr "Tänava aadress"
+
+msgctxt "jobs-field"
+msgid "City"
+msgstr "Linn"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Address Locality"
+msgstr "Aadress Piirkond"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Address Region"
+msgstr "Aadress Piirkond"
+
+msgctxt "jobs-field"
+msgid "File URL"
+msgstr "Faili URL"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Button name"
+msgstr "Nupu nimi"
+
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Starting"
+msgstr "Alustades"
+
+msgctxt "jobs-field"
+msgid "Up to"
+msgstr "kuni"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "\"Offer ended\" message"
+msgstr "&quot;Pakkumise lõppenud&quot; sõnum"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Show \"Offer ended\" message when offer ends"
+msgstr "Pakkumise lõpus kuvatakse teade pakkumise lõppemise kohta"
+
+#, fuzzy
+msgctxt "job-message"
+msgid "Offer ended on %s"
+msgstr "Pakkumine lõppes %s"
+
+#, fuzzy
+msgctxt "job-message"
+msgid "Use %s where you would like to show offer ending date."
+msgstr "Kasutage %s, kus soovite näidata pakkumise lõppkuupäeva."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Logo can be added/changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Logo saab lisada / muuta <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">seadetes</a> ."
+
+msgctxt "job-settings"
+msgid "Sidebar position"
+msgstr "Külgriba asukoht"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Permalink slug"
+msgstr "Permalink slug"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "No offers message"
+msgstr "Ei paku sõnumit"
+
+msgctxt "job-settings"
+msgid "Company name"
+msgstr "Ettevõtte nimi"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Default email"
+msgstr "Vaikimisi e-posti aadress"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Default slug: job"
+msgstr "Vaikimisi slug: töö"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hiring organization"
+msgstr "Organisatsiooni töölevõtmine"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Currency symbol"
+msgstr "Valuuta sümbol"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Currency symbol position"
+msgstr "Valuuta sümboli asend"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Preview CTA text"
+msgstr "CTA teksti eelvaade"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Job archive page"
+msgstr "Tööarhiivi leht"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Company logo (for pdf)"
+msgstr "Ettevõtte logo (pdf-le)"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Jobs per page"
+msgstr "Töökohad lehel"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hide Letter upload"
+msgstr "Peida tähti üleslaadimine"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hide CV upload"
+msgstr "Peida CV üleslaadimine"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Jobs listing:"
+msgstr "Tööülesannete loend:"
+
+msgctxt "job-settings"
+msgid "Before"
+msgstr "Enne"
+
+msgctxt "job-settings"
+msgid "After"
+msgstr "Pärast"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Place this shortcode on the page, where you want to show your job postings."
+msgstr "Asetage see lühinumber lehele, kus soovite oma tööpakkumisi näidata."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "To show jobs list somewhere in your template, use function below:"
+msgstr "Töökohtade näitamiseks kusagil oma mallis kasutage alltoodud funktsiooni:"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Where can I change the date format?"
+msgstr "Kust saab kuupäeva vormingut muuta?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "The date format of the field is taken from the WordPress settings page"
+msgstr "Väljendi kuupäevavorming on WordPressi seadete lehelt võetud"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I change a field title?"
+msgstr "Kuidas ma saan muuta välitüüpi?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens the field's settings, where you can input your custom title"
+msgstr "Kõigil väljadel on ülemises paremas nurgas hammasratta ikoon, mis avab väli sätted, kus saate oma kohandatud pealkirja sisestada"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I hide/remove a title from appearing on the front-end?"
+msgstr "Kuidas ma peidan / eemaldan pealkirja esiosa ilmumisel?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens a field settings, where you can hide a title by selecting a option"
+msgstr "Kõigil väljadel on ülemises paremas nurgas hammasratta ikoon, mis avab põllu seaded, kus saate pealkirja peita valides valiku"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "I want to hide/remove some fields, how can I do this?"
+msgstr "Ma tahan mõned väljad peita / eemaldada, kuidas seda teha?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Every field has a \"trash can\" icon in the top right corner, by clicking it, the field is moved to the \"Inactive widgets\" section. You can also just drag and drop any field there. This will prevent it from appearing on the front-end."
+msgstr "Igal väljal on paremas ülanurgas prügikasti ikoon, klikkides sellel, asetatakse väli jaotisesse &quot;Mitteaktiivsed vead&quot;. Võite lihtsalt ka ükskõik millist lahtrit lohistada. See takistab selle esiotsa ilmumist."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "If a field is empty, it will also not appear on the front-end."
+msgstr "Kui väli on tühi, siis ka esiotsa ei ilmu."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I edit the \"Thank you\" message?"
+msgstr "Kuidas ma saan muuta sõnumi &quot;Tänan teid&quot;?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "The notification message can be edited on the job edit page, under the \"Settings\" tab"
+msgstr "Teatesõnumit saab muuta töö redigeerimise lehel vahekaardil &quot;Seaded&quot;"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I change the e-mail address of the person, who receives confirmation emails?"
+msgstr "Kuidas saan kinnitada e-posti aadressi?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "The confirmation e-mail address can be edited on the job edit page, under the \"Settings\" tab."
+msgstr "Kinnitus e-posti aadressi saab redigeerida tööriista redigeerimise lehel vahekaardil &quot;Seaded&quot;."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "By default, the recipient is the site admin."
+msgstr "Vaikimisi on adressaat saidi administraator."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Where are all the entries saved?"
+msgstr "Kus kõik salvestused on salvestatud?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "All of the entries are saved in the \"Job entries\" subpage."
+msgstr "Kõik sissekanded salvestatakse alamlehele Tööülesanded."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "I have so much entries already, how can I navigate easier there?"
+msgstr "Mul on nii palju sissekandeid, kuidas ma saan seal hõlpsamini navigeerida?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "You can filter the entries by position."
+msgstr "Saate filtreerida kirjeid positsiooni järgi."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "You also can search entries by name, email or phone number."
+msgstr "Samuti saate otsida kirjeid nime, e-posti või telefoninumbri järgi."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I personalize the PDF?"
+msgstr "Kuidas ma saan PDF-i isikupärastada?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "You can add your logo in the \"Settings\" section under \"Global options\"."
+msgstr "Saate lisada oma logo jaotises &quot;Seaded&quot; jaotises &quot;Globaalsed valikud&quot;."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I add Structured Data to the fields?"
+msgstr "Kuidas ma saan väljadele lisada struktureeritud andmeid?"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "You don't have to, we already took care of structured data and added it in the right place."
+msgstr "Te ei pea seda tegema, oleme juba struktureeritud andmete eest hoolitsenud ja lisanud selle õiges kohas."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "To test it, use this <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tool</a> and paste there a job url from your site there."
+msgstr "Selle testimiseks kasutage seda <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tööriista</a> ja seal oma veebisaidilt seal töökoha URL-i."
+
+#: include/class-job-posting-helper.php:37
+#: include/class-job-posting-helper.php:54
+#, fuzzy
+msgid "Please input template name."
+msgstr "Palun sisestage malli nimi."
+
+#: include/class-job-posting-helper.php:104
+#, fuzzy
+msgid "Filter by position"
+msgstr "Filtreerige positsiooni järgi"
+
+#: include/class-job-posting-helper.php:133
+#, fuzzy
+msgid "Job postings - Settings"
+msgstr "Tööpakkumised - Seaded"
+
+#: include/class-job-posting-helper.php:133
+msgid "Settings"
+msgstr "Seaded"
+
+#, fuzzy
+msgid "Global Options"
+msgstr "Globaalsed valikud"
+
+msgid "Help"
+msgstr "Abi"
+
+#: include/class-job-posting-helper.php:262
+#, fuzzy
+msgid "Jobs"
+msgstr "Töökohad"
+
+#: include/class-job-posting-helper.php:263
+msgid "Job"
+msgstr "Töö"
+
+#: include/class-job-posting-helper.php:264
+#: include/class-job-posting-helper.php:265
+#, fuzzy
+msgid "Add new position"
+msgstr "Lisage uus positsioon"
+
+#: include/class-job-posting-helper.php:266
+#, fuzzy
+msgid "New job position"
+msgstr "Uus ametikoht"
+
+#: include/class-job-posting-helper.php:267
+#, fuzzy
+msgid "Update job"
+msgstr "Värskenda tööd"
+
+#: include/class-job-posting-helper.php:268
+#, fuzzy
+msgid "View job"
+msgstr "Vaata tööd"
+
+#: include/class-job-posting-helper.php:269
+#, fuzzy
+msgid "All positions"
+msgstr "Kõik positsioonid"
+
+#: include/class-job-posting-helper.php:274
+#, fuzzy
+msgctxt "jobs_slug"
+msgid "job"
+msgstr "töökoht"
+
+#: include/class-job-posting-helper.php:304
+msgctxt "jobs_categories"
+msgid "Categories"
+msgstr "Kategooriad"
+
+#: include/class-job-posting-helper.php:305
+msgctxt "jobs_category"
+msgid "Category"
+msgstr "Kategooria"
+
+#: include/class-job-posting-helper.php:315
+#: include/class-job-posting-helper.php:316
+#, fuzzy
+msgid "Job entry"
+msgstr "Töö sisestamine"
+
+#: include/class-job-posting-helper.php:317
+#: include/class-job-posting-helper.php:318
+#, fuzzy
+msgid "Add new entry"
+msgstr "Lisa uus kanne"
+
+#: include/class-job-posting-helper.php:319
+#, fuzzy
+msgid "New job entry"
+msgstr "Uus töö sissekanne"
+
+#: include/class-job-posting-helper.php:320
+#, fuzzy
+msgid "Update entry"
+msgstr "Kirje värskendamine"
+
+#: include/class-job-posting-helper.php:321
+#, fuzzy
+msgid "Job entries"
+msgstr "Tööülesanded"
+
+#: include/class-job-posting-helper.php:326
+#, fuzzy
+msgctxt "jobs_entry_slug"
+msgid "job-entry"
+msgstr "tööleasumine"
+
+#: include/class-job-posting-helper.php:400
+#, fuzzy
+msgctxt "apply-now-confirmation"
+msgid "<p style=\"text-align: center;\">Thank you for submitting your application. We will contact you shortly!</p>"
+msgstr "<p style=\"text-align: center;\"> Täname, et esitasite oma avalduse. Me võtame teiega kohe ühendust! </p>"
+
+#: include/class-job-posting-helper.php:406
+#, fuzzy
+msgctxt "job-settings"
+msgid "Notification"
+msgstr "Teade"
+
+#: include/class-job-posting-helper.php:410
+#, fuzzy
+msgctxt "job-settings"
+msgid "Notification message"
+msgstr "Teateavaldus"
+
+#: include/class-job-posting-helper.php:424
+msgctxt "job-settings"
+msgid "Confirmation"
+msgstr "Kinnitamine"
+
+#: include/class-job-posting-helper.php:428
+#, fuzzy
+msgctxt "job-settings"
+msgid "Who receives confirmation?"
+msgstr "Kes saab kinnitus?"
+
+#: include/class-job-posting-helper.php:435
+msgctxt "job-settings"
+msgid "E-mail address"
+msgstr "E-posti aadress"
+
+#: include/class-job-posting-helper.php:747
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom title"
+msgstr "Kohandatud pealkiri"
+
+#: include/class-job-posting-helper.php:760
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Hide title"
+msgstr "Peida pealkiri"
+
+#: include/class-job-posting-helper.php:786
+msgctxt "job-entry-name"
+msgid "Name"
+msgstr "Nimi"
+
+#: include/class-job-posting-helper.php:798
+msgctxt "job-entry-name"
+msgid "E-mail"
+msgstr "E-post"
+
+#: include/class-job-posting-helper.php:810
+msgctxt "job-entry-name"
+msgid "Phone"
+msgstr "Telefon"
+
+#: include/class-job-posting-helper.php:822
+#, fuzzy
+msgctxt "job-entry-name"
+msgid "Letter"
+msgstr "Kiri"
+
+#: include/class-job-posting-helper.php:838
+msgctxt "job-entry-name"
+msgid "Attachment"
+msgstr "Manus"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Job Postings - Structured Data"
+msgstr "Tööpakkumised - struktureeritud andmed"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Blueglass Interactive OÃ"
+msgstr "Blueglass Interactive OÃœ"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "http://blueglass.ee"
+msgstr "http://blueglass.ee"
+
+msgctxt "job-settings"
+msgid "PREVIEW"
+msgstr "EELVAADE"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Actual layout and some styling can look a bit different on the site, because of the theme used."
+msgstr "Tegelik paigutus ja mõni stiil võib saidil veidi sarnaneda, kuna seda kasutatakse."
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Content text color"
+msgstr "Sisu teksti värv"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Content heading color"
+msgstr "Sisujuhtumi värv"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box background"
+msgstr "Kasti taust"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box border"
+msgstr "Karpi piir"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Subheading text color"
+msgstr "Alamrubriigi teksti värv"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Heading text color"
+msgstr "Teksti värvi pealkiri"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button text color"
+msgstr "Nuppude teksti värv"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button background <b>:hover</b>"
+msgstr "Nuppude taust <b>: hõljutage kursorit</b>"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button background"
+msgstr "Nuppude taust"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button border radius"
+msgstr "Nuppude piirjoone raadius"
+
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box border radius"
+msgstr "Karpi piirjoone raadius"
+
+#, fuzzy
+msgid "Style settings"
+msgstr "Style stiilid"
+
+#, fuzzy
+msgid "Reset style settings"
+msgstr "Lähtesta stiili seadeid"
+
+#, fuzzy
+msgid "These settings are global and independent to languages."
+msgstr "Need seaded on globaalsed ja keeltest sõltumatud."
+
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "Position: "
+msgstr "Ametikoht:"
+
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "New entry for "
+msgstr "Uus kanne"
+
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "Job entry: "
+msgstr "Töö sisestamine:"
+
+msgid "Apply Form"
+msgstr "Vorm"
+
+msgid "Apply Form fields"
+msgstr "Vormi väljad"
+
+msgid "Max allowed file size"
+msgstr "Maksimaalne faili suurus"
+
+msgid "For example: <b>12</b> or <b>0.5</b>."
+msgstr "Näiteks: <b>12</b> või <b>0,5</b>."
+
+msgid "File size exceeded message"
+msgstr "Faili suurus on ületatud sõnum"
+
+msgid "Use %1$s where you would like to show allowed file size. Use %2$s where you would like to show file name.<br>You can update allowed file size in \"Global options\"."
+msgstr "Kasutage %1$s, kus soovite näidata lubatud failisuurust. Kasutage %2$s, kuhu soovite faili nime näidata. <br> Võimalik on uuendada lubatud failisuurust \"Global options\"."
+
+msgid "File %2$s exceeds the allowed file size of %1$s MB."
+msgstr "Fail %2$s ületab lubatud faili mahu %1$s MB."
+
+msgid "Page where you list jobs"
+msgstr "Töökohti ehekülg"
+
+msgid "Used for propper linking of category and other functions."
+msgstr "Kasutatakse kategooria- ja muude funktsioonide sidumiseks."
+
+msgctxt "job-settings"
+msgid "Filters layout"
+msgstr "Filtrite paigutus"
+
+msgid "Filters"
+msgstr "Filtrid"
+
+msgid "This is the filters that you see when use show_filters=\"true\" on [job-postings] shortcode"
+msgstr "See on filtrid, mida näete, kui kasutate [job-postings show_filters = \"true\"] shortcode"
+
+msgid "Jobs for Wordpress - Help"
+msgstr "Jobs for WordPress - Help"
+
+msgid "Vacancy Search"
+msgstr "Vabade ametikohtade otsing"

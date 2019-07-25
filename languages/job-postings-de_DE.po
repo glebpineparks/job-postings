@@ -1,0 +1,912 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Job Postings - Structured Data\n"
+"POT-Creation-Date: 2017-07-10 17:35+0300\n"
+"PO-Revision-Date: 2018-10-14 22:22+0300\n"
+"Last-Translator: Gleb Makarov\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: job-postings.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/settings.php:25
+msgid "Settings updated"
+msgstr "Einstellungen aktualisieren"
+
+#: admin/settings.php:127
+msgid "-- Select page --"
+msgstr "-- Seite auswählen --"
+
+#: admin/settings.php:156 admin/settings.php:275
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+#: admin/settings.php:194 include/class-job-posting-helper.php:636
+msgid "Upload/Select file"
+msgstr "Datei-Upload/Select"
+
+msgctxt "job-message"
+msgid "Currently no job offers available."
+msgstr "Aktuell haben wir keine offenen Stellen."
+
+#: class-job-postings.php:69
+msgctxt "jobs-field"
+msgid "Position"
+msgstr "Anstellung"
+
+#: class-job-postings.php:72 class-job-postings.php:81
+#: class-job-postings.php:105 class-job-postings.php:113
+msgctxt "jobs-field"
+msgid "Start typing or double click to open suggestions"
+msgstr "Mit Eingabe starten oder Doppelklick für Vorschläge"
+
+#: class-job-postings.php:79
+msgctxt "jobs-field"
+msgid "Employment Type"
+msgstr "Arbeitspensum"
+
+#: class-job-postings.php:87
+msgctxt "jobs-field"
+msgid "Beginning of employment"
+msgstr "Start Anstellung"
+
+#: class-job-postings.php:89
+msgctxt "jobs-field"
+msgid "Input beginning of employment"
+msgstr "Start Anstellung"
+
+#: class-job-postings.php:95
+msgctxt "jobs-field"
+msgid "Duration of employment"
+msgstr "Dauer der Anstellung"
+
+#: class-job-postings.php:97
+msgctxt "jobs-field"
+msgid "Input duration of employment"
+msgstr "Dauer der Anstellung"
+
+#: class-job-postings.php:103
+msgctxt "jobs-field"
+msgid "Industry"
+msgstr "Industrie / Gewerbe"
+
+#: class-job-postings.php:111
+msgctxt "jobs-field"
+msgid "Job Location"
+msgstr "Arbeitsort"
+
+#: class-job-postings.php:119
+msgctxt "jobs-field"
+msgid "Description"
+msgstr "Beschreibung"
+
+#: class-job-postings.php:122
+msgctxt "jobs-field"
+msgid "Input position description"
+msgstr "Input Beschreibung der Anstellung"
+
+#: class-job-postings.php:128
+msgctxt "jobs-field"
+msgid "Responsibilities"
+msgstr "Zuständigkeiten / Hauptaufgaben"
+
+#: class-job-postings.php:131
+msgctxt "jobs-field"
+msgid "Input position responsibilities"
+msgstr "​Input Zuständigkeiten / Hauptaufgaben"
+
+#: class-job-postings.php:137
+msgctxt "jobs-field"
+msgid "Qualifications"
+msgstr "Qualifikationen / Anforderungen"
+
+#: class-job-postings.php:140
+msgctxt "jobs-field"
+msgid "Input position qualifications"
+msgstr "Input Qualifikationen / Anforderungen"
+
+#: class-job-postings.php:146
+msgctxt "jobs-field"
+msgid "Job Benefits"
+msgstr "Leistungen der Anstellung"
+
+#: class-job-postings.php:149
+msgctxt "jobs-field"
+msgid "Input position benefits"
+msgstr "​Input Leistungen der Anstellung"
+
+#: class-job-postings.php:155
+msgctxt "jobs-field"
+msgid "Contacts"
+msgstr "Kontakte"
+
+#: class-job-postings.php:158
+msgctxt "jobs-field"
+msgid "Input position contacts"
+msgstr "Input Kontakte"
+
+#: class-job-postings.php:164
+msgctxt "jobs-field"
+msgid "Working Hours"
+msgstr "Arbeitszeiten"
+
+#: class-job-postings.php:166
+msgctxt "jobs-field"
+msgid "Input position working hours"
+msgstr "​Input Arbeitszeiten"
+
+#: class-job-postings.php:173
+msgctxt "jobs-field"
+msgid "Base Salary"
+msgstr "Basislohn"
+
+#: class-job-postings.php:175
+msgctxt "jobs-field"
+msgid "Input position base salary"
+msgstr "Input Basislohn"
+
+#: class-job-postings.php:176
+msgctxt "jobs-field"
+msgid "Currency can be changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Die Währung kann in den <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Einstellungen</a> geändert werden."
+
+#: class-job-postings.php:183 class-job-postings.php:918
+#: include/class-pdf-export.php:348
+msgctxt "apply-now"
+msgid "Date posted"
+msgstr "Veröffentlichungsdatum"
+
+#: class-job-postings.php:185
+msgctxt "jobs-field"
+msgid "No settings for this field"
+msgstr "Keine Einstellungen"
+
+#: class-job-postings.php:191 class-job-postings.php:940
+#: class-job-postings.php:1147
+msgctxt "apply-now"
+msgid "PDF Export"
+msgstr "PDF-Export"
+
+#: class-job-postings.php:193 class-job-postings.php:948
+#: class-job-postings.php:1151
+msgctxt "apply-now"
+msgid "Export as PDF"
+msgstr "Als PDF exportieren"
+
+#: class-job-postings.php:199 class-job-postings.php:963
+msgctxt "apply-now"
+msgid "Apply now"
+msgstr "Jetzt bewerben"
+
+#: class-job-postings.php:201
+msgctxt "jobs-field"
+msgid "Button that open modal window"
+msgstr "Modal-Fenster Link"
+
+#: class-job-postings.php:202
+msgctxt "jobs-field"
+msgid "If you like to change button text, just edit it below."
+msgstr "Den Text des Buttons können Sie nachfolgend durch Klick in den Button ändern."
+
+#: class-job-postings.php:209
+msgctxt "jobs-field"
+msgid "Attachment"
+msgstr "Anhang"
+
+#: class-job-postings.php:217
+msgctxt "jobs-field"
+msgid "Custom text 1"
+msgstr "Eigener Text 1"
+
+#: class-job-postings.php:226
+msgctxt "jobs-field"
+msgid "Custom text 2"
+msgstr "Eigener Text 2"
+
+#: class-job-postings.php:235
+msgctxt "jobs-field"
+msgid "Custom text 3"
+msgstr "Eigener Text 3"
+
+msgctxt "jobs-field"
+msgid "Button"
+msgstr "Knopf"
+
+msgctxt "jobs-field"
+msgid "Link target"
+msgstr "Linkziel"
+
+msgctxt "jobs-field"
+msgid "Style"
+msgstr "Stil"
+
+#: class-job-postings.php:257
+msgid "Name"
+msgstr "Name"
+
+#: class-job-postings.php:258
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: class-job-postings.php:259
+msgid "Phone"
+msgstr "Telefonnummer"
+
+#: class-job-postings.php:260
+msgid "Letter"
+msgstr "Motivationsschreiben"
+
+#: class-job-postings.php:261
+msgid "Documents"
+msgstr "Dokumente"
+
+#: class-job-postings.php:295 class-job-postings.php:308
+msgid "Attachment"
+msgstr "Anhang"
+
+#: class-job-postings.php:388
+msgctxt "job-postings"
+msgid "View"
+msgstr "Ansehen"
+
+#: class-job-postings.php:433
+msgid "Position details"
+msgstr "Details zur Anstellung"
+
+#: class-job-postings.php:442
+msgid "Inactive widgets"
+msgstr "Inaktive Widgets"
+
+#: class-job-postings.php:451
+msgid "Entry details"
+msgstr "Details eingeben"
+
+#: class-job-postings.php:473
+msgctxt "job-meta-box"
+msgid "Position details"
+msgstr "Details zur Anstellung"
+
+#: class-job-postings.php:474
+msgctxt "job-meta-box"
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: class-job-postings.php:1187
+msgctxt "jobs-modal"
+msgid "Apply now"
+msgstr "Jetzt bewerben"
+
+#: class-job-postings.php:1188
+msgctxt "jobs-modal"
+msgid "Position: "
+msgstr "Anstellung: "
+
+#: class-job-postings.php:1192
+msgctxt "jobs-modal"
+msgid "Name"
+msgstr "Name"
+
+#: class-job-postings.php:1193
+msgctxt "jobs-modal"
+msgid "Your name"
+msgstr "Ihre Name"
+
+#: class-job-postings.php:1202
+msgctxt "jobs-modal"
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: class-job-postings.php:1203
+msgctxt "jobs-modal"
+msgid "Your e-mail address"
+msgstr "Ihre E-Mailadresse"
+
+#: class-job-postings.php:1211
+msgctxt "jobs-modal"
+msgid "Phone"
+msgstr "Telefonnummer"
+
+#: class-job-postings.php:1212
+msgctxt "jobs-modal"
+msgid "Your phone number"
+msgstr "Ihre Telefonnummer"
+
+#: class-job-postings.php:1225
+msgctxt "jobs-modal"
+msgid "Letter"
+msgstr "Motivationsschreiben"
+
+#: class-job-postings.php:1226
+msgctxt "jobs-modal"
+msgid "Your letter"
+msgstr "Ihre Motivationsschreiben"
+
+#: class-job-postings.php:1229 class-job-postings.php:1242
+msgctxt "jobs-modal"
+msgid "Add"
+msgstr "​Anhängen"
+
+msgctxt "jobs-modal"
+msgid "Add file"
+msgstr "Datei auswählen"
+
+#: class-job-postings.php:1238
+msgctxt "jobs-modal"
+msgid "CV & Documents"
+msgstr "CV & weitere Dokumente"
+
+#: class-job-postings.php:1239
+msgctxt "jobs-modal"
+msgid "Your CV & Documents"
+msgstr "Ihre CV & weitere Dokumente"
+
+#: class-job-postings.php:1252
+msgctxt "jobs-modal"
+msgid "Send Application"
+msgstr "Bewerbung einreichen"
+
+#: class-job-postings.php:1318
+msgctxt "jobs-modal"
+msgid "Select file"
+msgstr "Datei auswählen"
+
+msgctxt "jobs-modal"
+msgid "Required fields"
+msgstr "Benötigte Felder"
+
+#: class-job-postings.php:1373
+msgctxt "jobs-entry"
+msgid "New entry: "
+msgstr "Neuer Eintrag: "
+
+msgid "recommended by Google"
+msgstr "von Google empfohlen"
+
+msgctxt "jobs-field"
+msgid "Postal Code"
+msgstr "Postleitzahl"
+
+msgctxt "jobs-field"
+msgid "Valid through"
+msgstr "Gültig bis"
+
+msgctxt "jobs-field"
+msgid "Skills"
+msgstr "Fähigkeiten"
+
+msgctxt "jobs-field"
+msgid "Experience"
+msgstr "Erfahrung"
+
+msgctxt "jobs-field"
+msgid "Education"
+msgstr "Bildung"
+
+msgctxt "jobs-field"
+msgid "Street Address"
+msgstr "Adresse"
+
+msgctxt "jobs-field"
+msgid "City"
+msgstr "Stadt"
+
+msgctxt "jobs-field"
+msgid "Address Locality"
+msgstr "Adresse Land"
+
+msgctxt "jobs-field"
+msgid "Address Region"
+msgstr "Adresse Region"
+
+msgctxt "jobs-field"
+msgid "File URL"
+msgstr "Datei-URL"
+
+msgctxt "jobs-field"
+msgid "Button name"
+msgstr "Schaltflächentext"
+
+msgctxt "jobs-field"
+msgid "Starting"
+msgstr "Ab"
+
+msgctxt "jobs-field"
+msgid "Up to"
+msgstr "Bis zu"
+
+msgctxt "job-settings"
+msgid "\"Offer ended\" message"
+msgstr "\"Angebot abgelaufen\" Nachricht"
+
+msgctxt "job-settings"
+msgid "Show \"Offer ended\" message when offer ends"
+msgstr "Zeige \"Angebot abgelaufen\" wenn das Angebot endet"
+
+msgctxt "job-message"
+msgid "Offer ended on %s"
+msgstr "Stellenausschreibung endete am %s"
+
+msgctxt "job-message"
+msgid "Use %s where you would like to show offer ending date."
+msgstr "Verwende %s Prozent-Angaben, um das Ablaufdatum des Angebots zu bestimmen."
+
+msgctxt "job-settings"
+msgid "Logo can be added/changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Das Logo kann im Bereich <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Einstellungen</a> hinzugefügt/geänder werden."
+
+msgctxt "job-settings"
+msgid "Sidebar position"
+msgstr "Sidebar Position"
+
+msgctxt "job-settings"
+msgid "Permalink slug"
+msgstr "URL-Strukturen"
+
+msgctxt "job-settings"
+msgid "No offers message"
+msgstr "Keine Stellen"
+
+msgctxt "job-settings"
+msgid "Company name"
+msgstr "Name der Firma"
+
+msgctxt "job-settings"
+msgid "Default email"
+msgstr "Standard-E-Mail"
+
+msgctxt "job-settings"
+msgid "Default slug: job"
+msgstr "Standard: job"
+
+msgctxt "job-settings"
+msgid "Hiring organization"
+msgstr "Arbeitgeber"
+
+msgctxt "job-settings"
+msgid "Currency symbol"
+msgstr "Währungssymbol"
+
+msgctxt "job-settings"
+msgid "Currency symbol position"
+msgstr "Position des Währungssymbols"
+
+msgctxt "job-settings"
+msgid "Preview CTA text"
+msgstr "Vorschau CTA-Text"
+
+msgctxt "job-settings"
+msgid "Job archive page"
+msgstr "Archivseite Jobs"
+
+msgctxt "job-settings"
+msgid "Company logo (for pdf)"
+msgstr "Logo Arbeitgeber (für PDF)"
+
+msgctxt "job-settings"
+msgid "Jobs per page"
+msgstr "Anzahl Inserate pro Seite"
+
+msgctxt "job-settings"
+msgid "Hide Letter upload"
+msgstr "Anhang für Motivationsschreiben verbergen"
+
+msgctxt "job-settings"
+msgid "Hide CV upload"
+msgstr "Anhang für CV & weitere Dokumente verbergen"
+
+msgctxt "job-settings"
+msgid "Jobs listing:"
+msgstr "Stelleninserate:"
+
+msgctxt "job-settings"
+msgid "Before"
+msgstr "Vor dem Betrag"
+
+msgctxt "job-settings"
+msgid "After"
+msgstr "Nach dem Betrag"
+
+msgctxt "job-settings"
+msgid "Place this shortcode on the page, where you want to show your job postings."
+msgstr "Platzieren Sie diesen Shortcode auf der Seite, auf der Sie die Stelleninserate anzeigen möchten."
+
+msgctxt "job-settings"
+msgid "To show jobs list somewhere in your template, use function below:"
+msgstr "Um die Liste der Stelleninserate in Ihrem Template erscheinen zu lassen, verwenden Sie die folgende Funktion:"
+
+msgctxt "job-settings"
+msgid "Where can I change the date format?"
+msgstr "Wo kann ich die Anzeige des Datums ändern?"
+
+msgctxt "job-settings"
+msgid "The date format of the field is taken from the WordPress settings page"
+msgstr "Das Anzeigeformat des Datums wird vom entsprechenden Feld in den allgemeinen WordPress-Einstellungen übernommen."
+
+msgctxt "job-settings"
+msgid "How can I change a field title?"
+msgstr "Wie kann ich den Titel eines Abschnitts ändern?"
+
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens the field's settings, where you can input your custom title"
+msgstr "Jedes Feld hat ein «Einstellungen»-Symbol (Zahnrad) in der oberen rechten Ecke. Durch Klick öffnen sich die Einstellungsmöglichkeiten dieses Eingabefelds. Dort können Sie den Titel nach Belieben abändern."
+
+msgctxt "job-settings"
+msgid "How can I hide/remove a title from appearing on the front-end?"
+msgstr "Wie kann ich das Anzeigen eines Titels auf der Webseite verhindern/den Titel ausblenden?"
+
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens a field settings, where you can hide a title by selecting a option"
+msgstr "Jedes Feld hat ein «Einstellungen»-Symbol (Zahnrad) in der oberen rechten Ecke. Durch Klick öffnen sich die Einstellungsmöglichkeiten dieses Eingabefelds. Dort können Sie die Funktion «Titel verbergen» (Hide title) anwählen."
+
+msgctxt "job-settings"
+msgid "I want to hide/remove some fields, how can I do this?"
+msgstr "Wie kann ich einzelne Felder auf der Webseite/verbergen bzw. nicht anzeigen lassen?"
+
+msgctxt "job-settings"
+msgid "Every field has a \"trash can\" icon in the top right corner, by clicking it, the field is moved to the \"Inactive widgets\" section. You can also just drag and drop any field there. This will prevent it from appearing on the front-end."
+msgstr "Jedes Feld hat ein «Löschen»-Symbol (Papierkorb) in der oberen rechten Ecke. Durch Klick auf das Symbol wird das entsprechende Feld in den Bereich «Inaktive Job Widgets» verschoben. Sie können jedes Feld auch nach Belieben per Drag-and-Drop verschieben und so die Reihenfolge auf der Website ändern."
+
+msgctxt "job-settings"
+msgid "If a field is empty, it will also not appear on the front-end."
+msgstr "Zudem: Wenn Sie das Eingabefeld leer lassen, wird das entsprechende Feld auf der Webseite nicht angezeigt."
+
+msgctxt "job-settings"
+msgid "How can I edit the \"Thank you\" message?"
+msgstr "Wie kann ich die Dankesnachricht editieren?"
+
+msgctxt "job-settings"
+msgid "The notification message can be edited on the job edit page, under the \"Settings\" tab"
+msgstr "Die Dankesnachricht kann auf der «Stelleninserat bearbeiten»-Seite, im Bereich «Einstellungen» editiert werden."
+
+msgctxt "job-settings"
+msgid "How can I change the e-mail address of the person, who receives confirmation emails?"
+msgstr "Wie kann ich den Empfänger der Eingangsbestätigung ändern?"
+
+msgctxt "job-settings"
+msgid "The confirmation e-mail address can be edited on the job edit page, under the \"Settings\" tab."
+msgstr "Der Empfänger der Eingangsbestätigung kann auf der «Stelleninserat bearbeiten»-Seite im Bereich «Einstellungen» editiert werden."
+
+msgctxt "job-settings"
+msgid "By default, the recipient is the site admin."
+msgstr "Als Default-Einstellung wird der Admin als Empfänger gesetzt."
+
+msgctxt "job-settings"
+msgid "Where are all the entries saved?"
+msgstr "Wo werden die eingehenden Bewerbungen für die ausgeschriebenen Stellen gespeichert?"
+
+msgctxt "job-settings"
+msgid "All of the entries are saved in the \"Job entries\" subpage."
+msgstr "Alle eingehenden Bewerbungen werden im Bereich «Bewerbungen» (im Menü links) gespeichert. "
+
+msgctxt "job-settings"
+msgid "I have so much entries already, how can I navigate easier there?"
+msgstr "Unter «Bewerbungen» sind bereits sehr viele Einträge abgespeichert. Wie kann ich mich dort einfach zurechtfinden?"
+
+msgctxt "job-settings"
+msgid "You can filter the entries by position."
+msgstr "Sie können die Bewerbungen entsprechend den ausgeschriebenen Anstellungen filtern."
+
+msgctxt "job-settings"
+msgid "You also can search entries by name, email or phone number."
+msgstr "Sie können die eingegangenen Bewerbungen zudem nach Name, E-Mailadresse und Telefonnummer durchsuchen."
+
+msgctxt "job-settings"
+msgid "How can I personalize the PDF?"
+msgstr "Wie kann ich die PDF personalisieren?"
+
+msgctxt "job-settings"
+msgid "You can add your logo in the \"Settings\" section under \"Global options\"."
+msgstr "Sie können Ihr Logo im \"Einstellungen\"-Bereich unter \"Globale Optionen\" hinterlegen."
+
+msgctxt "job-settings"
+msgid "How can I add Structured Data to the fields?"
+msgstr "Wie kann ich strukturierte Daten zu den Eingabefeldern hinterlegen?"
+
+msgctxt "job-settings"
+msgid "You don't have to, we already took care of structured data and added it in the right place."
+msgstr "Dies haben wir für Sie bereits erledigt."
+
+msgctxt "job-settings"
+msgid "To test it, use this <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tool</a> and paste there a job url from your site there."
+msgstr "Um dies zu testen, können Sie gerne dieses <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">Tool</a> verwenden. Fügen Sie hierfür einfach die URL einer Ihrer Stellenausschreibungen ein und starten den Test."
+
+#: include/class-job-posting-helper.php:37
+#: include/class-job-posting-helper.php:54
+msgid "Please input template name."
+msgstr "Bitte Eingabe Vorlagennamen."
+
+#: include/class-job-posting-helper.php:104
+msgid "Filter by position"
+msgstr "Filtern nach Anstellung"
+
+#: include/class-job-posting-helper.php:133
+msgid "Job postings - Settings"
+msgstr "Einstellungen"
+
+#: include/class-job-posting-helper.php:133
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Global Options"
+msgstr "Globale Optionen"
+
+msgid "Help"
+msgstr "Hilfe"
+
+#: include/class-job-posting-helper.php:262
+msgid "Jobs"
+msgstr "Stelleninserate"
+
+#: include/class-job-posting-helper.php:263
+msgid "Job"
+msgstr "Stelleninserat"
+
+#: include/class-job-posting-helper.php:264
+#: include/class-job-posting-helper.php:265
+msgid "Add new position"
+msgstr "Neues Inserat erfassen"
+
+#: include/class-job-posting-helper.php:266
+msgid "New job position"
+msgstr "Neues Inserat"
+
+#: include/class-job-posting-helper.php:267
+msgid "Update job"
+msgstr "Aktualisieren"
+
+#: include/class-job-posting-helper.php:268
+msgid "View job"
+msgstr "Anschauen"
+
+#: include/class-job-posting-helper.php:269
+msgid "All positions"
+msgstr "Alle Inserate"
+
+#: include/class-job-posting-helper.php:274
+#, fuzzy
+msgctxt "jobs_slug"
+msgid "job"
+msgstr "Stelleninserat"
+
+#: include/class-job-posting-helper.php:304
+msgctxt "jobs_categories"
+msgid "Categories"
+msgstr "Kategorien"
+
+#: include/class-job-posting-helper.php:305
+msgctxt "jobs_category"
+msgid "Category"
+msgstr "Kategorie"
+
+#: include/class-job-posting-helper.php:315
+#: include/class-job-posting-helper.php:316
+msgid "Job entry"
+msgstr "Bewerbung"
+
+#: include/class-job-posting-helper.php:317
+#: include/class-job-posting-helper.php:318
+msgid "Add new entry"
+msgstr "Neue Bewerbung erfassen"
+
+#: include/class-job-posting-helper.php:319
+msgid "New job entry"
+msgstr "Neue Bewerbung"
+
+#: include/class-job-posting-helper.php:320
+msgid "Update entry"
+msgstr "Bewerbung aktualisieren"
+
+#: include/class-job-posting-helper.php:321
+msgid "Job entries"
+msgstr "Bewerbungen"
+
+#: include/class-job-posting-helper.php:326
+#, fuzzy
+msgctxt "jobs_entry_slug"
+msgid "job-entry"
+msgstr "Bewerbung"
+
+#: include/class-job-posting-helper.php:400
+msgctxt "apply-now-confirmation"
+msgid "<p style=\"text-align: center;\">Thank you for submitting your application. We will contact you shortly!</p>"
+msgstr "<p style=\"text-align: center;\">Besten Dank für die Einreichung Ihrer Bewerbung. Wir werden in Kürze Kontakt mit Ihnen aufnehmen.</p>"
+
+#: include/class-job-posting-helper.php:406
+msgctxt "job-settings"
+msgid "Notification"
+msgstr "Dankesnachricht"
+
+#: include/class-job-posting-helper.php:410
+msgctxt "job-settings"
+msgid "Notification message"
+msgstr "Dankesnachricht"
+
+#: include/class-job-posting-helper.php:424
+msgctxt "job-settings"
+msgid "Confirmation"
+msgstr "Eingangsbestätigung"
+
+#: include/class-job-posting-helper.php:428
+msgctxt "job-settings"
+msgid "Who receives confirmation?"
+msgstr "​Wer erhält eine Eingangsbestätigung?"
+
+#: include/class-job-posting-helper.php:435
+msgctxt "job-settings"
+msgid "E-mail address"
+msgstr "E-Mail Adresse"
+
+#: include/class-job-posting-helper.php:747
+msgctxt "jobs-field"
+msgid "Custom title"
+msgstr "Benutzerdefinierter Titel"
+
+#: include/class-job-posting-helper.php:760
+msgctxt "jobs-field"
+msgid "Hide title"
+msgstr "Titel verbergen"
+
+#: include/class-job-posting-helper.php:786
+msgctxt "job-entry-name"
+msgid "Name"
+msgstr "Name"
+
+#: include/class-job-posting-helper.php:798
+msgctxt "job-entry-name"
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: include/class-job-posting-helper.php:810
+msgctxt "job-entry-name"
+msgid "Phone"
+msgstr "Telefonnummer"
+
+#: include/class-job-posting-helper.php:822
+msgctxt "job-entry-name"
+msgid "Letter"
+msgstr "Motivationsschreiben"
+
+#: include/class-job-posting-helper.php:838
+msgctxt "job-entry-name"
+msgid "Attachment"
+msgstr "Anhang"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Job Postings - Structured Data"
+msgstr "StellenAusschreibungen-strukturierte Daten"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Blueglass Interactive OÜ"
+msgstr "BlueGlass Interactive OÜ"
+
+#. Author URI of the plugin/theme
+msgid "http://blueglass.ee"
+msgstr "http://blueglass.ee/en/"
+
+msgctxt "job-settings"
+msgid "PREVIEW"
+msgstr "VORSCHAU"
+
+msgctxt "job-settings"
+msgid "Actual layout and some styling can look a bit different on the site, because of the theme used."
+msgstr "Das eigentliche Layout und Design kann aufgrund des verwendet Themes leicht anders aussehen."
+
+msgctxt "job-settings"
+msgid "Content text color"
+msgstr "Inhaltstextfarbe"
+
+msgctxt "job-settings"
+msgid "Content heading color"
+msgstr "Inhalts&shy;überschriftsfarbe"
+
+msgctxt "job-settings"
+msgid "Box background"
+msgstr "Box Hintergrund"
+
+msgctxt "job-settings"
+msgid "Box border"
+msgstr "Box-Rahmen"
+
+msgctxt "job-settings"
+msgid "Subheading text color"
+msgstr "Untertitel-Textfarbe"
+
+msgctxt "job-settings"
+msgid "Heading text color"
+msgstr "Überschrift Textfarbe"
+
+msgctxt "job-settings"
+msgid "Button text color"
+msgstr "Schaltfläche Textfarbe"
+
+msgctxt "job-settings"
+msgid "Button background <b>:hover</b>"
+msgstr "Button Hintergrund <b>:hover</b>"
+
+msgctxt "job-settings"
+msgid "Button background"
+msgstr "Button Hintergrund"
+
+msgctxt "job-settings"
+msgid "Button border radius"
+msgstr "Schaltflächenradius"
+
+msgctxt "job-settings"
+msgid "Box border radius"
+msgstr "Rahmenradius"
+
+msgid "Style settings"
+msgstr "Stileinstellungen"
+
+msgid "Reset style settings"
+msgstr "Stileinstellungen zurücksetzen"
+
+msgid "These settings are global and independent to languages."
+msgstr "Diese Einstellung gelten global und unabhängig von den Sprachen."
+
+msgctxt "job-entry-email"
+msgid "Position: "
+msgstr "Anstellung: "
+
+msgctxt "job-entry-email"
+msgid "New entry for "
+msgstr "Neuer Eintrag "
+
+msgctxt "job-entry-email"
+msgid "Job entry: "
+msgstr "Neuer Eintrag "
+
+msgid "Apply Form"
+msgstr "Anwenden"
+
+msgid "Apply Form fields"
+msgstr "Formularfelder anwenden"
+
+msgid "Max allowed file size"
+msgstr "Erlaubte Datei-Größe"
+
+msgid "For example: <b>12</b> or <b>0.5</b>."
+msgstr "Zum Beispiel: <b>12</b> oder <b>0,5</b>."
+
+msgid "File size exceeded message"
+msgstr "Dateigröße überschritten Nachricht"
+
+msgid "Use %1$s where you would like to show allowed file size. Use %2$s where you would like to show file name.<br>You can update allowed file size in \"Global options\"."
+msgstr "Verwenden Sie %1$s, wo möchten Sie zulässige Dateigröße zu zeigen. Verwenden Sie %2$s, wo würden Sie gerne Dateiname angezeigt.<br>Sie können im \"Globale Optionen\" zulässige Dateigröße aktualisieren."
+
+msgid "File %2$s exceeds the allowed file size of %1$s MB."
+msgstr "Datei %2$s überschreitet die zulässige Dateigröße von %1$s MB."
+
+msgid "Page where you list jobs"
+msgstr "Seite, auf der Sie Jobs auflisten"
+
+msgid "Used for propper linking of category and other functions."
+msgstr "Für die Propper-Verknüpfung von Kategorie und anderen Funktionen verwendet."
+
+msgctxt "job-settings"
+msgid "Filters layout"
+msgstr "Filter Layout"
+
+msgid "Filters"
+msgstr "Filter"
+
+msgid "This is the filters that you see when use show_filters=\"true\" on [job-postings] shortcode"
+msgstr "Das sind die Filter, die Sie sehen, wenn Sie SHOW_FILTERS = \"true\" auf [Job-Postings] Shortcode verwenden"
+
+msgid "Jobs for Wordpress - Help"
+msgstr "Jobs für WordPress-Help"
+
+msgid "Vacancy Search"
+msgstr "Leerstandsuche"
