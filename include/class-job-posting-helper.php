@@ -219,7 +219,7 @@ class Job_Postings_Helper{
 		return $file_path;
 	}
 
-	public static function get_onoff_switch( $label, $name, $id = '', $is_checked = false, $conditional = '', $conditional2 = '', $contidional_invert = false, $class = '' ){
+	public static function get_onoff_switch( $label, $name, $id = '', $is_checked = false, $conditional = '', $conditional2 = '', $conditional_invert = false, $class = '' ){
 		global $post;
 
 		$value 	= get_post_meta( $post->ID, $name, true );
@@ -232,7 +232,7 @@ class Job_Postings_Helper{
 		if( $conditional ) $logic = 'data-conditional-logic="'.$conditional.'"';
 		if( $conditional2 ) $logic .= ' data-conditional-logic2="'.$conditional2.'"';
 
-		if( $contidional_invert ) {
+		if( $conditional_invert ) {
 			$logic .= ' data-conditional-logic-invert="invert"';
 		}else{
 			$logic .= ' data-conditional-logic-invert="normal"';
