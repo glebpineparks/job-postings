@@ -429,6 +429,20 @@ class JobAddEdit
 				    		echo '<textarea class="jp-textarea" resize="none" rows="2" name="'.$key.'" id="'.$key.'" placeholder="'.$placeholder.'" '.$req.'>'.$value.'</textarea>';
     					break;
 
+                    case 'beginning':
+                        # INPUT
+                        $value = isset( $values[$key] ) ? $values[$key][0] : '';
+
+                        echo Job_Postings_Helper::get_onoff_switch( __('Job starts immediately', 'job-postings'), $key . '_immediately', '', false, 'wrap_job_location', '', true );
+
+                        echo '<div id="wrap_job_location" class="wrap_job_location">';
+
+                        echo '<textarea class="jp-textarea" resize="none" rows="2" name="'.$key.'" id="'.$key.'" placeholder="'.$placeholder.'" '.$req.'>'.$value.'</textarea>';
+
+                        echo '</div>';
+
+                        break;
+
 
     				case 'location':
     					# INPUT

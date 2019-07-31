@@ -123,13 +123,13 @@ class Job_Postings extends Job_Postings_Helper{
 					'sort' 	=> 'sort-right'
 					),
 
-				'position_employment_begining' => array(
-					'type' 	=> 'textarea',
-					'name' 	=> _x('Beginning of employment', 'jobs-field', 'job-postings'),
-					'key'	=> 'position_employment_begining',
-					'placeholder' => _x('Input beginning of employment', 'jobs-field', 'job-postings'),
-					'sort' 	=> 'sort-right'
-					),
+			'position_employment_beginning' => array(
+				'type' => 'beginning',
+				'name' => _x('Beginning of employment', 'jobs-field', 'job-postings'),
+				'key' => 'position_employment_beginning',
+				'placeholder' => _x('Input beginning of employment', 'jobs-field', 'job-postings'),
+				'sort' => 'sort-right',
+			),
 
 				'position_employment_duration' => array(
 					'type' 	=> 'text',

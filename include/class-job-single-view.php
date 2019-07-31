@@ -144,6 +144,22 @@ class JobSingleView
                         if( $value ) self::$json_ld['workHours'] = $value;
                     break;
 
+                    case 'position_employment_beginning';
+
+                        $immediately = isset( $values[$key.'_immediately'] ) ? $values[$key.'_immediately'][0] : '';
+
+                        if ( $immediately == 'on' ) {
+                            $meta 	= 'itemprop="jobImmediateStart"';
+                            self::$json_ld['jobStartDate'] = true;
+                        } else {
+                            $meta 	= 'itemprop="jobStartDate"';
+
+                            $value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
+                            if( $value ) self::$json_ld['jobStartDate'] = $value . $immediately;
+                        }
+
+                    break;
+
                     case 'position_base_salary';
                         $meta 	= 'itemprop="baseSalary"';
 
