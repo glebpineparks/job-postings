@@ -112,8 +112,8 @@ class Job_Postings_Helper{
     		'posts_per_page' => -1
 		);
 		$new = new WP_Query( $args );
-
     	$new = $new->found_posts;
+		wp_reset_postdata();
 
     	return $new;
     }
