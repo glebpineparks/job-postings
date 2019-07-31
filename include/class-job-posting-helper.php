@@ -99,21 +99,27 @@ class Job_Postings_Helper{
 
     public static function get_new_entries(){
 
-    	$args = array(
-			'post_type' => 'job-entry',
-    		'meta_key' => 'job_entry_viewed',
-    		'meta_query' => array(
-				array(
-					'key'     => 'job_entry_viewed',
-					'value'   => 'no',
-					'compare' => '==',
+		$new = 0; 
+		
+		if( is_admin() ){
+			$args = array(
+				'post_type' => 'job-entry',
+				'meta_key' => 'job_entry_viewed',
+				'meta_query' => array(
+					array(
+						'key'     => 'job_entry_viewed',
+						'value'   => 'no',
+						'compare' => '==',
+					),
 				),
-			),
-    		'posts_per_page' => -1
-		);
-		$new = new WP_Query( $args );
-    	$new = $new->found_posts;
-		wp_reset_postdata();
+				'posts_per_page' => -1
+			);
+			$new = new WP_Query( $args );
+			$new = $new->found_posts;
+
+			wp_reset_postdata();
+			wp_reset_query();
+		}
 
     	return $new;
     }
