@@ -309,6 +309,7 @@ class JobApplicationSubmit
                     $fullsize_path = get_attached_file( $attachment_id );
                     $pathinfo = pathinfo( $fullsize_path );
                     $url = wp_get_attachment_url( $attachment_id );
+                    
 
                     // Add meta to attachment
                     update_post_meta($attachment_id, 'jobs_plugin_attachment', 'true');
@@ -337,8 +338,10 @@ class JobApplicationSubmit
                     }
 
                     $url = esc_url_raw($url);
-                    $value = array('label' => $lbl, 'value' => $url);
-                    update_post_meta($new_post_id, 'jobs_attachment_'.$key, serialize($value));
+                    $entry_data = array('label' => $lbl, 'value' => $url);
+                    //update_post_meta($new_post_id, 'jobs_attachment_'.$key, serialize($value));
+
+                    self::relocate_file( $attachment_id, $new_post_id, $key, $entry_data );
 
                     $uploaded[] = $filename;
                 }
@@ -402,6 +405,7 @@ class JobApplicationSubmit
                     }
 
                     $attachment_id = media_handle_upload( $key, $attachment_id );
+
 
                     if ( is_wp_error( $attachment_id ) ) {
                         /*
@@ -471,7 +475,35 @@ class JobApplicationSubmit
 
         }
 
-        
         die();
     }
+
+    public static function relocate_file( $attachment_id = 0, $entry_id = 0, $key, $entry_data ){
+        if( !$attachment_id || !$entry_id ) return false;
+
+        // Secure file directory
+        $filedir = ABSPATH . '../jobs-dir';
+
+        // Create directory if not yet exists
+        if (!file_exists($filedir)) {
+            mkdir($filedir, 0744, true);
+        }
+
+        // Get file path and filename
+        $fullsize_path  = get_attached_file( $attachment_id );
+        $timestamp      = time();
+        $filename       = $timestamp . '-' . basename ( $fullsize_path );
+
+        $entry_data['value']    = trailingslashit(get_home_url()) . 'job-postings-get-file/' . $filename;
+
+        // Move file to secure location
+        rename($fullsize_path, $filedir .'/' . $filename);
+
+        update_post_meta($entry_id, 'jobs_attachment_'.$key, serialize($entry_data));
+
+        // Force Delete file from WP default directory
+        wp_delete_attachment( $attachment_id, true );
+
+    }
+    
 }

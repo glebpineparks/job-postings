@@ -10,9 +10,7 @@ body #jobs_help code{
   white-space: pre-line;
 }
 
-body {
-    font-family: sans-serif;
-}
+
 
 .colorpicker{
     z-index: 99;

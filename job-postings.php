@@ -51,6 +51,8 @@ include_once('include/class-job-entry.php');
 // Include main class
 include_once('class-job-postings.php');
 
+include_once('include/class-job-get-uploaded-file.php');
+
 include_once('include/class-job-single-view.php');
 include_once('include/class-job-apply-form.php');
 include_once('include/class-job-notifications.php');

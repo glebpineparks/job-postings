@@ -220,8 +220,19 @@ class Job_Postings_Helper{
 	}
 
 	public static function getFilePath( $file_url ){
-		$siteurl 	= get_option('siteurl');
-		$file_path 	= str_replace(trailingslashit($siteurl), trailingslashit(ABSPATH), $file_url);
+		if( strpos($file_url, '/job-postings-get-file/') ){
+
+			$filedir = ABSPATH . '../jobs-dir/';
+			$siteurl 	= get_option('siteurl');
+
+			$file_path 	= str_replace(trailingslashit($siteurl), trailingslashit($filedir), $file_url);
+			$file_path 	= str_replace('/job-postings-get-file', '', $file_path);
+
+		}else{
+			$siteurl 	= get_option('siteurl');
+			$file_path 	= str_replace(trailingslashit($siteurl), trailingslashit(ABSPATH), $file_url);
+		}
+		
 		return $file_path;
 	}
 
