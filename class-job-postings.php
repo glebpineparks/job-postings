@@ -25,6 +25,8 @@ class Job_Postings extends Job_Postings_Helper{
 
 		JobSecurity::init();
 
+		self::getLanguages();
+		add_action( 'init', array('Job_Postings', 'getLanguages') );
 
 		do_action( 'job-postings-loaded');
 
@@ -39,8 +41,6 @@ class Job_Postings extends Job_Postings_Helper{
 		JobApplicationSubmit::init();
 
 		//self::getLanguages();
-
-		add_action( 'init', array('Job_Postings', 'getLanguages') );
 
 		//Job_Postings::init();
 		add_action( 'init', array('Job_Postings', 'init') );	
@@ -380,6 +380,13 @@ class Job_Postings extends Job_Postings_Helper{
 				self::$languages = $langs;
 			}
 
+		}else{
+			$default_lang 	= explode('_', get_locale());
+			$dlang 			= $default_lang[0];
+			self::$languages[$dlang] = $dlang;
+
+			self::$default_lang = $dlang;
+			self::$lang 		= $dlang;
 		}
 		
 		if ( function_exists( 'pll_the_languages' ) ) {
@@ -393,9 +400,11 @@ class Job_Postings extends Job_Postings_Helper{
 				self::$languages = $langs_proccessed;
 			}
 		}
+
 	}
 
 	public static function getLang(){
+
 		return self::$lang;
 	}
 

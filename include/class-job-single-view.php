@@ -57,7 +57,7 @@ class JobSingleView
 
             usort($fields, array('Job_Postings_Helper','sortByOrder') );
 
-            $currency_symbol = get_option( 'jobs_currency_symbol'.'_'.Job_Postings::$lang );
+            $currency_symbol = get_option( 'jobs_currency_symbol'.'_'.Job_Postings::getLang() );
             if(!$currency_symbol) $currency_symbol = '€';
 
             // RENDER
@@ -311,7 +311,7 @@ class JobSingleView
                 }
 
 
-                $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
+                $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::getLang());
                 // if(!$hiring_organization) $hiring_organization = get_option('blogname');
                 // if($hiring_organization) self::$json_ld['hiringOrganization'] = esc_attr($hiring_organization);
                 $hiring_organization_logo = get_option('jobs_company_logo');
@@ -527,13 +527,13 @@ class JobSingleView
                                 }
                             }
 
-
                             if( $key == 'position_base_salary' ){
+                                
                                 $value 	= isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
                                 $upto 	= isset( $values[$key.'_upto'] ) ? esc_attr( $values[$key.'_upto'][0] ) : '';
 
                                 if($currency_symbol){
-                                    $currency_position = get_option( 'jobs_currency_position'.'_'.Job_Postings::$lang );
+                                    $currency_position = get_option( 'jobs_currency_position'.'_'.Job_Postings::getLang() );
                                     if(!$currency_position) $currency_position = 'before';
 
                                     $starting = '';
@@ -595,7 +595,7 @@ class JobSingleView
                             $out .= '<div '.$meta.' class="jobs-row-input">';
                                 if( $meta_2 ) $out .= '<span '.$meta_2.'>';
 
-                                        $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
+                                        $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::getLang());
                                         if(!$hiring_organization) $hiring_organization = get_option('blogname');
                                         $hiring_organization = esc_html($hiring_organization);
                                         $out .= '<img class="jobs_hiring_logo" src="'.$company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
@@ -706,8 +706,8 @@ class JobSingleView
 
                     $value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
 
-                    $offer_ended_enabled = get_option( 'jobs_offer_ended_message_enabled_'.Job_Postings::$lang );
-                    $offer_ended_message = get_option( 'jobs_offer_ended_message_'.Job_Postings::$lang );
+                    $offer_ended_enabled = get_option( 'jobs_offer_ended_message_enabled_'.Job_Postings::getLang() );
+                    $offer_ended_message = get_option( 'jobs_offer_ended_message_'.Job_Postings::getLang() );
                     $offer_ended_message = $offer_ended_message ?  sprintf($offer_ended_message, $job_valid_date) : sprintf(_x('Offer ended on %s', 'job-message', 'job-postings'), $job_valid_date);
 
                     $out .= '<div class="jobs-row-apply">';
@@ -733,8 +733,8 @@ class JobSingleView
 
                     $value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
 
-                    $offer_ended_enabled = get_option( 'jobs_offer_ended_message_enabled_'.Job_Postings::$lang );
-                    $offer_ended_message = get_option( 'jobs_offer_ended_message_'.Job_Postings::$lang );
+                    $offer_ended_enabled = get_option( 'jobs_offer_ended_message_enabled_'.Job_Postings::getLang() );
+                    $offer_ended_message = get_option( 'jobs_offer_ended_message_'.Job_Postings::getLang() );
                     $offer_ended_message = $offer_ended_message ?  sprintf($offer_ended_message, $job_valid_date) : sprintf(_x('Offer ended on %s', 'job-message', 'job-postings'), $job_valid_date);
 
                     $out .= '<div class="jobs-row-apply">';
