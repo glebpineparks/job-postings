@@ -1,6 +1,7 @@
 <?php  
 
 $language = 'en';
+$the_post_id = 0;
 
 class Jobs_PDF_Header_Footer extends TCPDF {
 
@@ -11,13 +12,12 @@ class Jobs_PDF_Header_Footer extends TCPDF {
 		$this->footerData = $this->getHeaderData();
 
 		// Logo
-		//$image_file = K_PATH_IMAGES.'viseca.jpg';
 		//$this->Image($image_file, 0, 7, 35, 0, 'JPG', '', 'T', false, 300, 'R', false, false, 0, false, false, false);
 	}
 
 	// Page footer
 	public function Footer() {
-		global $language;
+		global $language, $the_post_id;
 		// Position at 15 mm from bottom
 		$this->SetY(-15);
 
@@ -28,7 +28,10 @@ class Jobs_PDF_Header_Footer extends TCPDF {
 
 		$blogdescription = get_option('blogdescription');
 		$site_url = get_option('home');
-		$hiring_organization = get_option('jobs_hiring_organization'.'_'.$language);
+		
+		$hiring_organization_name 	= get_post_meta($the_post_id, 'position_hiring_organization_name', true);
+		$hiring_organization 		= $hiring_organization_name ? esc_attr( $hiring_organization_name ) : get_option('jobs_hiring_organization'.'_'.$language);
+		if(!$hiring_organization) $hiring_organization = get_option('blogname');
 
 		$html = '
 			<table border="0" cellspacing="0" cellpadding="0">
@@ -50,17 +53,24 @@ class jobPDFExport{
 		
 	
 	public function __construct( $post_id = null, $fields, $lang ){
-		global $language;
+		global $language, $the_post_id;
 		//print_r($form);
 
 		$language = $lang;
+		$the_post_id = $post_id;
 
 
 		// create new PDF document
 		$pdf = new Jobs_PDF_Header_Footer(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+		$position_logo 	= get_post_meta($the_post_id, 'position_logo', true);
+		$company_logo 	= get_option('jobs_company_logo');
+		$company_logo 	= $position_logo ? esc_attr( $position_logo ) : $company_logo;
 		
-		$company_logo 			= get_option('jobs_company_logo');
-		$hiring_organization 	= get_option('jobs_hiring_organization'.'_'.$language);
+		$hiring_organization_name 	= get_post_meta($the_post_id, 'position_hiring_organization_name', true);
+		$hiring_organization 		= $hiring_organization_name ? esc_attr( $hiring_organization_name ) : get_option('jobs_hiring_organization'.'_'.$language);
+		if(!$hiring_organization) $hiring_organization = get_option('blogname');
+		
 	    $job_date 				= get_the_date( get_option('date_format'), $post_id );
 
 		$title = get_post_meta($post_id, 'position_title', true);
@@ -139,9 +149,9 @@ class jobPDFExport{
 
 		$offer_link = get_permalink( $post_id );
 		$sitename = get_option('blogname');
-		$sitename = '<b style="font-size: 20px;">'.$sitename.'</b><br>';
+		$sitename = '<b style="font-size: 20px;">'.apply_filters('job-postings/pdf/sitename', $sitename, $post_id).'</b><br><br>';
 
-		if( $company_logo ) $sitename = '<img src="'.$company_logo.'" height="35"><br>';
+		if( $company_logo ) $sitename = '<img src="'.$company_logo.'" height="75"><br>';
 
 		$html = $sitename . '<br><i>'.$offer_link.'<i><br><br><br>';
 		//$pdf->writeHTML($style . $html, true, false, true, false, '');
@@ -404,6 +414,7 @@ class jobPDFExport{
 	}
 	
 	public function get_field_content_2($post_id, $field, $lang){
+
 		$out1 = '';
 
 
@@ -448,7 +459,7 @@ class jobPDFExport{
 		$skip = array('position_apply_now', 'position_pdf_export');
     	if( !in_array($key, $skip) ){
 
-			if( $value ){
+			if( $value || $key == 'position_logo' || $type == 'location' ){
 				$out1 .= '<div>';
 				
 					$fs = '';
@@ -463,9 +474,10 @@ class jobPDFExport{
 
 					$out1 .= '<div style="line-height:15px; '.$fs.'" >';
 
+						$skip = array('position_base_salary', 'position_logo', 'position_job_location');
 
 						//$out1 .= '<p style="line-height:18px;">';
-						if( $key != 'position_base_salary' ){
+						if( !in_array($key, $skip) ){
 							
 							$value = isset( $values[$key] ) ? $values[$key][0] : '';	
 							$content = apply_filters('the_content', $title.$value);
@@ -473,6 +485,15 @@ class jobPDFExport{
 							//$out1 .= $title.$value;//substr($content, 0, 400);
 						}
 						
+						if( $key == 'position_logo' ){
+							$hiring_organization_name 	= get_post_meta($post_id, 'position_hiring_organization_name', true);
+							$hiring_organization 		= $hiring_organization_name ? $hiring_organization_name : get_option('jobs_hiring_organization'.'_'.$lang);
+							if(!$hiring_organization) $hiring_organization = get_option('blogname');
+							
+							$content = apply_filters('the_content', $title.$hiring_organization);
+							$out1 .= $content;//substr($content, 0, 400);
+							//$out1 .= $title.$value;//substr($content, 0, 400);
+						}
 
 						if( $key == 'position_base_salary' ){
 
@@ -516,6 +537,74 @@ class jobPDFExport{
 							}
 
 							$out1 .= '</div><br>';
+						}
+
+						if( $type == 'location' ){
+							$city = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
+
+							$streetAddress = isset( $values[$key.'_streetAddress'] ) ? esc_attr( $values[$key.'_streetAddress'][0] ) : '';
+							$postalCode = isset( $values[$key.'_postalCode'] ) ? esc_attr( $values[$key.'_postalCode'][0] ) : '';
+							// $addressLocality = (isset( $values[$key.'_addressLocality'] ) && $values[$key.'_addressLocality'][0] != '') ? esc_attr( $values[$key.'_addressLocality'][0] ) : '';
+							$addressRegion = (isset( $values[$key.'_addressRegion'] ) && $values[$key.'_addressRegion'][0] != '') ? esc_attr( $values[$key.'_addressRegion'][0] ) : '';
+							$addressCountry = (isset( $values[$key.'_addressCountry'] ) && $values[$key.'_addressCountry'][0] != '') ? esc_attr( $values[$key.'_addressCountry'][0] ) : '';
+
+							$remote = isset( $values[$key.'_remote'] ) ? $values[$key.'_remote'][0] : '';
+
+							$remote_data = isset( $values['job_remote_data'] ) ? $values['job_remote_data'][0] : '';
+
+
+							$full_address = array();
+
+							if( $streetAddress )
+								$full_address[] = $streetAddress;
+
+							if( $postalCode )
+								$full_address[] = $postalCode;
+
+							if( $city )
+								$full_address[] = $city;
+
+							// if( $addressLocality )
+							//     $full_address[] = $addressLocality;
+
+							if( $addressRegion )
+								$full_address[] = $addressRegion;
+
+							if( $addressCountry )
+								$full_address[] = $addressCountry;
+
+
+							$content = '';
+							if($full_address) {
+								$content .= implode(', ', $full_address) . '<br>';
+							}
+
+							if($remote_data){
+								$remote_data = unserialize($remote_data);
+							}
+
+							$remote_possible = apply_filters('job-postings/'.$post_id.'/remote-possible-text', __('Remote work possible', 'job-postings'));
+
+							$remote_from = apply_filters('job-postings/'.$post_id.'/remote-from-text', __('Remote work from', 'job-postings') . ': ');
+
+							if( $remote == 'on' && $remote_data && (count($remote_data) >= 1 && $remote_data[0]['type'] != '' && $remote_data[0]['name'] != '') ){
+
+								if($remote_data){
+									$remote_places = array();
+									foreach($remote_data as $data){
+										$remote_places[] = $data['name'];
+									}
+								}
+
+								$remote_word_places = apply_filters('job-postings/'.$post_id.'/remote-places', implode('; ', $remote_places), $remote_data);
+
+								$content .= $remote_from . $remote_word_places;
+							}else if( $remote == 'on' ){
+								$content .= $remote_possible;
+							}
+
+							if( $content ) 
+								$out1 .= apply_filters('the_content', $title.$content);
 						}
 
 						//$out1 .= '</p>';

@@ -562,7 +562,7 @@ body #jobs_help code{
 
 .elements_preview .job-post .jobs-row.position_logo .jobs-row-input img{
     width: 100%;
-    max-width: 250px;
+    max-width: 270px;
     margin: 0 auto;
     display: block;
 
@@ -810,7 +810,37 @@ body #jobs_help code{
     max-width: 300px;
     margin: 0 auto;
     display: block;
-    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.postbox .jobs-row.type-empty_hiring_logo .jobs_hiring_logo.jobs-no-image{
+    display: none;
+}
+
+#position_logo_upload_file {
+    padding: 8px 5px;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    margin: 0 0;
+}
+
+#position_logo_upload_file_button{
+    padding: 3px 5px;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    margin: -1px 0 0 0;
+    height: auto;
+}
+
+.hiring_organization_name{
+    margin-top: 15px;
+}
+
+.hiring_organization_name input{
+    padding: 8px 5px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 0 0;
 }
 
 .postbox .jobs-row.ui-sortable-helper{
@@ -1718,6 +1748,20 @@ body #jobs_help code{
 #jobs-settings-fields .jobs-settings-sortable-disabled .jobs-row.required_by_google{
     border: 1px solid #daa7a7;
 }
+
+body.post-type-jobs .media-frame-menu,
+body.post-type-jobs .attachment-display-settings .setting.align,
+body.post-type-jobs .attachment-display-settings div.setting{
+    display: none;
+}
+
+body.post-type-jobs .media-frame-title,
+body.post-type-jobs .media-frame-router,
+body.post-type-jobs .media-frame-content,
+body.post-type-jobs .media-frame-toolbar {
+    left: 0;
+}
+
 
 @media screen and (max-width: 1300px) {
     .jobs_plugin_settings .row .el33{

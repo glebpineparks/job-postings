@@ -302,6 +302,23 @@ class JobSingleView
                         }
                     break;
 
+
+                    case 'position_logo';
+                        $company_logo 			    = get_option('jobs_company_logo');
+                        $hiring_organization_logo 	= isset( $values[$key] ) && $values[$key][0] != '' ? esc_attr( $values[$key][0] ) : $company_logo;
+        
+                        $hiring_organization 	= isset( $values['position_hiring_organization_name'] ) && $values['position_hiring_organization_name'][0] != '' ? esc_attr( $values['position_hiring_organization_name'][0] ) : get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
+                        if(!$hiring_organization) $hiring_organization = get_option('blogname');
+    
+                        if ( $hiring_organization ) {
+                            self::$json_ld['hiringOrganization']['@type'] = 'Organization';
+                            self::$json_ld['hiringOrganization']['name'] = esc_attr($hiring_organization);
+                            if($hiring_organization_logo) self::$json_ld['hiringOrganization']['logo'] = esc_attr($hiring_organization_logo);
+                            self::$json_ld['identifier']['@type'] = 'PropertyValue';
+                            self::$json_ld['identifier']['name'] = esc_attr($hiring_organization);
+                            self::$json_ld['identifier']['value'] = esc_attr($hiring_organization);
+                        }
+                    break;
                 }
 
                 // JSON+LD Date
@@ -310,22 +327,7 @@ class JobSingleView
                     if($date) self::$json_ld['datePosted'] = $date;
                 }
 
-
-                $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::getLang());
-                // if(!$hiring_organization) $hiring_organization = get_option('blogname');
-                // if($hiring_organization) self::$json_ld['hiringOrganization'] = esc_attr($hiring_organization);
-                $hiring_organization_logo = get_option('jobs_company_logo');
-                if ( ! $hiring_organization ) {
-                    $hiring_organization = get_option('blogname');
-                }
-                if ( $hiring_organization ) {
-                    self::$json_ld['hiringOrganization']['@type'] = 'Organization';
-                    self::$json_ld['hiringOrganization']['name'] = esc_attr($hiring_organization);
-                    self::$json_ld['hiringOrganization']['logo'] = esc_attr($hiring_organization_logo);
-                    self::$json_ld['identifier']['@type'] = 'PropertyValue';
-                    self::$json_ld['identifier']['name'] = esc_attr($hiring_organization);
-                    self::$json_ld['identifier']['value'] = esc_attr($hiring_organization);
-                }
+                
 
 
                 // if we use json-ld, clear itemprop attributes
@@ -353,7 +355,7 @@ class JobSingleView
 
                 if( $value || $type == 'location' ){
 
-                    $skip = array('position_apply_now', 'position_button', 'position_pdf_export', 'position_valid_through');
+                    $skip = array('position_apply_now', 'position_button', 'position_pdf_export', 'position_valid_through', 'position_logo');
 
                     if( !in_array($key, $skip) ){
 
@@ -582,9 +584,9 @@ class JobSingleView
 
 
                 if( $key == 'position_logo' ){
-                    $company_logo = get_option('jobs_company_logo');
+                    //$company_logo = get_option('jobs_company_logo');
 
-                    if( $company_logo ){
+                    if( $hiring_organization_logo ){
                         $out .= '<div class="jobs-row clearfix position_logo type-'.$type.' '.$class.'">';
                             if( $show_title ){
                                 if( $custom_title ) $name = $custom_title;
@@ -595,10 +597,8 @@ class JobSingleView
                             $out .= '<div '.$meta.' class="jobs-row-input">';
                                 if( $meta_2 ) $out .= '<span '.$meta_2.'>';
 
-                                        $hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::getLang());
-                                        if(!$hiring_organization) $hiring_organization = get_option('blogname');
-                                        $hiring_organization = esc_html($hiring_organization);
-                                        $out .= '<img class="jobs_hiring_logo" src="'.$company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
+                                    $hiring_organization = esc_html($hiring_organization);
+                                    $out .= '<img class="jobs_hiring_logo" src="'.$hiring_organization_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
 
                                 if( $meta_2 ) $out .= '</span>';
                             $out .= '</div>';

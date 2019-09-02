@@ -349,21 +349,97 @@ class JobAddEdit
 		   		 	}
 
 				    echo '<input class="item-sort-value" type="hidden" name="sort-'.$key.'" value="'.$index.'"/>';
-
+				
+				
     			switch ( $type ) {
 
     				case 'empty_hiring_logo':
-    					# INPUT
+						# INPUT
 
-							$company_logo 			= get_option('jobs_company_logo');
+							$global_company_logo 		= get_option('jobs_company_logo');
+							$global_hiring_organization = get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
 
-							if( $company_logo ){
-								$hiring_organization 	= get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
-								if(!$hiring_organization) $hiring_organization = get_option('blogname');
-								$out = '<img class="jobs_hiring_logo" src="'.$company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
-							}else{
-								$out = _x('Logo can be added/changed in <a target="_blank" href="edit.php?post_type=jobs&page=jp-help">Settings</a>.', 'job-settings', 'job-postings');
+							$horg_placeholder = '';
+							if( $global_hiring_organization != '' ) $horg_placeholder = 'Global: '. $global_hiring_organization;
+
+							$horg_logo_placeholder = '';
+							if( $global_company_logo != '' ) $horg_logo_placeholder = $global_company_logo;
+
+							$single_company_logo 		= isset( $values[$key] ) && $values[$key][0] != '' ? esc_attr( $values[$key][0] ) : '';
+							
+							$hiring_organization 		= isset( $values['position_hiring_organization_name'] ) && $values['position_hiring_organization_name'][0] != '' ? esc_attr( $values['position_hiring_organization_name'][0] ) : '';
+							//if(!$hiring_organization) $hiring_organization = get_option('blogname');
+
+							// if( $single_company_logo ){
+							// 	$hiring_organization 	= get_option('jobs_hiring_organization'.'_'.Job_Postings::$lang);
+							// 	if(!$hiring_organization) $hiring_organization = get_option('blogname');
+							// 	$out = '<img class="jobs_hiring_logo" src="'.$single_company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
+							// }else{
+							// 	$out = _x('Logo can be added/changed in <a target="_blank" href="edit.php?post_type=jobs&page=jp-help">Settings</a>.', 'job-settings', 'job-postings');
+							// }
+
+							if($global_hiring_organization) $out = _x('Global Hiring Organization is set and can be added/changed in <a target="_blank" href="edit.php?post_type=jobs&page=jp-help">Settings</a>.', 'job-settings', 'job-postings') . '<br>';
+							
+							if( $single_company_logo == '' && $horg_logo_placeholder != '' ) $single_company_logo = $horg_logo_placeholder;
+
+							$hiring_org_img_class = 'jobs-no-image';
+							if( $single_company_logo ){
+								$hiring_org_img_class = '';
 							}
+
+							$out = '<img id="'.$key.'_uploaded_image" class="jobs_hiring_logo '.$hiring_org_img_class.'" src="'.$single_company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
+
+							if( $single_company_logo == $horg_logo_placeholder ) $single_company_logo = '';
+
+							$out .= '<input id="'.$key.'_upload_file" type="text" name="'.$key.'" value="'.$single_company_logo.'" placeholder="'.$horg_logo_placeholder.'">';
+							$out .= '<input id="'.$key.'_upload_file_button" class="button button-primary" type="button" value="'.__('Upload/Select file', 'job-postings').'" />';
+							$custom_uploader = '<script type="text/javascript">
+								jQuery(document).ready(function(){
+									var '.$key.'_custom_uploader;
+										jQuery("#'.$key.'_upload_file_button").click(function(e) {
+											e.preventDefault();
+											if ('.$key.'_custom_uploader) {
+												'.$key.'_custom_uploader.open();
+												return;
+											}
+											'.$key.'_custom_uploader = wp.media.frames.file_frame = wp.media({
+												title: "Choose Image",
+												button: {
+													text: "Choose file"
+												},
+												multiple: false,
+												frame: "post",
+    											state: "insert"
+											});
+											'.$key.'_custom_uploader.on("insert", function(selection) {
+												// attachment = '.$key.'_custom_uploader.state().get("selection").first().toJSON();
+												// jQuery("#'.$key.'_upload_file").val(attachment.url);
+
+												var state = '.$key.'_custom_uploader.state();
+												selection = selection || state.get("selection");
+												if (! selection) return;
+												
+												// We set multiple to false so only get one image from the uploader
+												var attachment = selection.first();
+												var display = state.display(attachment).toJSON();  // <-- additional properties
+												attachment = attachment.toJSON();
+												
+												// Do something with attachment.id and/or attachment.url here
+												var imgurl = attachment.sizes[display.size].url;
+
+												jQuery("#'.$key.'_upload_file").val(imgurl);
+												jQuery("#'.$key.'_uploaded_image").attr("src", imgurl).removeClass("jobs-no-image");
+											});
+											'.$key.'_custom_uploader.open();
+										});
+								});
+							</script>';
+							echo $custom_uploader;
+							
+							$out .= '<div class="hiring_organization_name">';
+							$out .= '<label>' . $name . ':</label>';
+							$out .= '<input type="text" name="position_hiring_organization_name" value="'.$hiring_organization.'" placeholder="'.$horg_placeholder.'">';
+							$out .= '</div>';
 
 				    		echo $out;
     					break;
@@ -1058,6 +1134,10 @@ class JobAddEdit
             update_post_meta( $post_id, 'position_job_location_addressCountry', sanitize_text_field($field_key_title) );
         }
 
+        if( isset( $_POST['position_hiring_organization_name'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_hiring_organization_name'] );
+            update_post_meta( $post_id, 'position_hiring_organization_name', sanitize_text_field($field_key_title) );
+        }
 
         // Update metrics data
         $metrics_counted = get_post_meta( $post_id, 'jobs_post_metrics_counted', true );
