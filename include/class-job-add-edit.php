@@ -820,14 +820,14 @@ class JobAddEdit
 					$out .= _x('HTML Tag', 'jobs-field', 'job-postings');
 				$out .= '</label>';
 				$out .= '<select id="'.$name.'" name="'.$name.'">';
-					$out .= '<option value="div" '.selected($value, 'div', false).'>'.__('DIV', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h1" '.selected($value, 'h1', false).'>'.__('H1', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h2" '.selected($value, 'h2', false).'>'.__('H2', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h3" '.selected($value, 'h3', false).'>'.__('H3', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h4" '.selected($value, 'h4', false).'>'.__('H4', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h5" '.selected($value, 'h5', false).'>'.__('H5', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="h6" '.selected($value, 'h6', false).'>'.__('H6', 'jobs-field', 'job-postings').'</option>';
-					$out .= '<option value="span" '.selected($value, 'span', false).'>'.__('SPAN', 'jobs-field', 'job-postings').'</option>';
+					$out .= '<option value="div" ' . selected( $value, 'div', false ) . '>DIV</option>';
+					$out .= '<option value="h1" ' . selected( $value, 'h1', false ) . '>H1</option>';
+					$out .= '<option value="h2" ' . selected( $value, 'h2', false ) . '>H2</option>';
+					$out .= '<option value="h3" ' . selected( $value, 'h3', false ) . '>H3</option>';
+					$out .= '<option value="h4" ' . selected( $value, 'h4', false ) . '>H4</option>';
+					$out .= '<option value="h5" ' . selected( $value, 'h5', false ) . '>H5</option>';
+					$out .= '<option value="h6" ' . selected( $value, 'h6', false ) . '>H6</option>';
+					$out .= '<option value="span" ' . selected( $value, 'span', false ) . '>SPAN</option>';
 				$out .= '</select>';
 			$out .= '</div>';
 
