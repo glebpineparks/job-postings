@@ -51,12 +51,12 @@ class JobDependencies
 		wp_register_script('jp-admin-colorpicker-js', "{$dir}admin/js/colorpicker.js", array('jquery'), $ver );
 		wp_enqueue_script('jp-admin-colorpicker-js');
 
-		wp_register_script('jp-admin-repeater-js', "{$dir}admin/js/jquery.repeater.min.js", array('jquery') , $ver );
+		wp_register_script('jp-admin-repeater-js', "{$dir}admin/js/jquery.repeater.min.js", array('jquery'), $ver );
 		wp_enqueue_script('jp-admin-repeater-js');
 
 
 		// register & include JS
-		wp_register_script('jp-admin-scripts', "{$dir}admin/js/script.js".$ver, array('jquery', 'jquery-autogrow', 'jquery-match-height'));
+		wp_register_script('jp-admin-scripts', "{$dir}admin/js/script.js", array('jquery', 'jquery-autogrow', 'jquery-match-height'), $ver );
 		wp_enqueue_script('jp-admin-scripts');
 
 		$localized				    = array();
