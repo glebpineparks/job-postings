@@ -13,7 +13,7 @@ class JobDependencies
 
 	public static function admin_enqueue_scripts(){
 
-		$ver = '?v=' . JOBPOSTINGSVERSION;
+		$ver = JOBPOSTINGSVERSION;
 
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('jquery-ui-core');
@@ -27,10 +27,10 @@ class JobDependencies
 		$dir = JOBPOSTINGSURL;
 
 		// register & include CSS
-		wp_register_style('jp-admin-styles', "{$dir}admin/css/style.css".$ver);
+		wp_register_style('jp-admin-styles', "{$dir}admin/css/style.css", array() , $ver );
 		wp_enqueue_style('jp-admin-styles');
 
-		wp_register_style('jp-admin-colorpicker', "{$dir}admin/css/colorpicker.css".$ver);
+		wp_register_style('jp-admin-colorpicker', "{$dir}admin/css/colorpicker.css", array() , $ver);
 		wp_enqueue_style('jp-admin-colorpicker');
 
 
@@ -48,10 +48,10 @@ class JobDependencies
 
 
 		// register & include JS
-		wp_register_script('jp-admin-colorpicker-js', "{$dir}admin/js/colorpicker.js".$ver, array('jquery'));
+		wp_register_script('jp-admin-colorpicker-js', "{$dir}admin/js/colorpicker.js", array('jquery'), $ver );
 		wp_enqueue_script('jp-admin-colorpicker-js');
 
-		wp_register_script('jp-admin-repeater-js', "{$dir}admin/js/jquery.repeater.min.js".$ver, array('jquery'));
+		wp_register_script('jp-admin-repeater-js', "{$dir}admin/js/jquery.repeater.min.js", array('jquery') , $ver );
 		wp_enqueue_script('jp-admin-repeater-js');
 
 
@@ -71,7 +71,7 @@ class JobDependencies
 
 	public static function front_enqueue_scripts(){
 
-		$ver = '?v=' . JOBPOSTINGSVERSION;
+		$ver = JOBPOSTINGSVERSION;
 
 		$dir = JOBPOSTINGSURL;
 		
@@ -83,7 +83,7 @@ class JobDependencies
 
 
 		
-        wp_register_script('jp-front-select2', "{$dir}js/select2.min.js".$ver);
+        wp_register_script('jp-front-select2', "{$dir}js/select2.min.js", array(), $ver );
 		wp_enqueue_script('jp-front-select2');
 
 		// register & include JS
@@ -97,7 +97,7 @@ class JobDependencies
 
 		do_action('job-postings/front_enqueue_scripts');
 		
-        wp_register_script('jp-front-scripts', "{$dir}js/script.js".$ver);
+        wp_register_script('jp-front-scripts', "{$dir}js/script.js", array(), $ver);
         wp_enqueue_script('jp-front-scripts');
 
         $localized					= array();
@@ -105,7 +105,7 @@ class JobDependencies
 		$localized['no_name']		= __('Please input template name.', 'job-postings');
 		$localized['site_key']		= $site_key;
 		$localized['re_type']		= $re_type;
-		$localized['re_message']  	= __('Ups... reCaptcha identified you as a bot. If your not, please reload and try again.', 'job-postings');
+		$localized['re_message']  	= __('Ups... reCaptcha identified you as a bot. If you are not, please reload and try again.', 'job-postings');
 
 		$filesize_placeholder 	    = __('File %2$s exceeds the allowed file size of %1$s MB.', 'job-postings');
 		$filesize_exceeded 		    = get_option( 'jobs_filesize_validation_'.Job_Postings::$lang );
@@ -119,10 +119,10 @@ class JobDependencies
 
 		// register & include CSS
 		
-        wp_register_style('jp-front-select2', "{$dir}css/select2.min.css".$ver);
+        wp_register_style('jp-front-select2', "{$dir}css/select2.min.css", array(), $ver );
 		wp_enqueue_style('jp-front-select2');
 
-        wp_register_style('jp-front-styles', "{$dir}css/style.css".$ver);
+        wp_register_style('jp-front-styles', "{$dir}css/style.css", array(), $ver );
         wp_enqueue_style('jp-front-styles');
 
 
