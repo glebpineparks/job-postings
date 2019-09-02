@@ -1,6 +1,6 @@
 <?php 
 
-class JobGetUploadeFile {
+class JobGetUploadedFile {
 
     public function __construct(){
         add_action( 'init', array($this, 'init_internal') );
@@ -17,13 +17,16 @@ class JobGetUploadeFile {
         return $query_vars;
     }
 
-    public function parse_request( &$wp ){
-        if( !is_user_logged_in() ){
-            auth_redirect();
-        }
+    public function parse_request( &$wp ) {
 
         if ( array_key_exists( 'job_postings_get_file', $wp->query_vars ) ) {
+
+            if ( ! is_user_logged_in() ) {
+                auth_redirect();
+            }
+
             $this->do_query( $wp->query_vars['job_postings_get_file'] );
+
             exit();
         }
         return;
@@ -88,4 +91,4 @@ class JobGetUploadeFile {
     }
 
 }
-new JobGetUploadeFile();
+new JobGetUploadedFile();
