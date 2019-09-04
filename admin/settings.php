@@ -182,7 +182,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 								<?php
 								if (function_exists('icl_get_languages')) {
-									echo '<p class="jfw_hint">These settings are compatible with WPML and Polylang Plugins. Switch current language in admin bar above, to update settings of selected language.</p><br>';
+									echo '<p class="jfw_hint">' . __( 'These settings are compatible with WPML and Polylang Plugins. Switch current language in admin bar above, to update settings of selected language.', 'job-postings') . '</p><br>';
 								}
 								?>
 
@@ -402,7 +402,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 								<h3><?php _e('Apply Form fields', 'job-postings') ?></h3>
 								
-								<p class="description jfw_hint">Dont forget to input labels of the fields. If label leaved empty, field will not appear in the form.</p>
+								<p class="description jfw_hint"><?php _e("Don't forget to input labels of the fields. If the label is left empty, field will not appear in the form.", 'job-postings'); ?></p>
 								
 								<?php
 								// if (function_exists('icl_get_languages')) {
@@ -664,7 +664,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 												<div class="column jfw_col_4">
 
 													<?php
-														echo '<label>Select field type</label>';
+														echo '<label>' . __( 'Select field type', 'job-postings') . '</label>';
 														echo jfw_buildSelect( 'field_type', '' );
 													?>
 												</div>

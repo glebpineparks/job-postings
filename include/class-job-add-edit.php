@@ -807,7 +807,7 @@ class JobAddEdit
 				
 				$out .= Job_Postings_Helper::get_onoff_switch( '', $name, '', false, '' );
 
-				$out .= '<p class="jobs-field-description clearfix">Only hides it from job offer on your site, but Google still sees and validates it. If you want complettely remove it, use "thash" icon in widgets top right corner.</p>';
+				$out .= '<p class="jobs-field-description clearfix">' . __( 'Only hides it from job offer on your site, but Google still sees and validates it. If you want to completely remove it, use "trash" icon in the widgets top right corner.', 'job-postings' ) . '</p>';
 			$out .= '</div>';
 			/**/
 

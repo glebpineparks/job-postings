@@ -275,8 +275,8 @@ if( !class_exists('JobApplyForm') ){
 
         extract( self::default_atts(
                 array(
-                    'label' 		=> 'Label',
-                    'placeholder' 	=> 'Placeholder',
+                    'label' 		=> __( 'Label', 'job-postings' ),
+                    'placeholder' 	=> __( 'Placeholder', 'job-postings' ),
                     'key' 			=> 'key',
                     'type' 			=> 'text',
                     'add_text' 		=> _x('Add file', 'jobs-modal', 'job-postings'),

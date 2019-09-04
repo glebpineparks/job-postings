@@ -26,8 +26,8 @@ function my_jobs_default_fields( $default_fields ){
 
     <h3><?php _e('Default fields', 'job-postings') ?></h3>
 
-    <p class="description jfw_hint">Here you can rearange fields or disable them.</p>
-    <p class="description jfw_hint jfw_hint_red">Fields required by Google are marked red. You still can disable them, but consider using them as Google can skip indexing job posting if required field is missing.</p>
+    <p class="description jfw_hint"><?php _e('Here you can rearrange fields or disable them.', 'job-postings'); ?></p>
+    <p class="description jfw_hint jfw_hint_red"><?php _e('Fields required by Google are marked red. You still can disable them, but consider using them as Google can skip indexing job posting if required field is missing.', 'job-postings'); ?></p>
 								
 
     <?php
