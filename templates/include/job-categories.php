@@ -40,7 +40,7 @@ if( $terms && !empty($terms) ){
 	$out = '<div class="job-listing-categories '.implode(', ', $class).'">';
 
 		$all = apply_filters( 'jobs/all', _x('All', 'job-categories', 'job-postings') );
-		$out .= '<a href="?job-category=all" class="job-category '.$active_all.'">'.$all.'</a>';
+		$out .= '<a href="'.$jobs_page_permalink.'?job-category=all" class="job-category job-category-all '.$active_all.'">'.$all.'</a>';
 
 		foreach ($terms as $key => $term) {
 			$active = '';
@@ -50,35 +50,35 @@ if( $terms && !empty($terms) ){
 				$active = 'active';
 			}
 
-      $count = '';
-      if( $show_count ){
-				$args = array(
-					'post_type' => 'jobs',
-					'post_status' => 'publish',
-					'posts_per_page' => -1,
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'jobs_category',
-							'field'    => 'term_id',
-							'terms'    => array( $term->term_id ),
-						),
-					),
-				);
+			$count = '';
+			if( $show_count ){
+						$args = array(
+							'post_type' => 'jobs',
+							'post_status' => 'publish',
+							'posts_per_page' => -1,
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'jobs_category',
+									'field'    => 'term_id',
+									'terms'    => array( $term->term_id ),
+								),
+							),
+						);
 
-				$args = apply_filters( 'jobs/listing_query', $args );
+						$args = apply_filters( 'jobs/listing_query', $args );
 
-				$args['posts_per_page'] = -1;
+						$args['posts_per_page'] = -1;
 
-        $count = get_posts( $args );
-        //print_r( $count );
-        $count = count($count);
-        $count = apply_filters('job-postings/category_count', ' <span class="category">('.$count.')</span>');
-      }
+				$count = get_posts( $args );
+				//print_r( $count );
+				$count = count($count);
+				$count = apply_filters('job-postings/category_count', ' <span class="category">('.$count.')</span>');
+			}
 
 			$child_class = '';
 			if( $parent != 0 ) $child_class = 'job-category-child';
 
-			$out .= '<a href="'.$jobs_page_permalink.'?job-category='.$term->slug.'" class="job-category '.$child_class.' '.$active.'">'.$term->name.$count.'</a>';
+			$out .= '<a href="'.$jobs_page_permalink.'?job-category='.$term->slug.'" class="job-category job-category-'.$term->slug.' '.$child_class.' '.$active.'">'.$term->name.$count.'</a>';
 
 		}
 	$out .= '</div>';

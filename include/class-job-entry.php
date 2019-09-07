@@ -1,12 +1,12 @@
 <?php
 
-abstract class JobEntry
-{
+abstract class JobEntry{
     public static function init(){
 		add_action( 'add_meta_boxes', array('JobEntry', 'add_meta_boxes'), 10, 2 );
 		add_filter( 'manage_edit-job-entry_columns', array('JobEntry', 'job_entry_columns')  );
 		add_action( 'manage_posts_custom_column', array('JobEntry', 'job_entry_column_values') , 10, 2 );
 		add_action( 'admin_menu', array('JobEntry', 'remove_publish_box') );
+		add_action( 'before_delete_post', array('JobEntry', 'remove_uploaded_files') );
 	}
 
 	public static function remove_publish_box() {
@@ -377,4 +377,35 @@ abstract class JobEntry
 
 	}
 
+	public static function remove_uploaded_files( $post_id ){
+		// We check if the global post type isn't ours and just return
+		global $post_type;   
+		if ( $post_type != 'job-entry' ) return;
+
+		// Get all post meta
+		$post_meta 		= get_post_custom($post_id);
+
+		//Loop throuh meta data of the post
+		if( !empty($post_meta) ){
+			foreach ($post_meta as $key => $meta) {
+				$meta = get_post_meta($post_id, $key, true);
+
+				//Unserialize data if it is serialized
+				if( Job_Postings_Helper::is_serialized($meta) )
+					$meta = unserialize($meta);
+
+				//Check if meta exists for key
+				if( $meta ){
+					$file_path 	= isset($meta['path']) ? $meta['path'] : '';
+
+					//If we found attachment with path set, delete it from the server
+					if( strpos($key, 'jobs_attachment_') !== false && $file_path != '' ){
+						unlink( $file_path );
+					}
+				}
+			}
+
+			
+		}
+	}
 }

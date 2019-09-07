@@ -16,6 +16,7 @@ if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 define('JOBPOSTINGSVERSION', '2.3.0');
 define('JOBPOSTINGSPATH', plugin_dir_path( __FILE__ ));
 define('JOBPOSTINGSURL', plugin_dir_url(__FILE__));
+define('JOBPOSTINGSFILESDIR', ABSPATH . '../jobs-dir/');
 
 // Load text domain for translations
 function job_postings_plugin_langs_init() {
@@ -64,6 +65,7 @@ include_once('include/shortcodes/class-job-search.php');
 include_once('include/shortcodes/class-job-list.php');
 include_once('include/shortcodes/class-job-single.php');
 
+include_once('include/class-job-duplicate-offer.php');
 
 Job_Postings::load();
 //add_action( 'init', array( 'Job_Postings', 'load' ), 100);

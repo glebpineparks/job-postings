@@ -1190,18 +1190,23 @@ class JobAddEdit
 
 
     public static function getDatalist( $key ){
-    	global $wpdb;
+		global $wpdb;
+		
+		$datalists = apply_filters('job-postings/datalists', true);
+		$datalists_key = apply_filters('job-postings/datalist/'.$key, true);
 
-		$table_name 	= $wpdb->prefix . "postmeta";
-		$out	= '';
-		$rows = $wpdb->get_results( "SELECT * FROM $table_name WHERE meta_key = '$key' AND meta_value != ''" );
-		if( !empty($rows) ){
-			$out .= '<datalist id="datalist-'.$key.'">';
-				foreach ($rows as $key => $row) {
-					$out .= '<option value="'.$row->meta_value.'" />';
-				}
-			$out .= '</datalist>';
-			return $out;
+		if( $datalists && $datalists_key ){
+			$table_name 	= $wpdb->prefix . "postmeta";
+			$out	= '';
+			$rows = $wpdb->get_results( "SELECT * FROM $table_name WHERE meta_key = '$key' AND meta_value != ''" );
+			if( !empty($rows) ){
+				$out .= '<datalist id="datalist-'.$key.'">';
+					foreach ($rows as $key => $row) {
+						$out .= '<option value="'.$row->meta_value.'" />';
+					}
+				$out .= '</datalist>';
+				return $out;
+			}
 		}
 
 		return '';

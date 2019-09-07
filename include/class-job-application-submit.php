@@ -289,7 +289,8 @@ class JobApplicationSubmit
             $errors     = array();
 
             foreach ($file_data as $key => $file) {
-                $filename = $file['name'];
+                $_FILES[$key]['name'] = self::transliterate( $file['name'] );
+                $filename = $_FILES[$key]['name'];
 
                 // Check filesize before uploading
                 if($file['size'] >= $max_filesize){
@@ -394,7 +395,8 @@ class JobApplicationSubmit
             if( $file_data && empty($uploaded) ){
                 $i = 1;
                 foreach ($file_data as $key => $file) {
-                    $filename = $file['name'];
+                    $_FILES[$key]['name'] = self::transliterate( $file['name'] );
+                    $filename = $_FILES[$key]['name'];
 
                     if( in_array($filename, $uploaded) ) continue;
 
@@ -478,11 +480,38 @@ class JobApplicationSubmit
         die();
     }
 
+    public static function transliterate( $string ){
+        $translit = array(
+            "А"=>"a", "Б"=>"b", "В"=>"v", "Г"=>"g", "Д"=>"d",
+            "Е"=>"e", "Ё"=>"yo", "Ж"=>"zh", "З"=>"z", "И"=>"i", 
+            "Й"=>"j", "К"=>"k", "Л"=>"l", "М"=>"m", "Н"=>"n", 
+            "О"=>"o", "П"=>"p", "Р"=>"r", "С"=>"s", "Т"=>"t", 
+            "У"=>"u", "Ф"=>"f", "Х"=>"kh", "Ц"=>"ts", "Ч"=>"ch", 
+            "Ш"=>"sh", "Щ"=>"sch", "Ъ"=>"", "Ы"=>"y", "Ь"=>"", 
+            "Э"=>"e", "Ю"=>"yu", "Я"=>"ya", "а"=>"a", "б"=>"b", 
+            "в"=>"v", "г"=>"g", "д"=>"d", "е"=>"e", "ё"=>"yo", 
+            "ж"=>"zh", "з"=>"z", "и"=>"i", "й"=>"j", "к"=>"k", 
+            "л"=>"l", "м"=>"m", "н"=>"n", "о"=>"o", "п"=>"p", 
+            "р"=>"r", "с"=>"s", "т"=>"t", "у"=>"u", "ф"=>"f", 
+            "х"=>"kh", "ц"=>"ts", "ч"=>"ch", "ш"=>"sh", "щ"=>"sch", 
+            "ъ"=>"", "ы"=>"y", "ь"=>"", "э"=>"e", "ю"=>"yu", "я"=>"ya", 
+            " "=>"-",  ":"=>"-", ";"=>"-","—"=>"-", "–"=>"-",
+            "š"=>"s", "č"=>"c", "đ"=>"d", "č"=>"c", "ć"=>"c", "ž"=>"z", "ñ"=>"n",
+            "Š"=>"s", "Č"=>"c", "Đ"=>"d", "Č"=>"c", "Ć"=>"c", "Ž"=>"z", "Ñ"=>"n",
+            "љ"=>"l", "њ"=>"n", "џ"=>"u",
+            "Љ"=>"l", "Њ"=>"n", "Џ"=>"u"
+        );
+        
+        $string = strtr($string, $translit);
+
+        return $string;
+    }
+
     public static function relocate_file( $attachment_id = 0, $entry_id = 0, $key, $entry_data ){
         if( !$attachment_id || !$entry_id ) return false;
 
         // Secure file directory
-        $filedir = ABSPATH . '../jobs-dir';
+        $filedir = apply_filters('job-postings/uploaded-files-path', JOBPOSTINGSFILESDIR);
 
         // Create directory if not yet exists
         if (!file_exists($filedir)) {
@@ -490,14 +519,16 @@ class JobApplicationSubmit
         }
 
         // Get file path and filename
-        $fullsize_path  = get_attached_file( $attachment_id );
+        $file_path  = get_attached_file( $attachment_id );
         $timestamp      = time();
-        $filename       = $timestamp . '-' . basename ( $fullsize_path );
+        $filename       = $timestamp . '-' . basename ( $file_path );
+        $new_file_location = $filedir .'/' . $filename;
 
-        $entry_data['value']    = trailingslashit(get_home_url()) . 'job-postings-get-file/' . $filename;
+        $entry_data['value'] = trailingslashit(get_home_url()) . 'job-postings-get-file/' . $filename;
+        $entry_data['path'] = $new_file_location;
 
         // Move file to secure location
-        rename($fullsize_path, $filedir .'/' . $filename);
+        rename($file_path, $new_file_location);
 
         update_post_meta($entry_id, 'jobs_attachment_'.$key, serialize($entry_data));
 

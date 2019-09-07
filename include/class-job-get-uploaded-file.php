@@ -35,7 +35,7 @@ class JobGetUploadedFile {
     public function do_query( $filename ){
 
             // Secure file directory
-            $filedir = ABSPATH . '../jobs-dir/';
+            $filedir = apply_filters('job-postings/uploaded-files-path', JOBPOSTINGSFILESDIR);
 
             $file =  $filedir . $filename;
             if (!$filedir || !is_file($file)) {
