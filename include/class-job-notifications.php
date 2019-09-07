@@ -42,7 +42,7 @@ class JobNotifications
 				$name = unserialize($name);
 				$name = $name['value'];
 			}else{
-				$name = 'Applicant';
+				$name = __( 'Applicant', 'job-postings' );
 			}
 
 			if( $post_meta ){
@@ -173,7 +173,7 @@ class JobNotifications
 				$name = unserialize($name);
 				$name = $name['value'];
 			}else{
-				$name = 'Applicant';
+				$name = __( 'Applicant', 'job-postings' );
 			}
 
 

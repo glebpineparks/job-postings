@@ -55,17 +55,17 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 						]</code>
 				</p>
 				<ul>
-					<li><b>category</b> - With this parameter you can show only job posting from defined categories. Add multiple categories separated by coma. If this parameter used, all others are ignored.</li>
-					<li><b>showcategory</b> - With this parameter you can show category filter above the job posts listing  (Default: false).</li>
-					<li><b>aligncategory</b> - Category filter alignment (Default: left).</li>
-					<li><b>hide_empty</b> - To show or hide empty categories (Default: true).</li>
-					<li><b>show_count</b> - To show/hide count of job postings in each category.</li>
-					<li><b>show_filters</b> - To show/hide filters (categories and search field). This parameter overwrites all other and can be configured ftom "Settings > Styles"</li>
-					<li><b>limit</b> - To limit the output of job posts. If limit is used, filters and pagination are disabled</li>
-					<li><b>posts_per_page</b> - To limit the output of job posts per page.</li>
-					<li><b>hide_past</b> - To exclude job postings which "Valid Through" date is past.</li>
-					<li><b>orderby</b> - Choose the field to sort the job postings by (Default: date).</li>
-					<li><b>order</b> - Select between ascending "ASC" and descending "DESC" (Default: DESC).</li>
+					<li><b>category</b> - <?php _ex('With this parameter you can show only job posting from defined categories. Add multiple categories separated by coma. If this parameter used, all others are ignored.', 'shortcode parameter "category"', 'job-postings'); ?></li>
+					<li><b>showcategory</b> - <?php _ex('With this parameter you can show category filter above the job posts listing  (Default: false).', 'shortcode parameter "showcategory"', 'job-postings'); ?></li>
+					<li><b>aligncategory</b> - <?php _ex('Category filter alignment (Default: left).', 'shortcode parameter "aligncategory"', 'job-postings'); ?></li>
+					<li><b>hide_empty</b> - <?php _ex('To show or hide empty categories (Default: true).', 'shortcode parameter "hide_empty"', 'job-postings'); ?></li>
+					<li><b>show_count</b> - <?php _ex('To show/hide count of job postings in each category.', 'shortcode parameter "show_count"', 'job-postings'); ?></li>
+					<li><b>show_filters</b> - <?php _ex('To show/hide filters (categories and search field). This parameter overwrites all other and can be configured ftom "Settings > Styles"', 'shortcode parameter "show_filters"', 'job-postings'); ?></li>
+					<li><b>limit</b> - <?php _ex('To limit the output of job posts. If limit is used, filters and pagination are disabled', 'shortcode parameter "limit"', 'job-postings'); ?></li>
+					<li><b>posts_per_page</b> - <?php _ex('To limit the output of job posts per page.', 'shortcode parameter "posts_per_page"', 'job-postings'); ?></li>
+					<li><b>hide_past</b> - <?php _ex('To exclude job postings which "Valid Through" date is past.', 'shortcode parameter "hide_past"', 'job-postings'); ?></li>
+					<li><b>orderby</b> - <?php _ex('Choose the field to sort the job postings by (Default: date).', 'shortcode parameter "orderby"', 'job-postings'); ?></li>
+					<li><b>order</b> - <?php _ex('Select between ascending "ASC" and descending "DESC" (Default: DESC).', 'shortcode parameter "order"', 'job-postings'); ?></li>
 				
 				</ul>
 				<br>
@@ -75,7 +75,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 					<code>[job-single id="JOB_ID"]</code>
 				</p>
 				<ul>
-					<li><b>id</b> - ID of the job to show.</li>
+					<li><b>id</b> - <?php _ex('ID of the job to show.', 'shortcode parameter "id"', 'job-postings'); ?></li>
 				</ul>
 				<br>
 
@@ -91,7 +91,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 					<code>[job-categories-tree show_count="false|true"]</code>
 				</p>
 				<ul>
-					<li><b>show_count</b> - To show/hide count of job postings in each category.</li>
+					<li><b>show_count</b> - <?php _ex('To show/hide count of job postings in each category.', 'shortcode parameter "show_count"', 'job-postings'); ?></li>
 				</ul>
 				<br>
 
@@ -123,9 +123,9 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 				<?php
 					if ( !$metrics_shareable || $metrics_shareable == 'no' ) {
-						echo __( '<a href="#agree" class="jobs-metrics-agree insettings">I agree to share anonymous data</a>', 'job-posting' );
+						echo '<a href="#agree" class="jobs-metrics-agree insettings">' . __( 'I agree to share anonymous data', 'job-posting' ) . '</a>';
 					}else{
-						echo __( '<a href="#agree" class="jobs-metrics-cancel insettings">Stop sharing</a>', 'job-posting' );
+						echo '<a href="#agree" class="jobs-metrics-cancel insettings">' . __( 'Stop sharing', 'job-posting' ) . '</a>';
 					}
 				?>
 				<p>

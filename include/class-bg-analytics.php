@@ -73,11 +73,11 @@ class BG_Analytics{
 
 			$message .= '</br>';
 
-			$message .= sprintf(__( '<a href="%s">What info will we collect?</a>', 'job-posting'), esc_attr( site_url('/wp-admin/edit.php?post_type=jobs&page=jp-help#anonymous_metrics') ), $message ); ;
+			$message .= sprintf(__( '<a href="%s">What info will we collect?</a>', 'job-posting'), esc_attr( site_url('/wp-admin/edit.php?post_type=jobs&page=jp-help#anonymous_metrics') ), $message );
 
 			$message .= '<div class="jobs-notice-actions">';
-				$message .= __( '<a href="#agree" class="jobs-metrics-agree button">I agree to share anonymous data</a>', 'job-posting' );
-				$message .= __( '<a href="#agree" class="jobs-metrics-cancel ">No, next time</a>', 'job-posting' );
+				$message .= '<a href="#agree" class="jobs-metrics-agree button">' . _x( 'I agree to share anonymous data', 'Link to allow metrics','job-posting' ) . '</a>';
+				$message .= '<a href="#agree" class="jobs-metrics-cancel">' . _x( 'No, next time', 'Link to deny metrics', 'job-posting' ) . '</a>';
 				$message .= '<span class="spinner"></span>';
 			$message .= '</div>';
 

@@ -20,7 +20,7 @@ echo '<div class="jobs-row clearfix">';
 	 		echo '<input class="jp-input" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'._x('E-mail address', 'job-settings', 'job-postings').'" required/>';
 	 	echo '</div>';
 
-	 	echo '<p class="jfw_hint">You can add multiple emails, separated by <b>comma</b>. Example: <b>email1@mysite.com, email2@mysite.com</b></p>';
+	 	echo '<p class="jfw_hint">' . __( 'You can add multiple emails, separated by <b>comma</b>. Example: <b>email1@mysite.com, email2@mysite.com</b>', 'job-postings' ) . '</p>';
 echo '</div>';
 
 echo Job_Postings_Helper::get_onoff_switch( __('Custom Notification', 'job-postings'), 'job_notify_custom_message', '', false, 'job_notify_message_editor' );
@@ -38,7 +38,7 @@ echo '<div id="job_notify_message_editor" class="jobs-row clearfix">';
         wp_editor( $value, $key, array(
                         'textarea_rows' => 4
                         ) );
-		echo '<p class="jfw_hint">You can add any message you want to forwart to the recipient. To add table with all fields, use {all_fields} somewhere in your email.</p><br>';
+		echo '<p class="jfw_hint">' . __( 'You can add any message you want to forwart to the recipient. To add table with all fields, use {all_fields} somewhere in your email.', 'job-postings' ) . '</p><br>';
 	echo '</div>';
 echo '</div>';
 

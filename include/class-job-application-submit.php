@@ -56,14 +56,15 @@ class JobApplicationSubmit
         }
 
         $fileErrors = array(
-            0 => "There is no error, the file uploaded with success",
-            1 => "The uploaded file exceeds the upload_max_files in server settings",
-            2 => "The uploaded file exceeds the MAX_FILE_SIZE from html form",
-            3 => "The uploaded file uploaded only partially",
-            4 => "No file was uploaded",
-            6 => "Missing a temporary folder",
-            7 => "Failed to write file to disk",
-            8 => "A PHP extension stoped file to upload" );
+            0 => __( "There is no error, the file uploaded with success", 'job-postings' ),
+            1 => __( "The uploaded file exceeds the upload_max_files in server settings", 'job-postings' ),
+            2 => __( "The uploaded file exceeds the MAX_FILE_SIZE from html form", 'job-postings' ),
+            3 => __( "The uploaded file uploaded only partially", 'job-postings' ),
+            4 => __( "No file was uploaded", 'job-postings' ),
+            6 => __( "Missing a temporary folder", 'job-postings' ),
+            7 => __( "Failed to write file to disk", 'job-postings' ),
+            8 => __( "A PHP extension stoped file to upload", 'job-postings' ),
+        );
 
 
         $apply_advanced = get_option( 'jobs_apply_advanced' );
@@ -85,7 +86,7 @@ class JobApplicationSubmit
             'post_content'  => '',
             'post_status'   => 'publish',
             'post_author'   => 1,
-            'post_parent' 	=> $post_id
+            'post_parent' 	=> $post_id,
         );
 
         // Insert the post into the database
@@ -95,8 +96,8 @@ class JobApplicationSubmit
 
             $data = array(
                 'job_id' 	=> $post_id,
-                'position' 	=> $position_title
-                );
+                'position' 	=> $position_title,
+            );
 
             $data['entry']['entry_id'] = $new_post_id;
 

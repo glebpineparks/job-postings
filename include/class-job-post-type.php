@@ -255,7 +255,7 @@ class JobPostType
         }
 
     	$labels = array(
-            'menu_name'         => __('Jobs','job-postings'),
+            'menu_name'          => __('Jobs','job-postings'),
 			'name'               => __('Jobs','job-postings'),
 			'singular_name'      => __('Job','job-postings'),
 			'add_new'            => __('Add new position','job-postings'),
