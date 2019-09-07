@@ -791,10 +791,14 @@ class JobSingleView
         }
     }
 
-    public static function printSchema(){
-        //if($this->schema_type == 'json-ld'){
-            echo '<script type="application/ld+json">'.json_encode(self::$json_ld).'</script>';
-        //}
+    public static function print_json_ld(){
+        echo '<script type="application/ld+json">'.json_encode( self::get_json_ld() ).'</script>';
+    }
+
+
+    public static function get_json_ld(){
+        $json_ld = apply_filters( 'job-postings/json_ld', self::$json_ld );
+        return $json_ld;
     }
 }
 
@@ -854,7 +858,7 @@ function get_job_fields( $job_id = '' ){
         echo '</div>';
 
         // This must be at the end, as we combine it with 2 functions above
-        echo JobSingleView::printSchema();
+        echo JobSingleView::print_json_ld();
 
     echo '</div>';
 
