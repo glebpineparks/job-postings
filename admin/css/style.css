@@ -1576,10 +1576,10 @@ body #jobs_help code{
 .jobs-notice{
     position: relative;
     border-left-width: 70px;
-    border-left-color: #40c0f1;
-    border-top: 4px solid #40c0f1;
-    border-bottom: 4px solid #40c0f1;
-    border-right: 4px solid #40c0f1;
+    border-left-color: #00bd73;
+    border-top: 4px solid #00bd73;
+    border-bottom: 4px solid #00bd73;
+    border-right: 4px solid #00bd73;
     border-radius: 4px;
 }
 
@@ -1588,7 +1588,7 @@ body #jobs_help code{
     content: '';
     position: absolute;
     top: 10px;
-    left: -53px;
+    left: -54px;
     background: url(../../images/analysis.svg) no-repeat center center;
     background-size: 100% auto;
     width: 40px;
@@ -1601,22 +1601,31 @@ body #jobs_help code{
 
 .jobs-notice .jobs-notice-wrap h3{
     margin: 0 0 15px;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 .jobs-notice .jobs-notice-actions{
     margin-top: 15px;
 }
 
-.jobs-metrics-agree{
+.jobs-metrics-agree.button{
     margin-right: 15px;
-    color: #008c00;
+    color: #fff;
+    background: #02ac79;
+    border-color: #019b6d;
+    box-shadow: 0 1px 0 #019b6d;
 }
-.jobs-metrics-agree:hover{
-    color: #0fb70f;
+.jobs-metrics-agree.button:hover{
+    color: #fff;
+    background: #00bd73;
+    border-color: #00a866;
 }
 .jobs-metrics-cancel{
     text-decoration: none;
-    color: #c56262;
+    color: #999;
+    padding: 5px 0 0;
+    display: inline-block;
 }
 .jobs-metrics-cancel:hover{
     color: red;

@@ -423,7 +423,7 @@ class Job_Postings extends Job_Postings_Helper{
 					break;
 			}
 
-			update_option('jobs_metrics_notice_seen', 'seen');
+			update_option('jobs_metrics_notice_seen_v2', 'seen');
 
 			$BlueGlassAnalytics->track_metrics();
 

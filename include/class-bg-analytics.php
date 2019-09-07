@@ -19,7 +19,7 @@ class BG_Analytics{
 
 	function __construct() {
 
-		$this->metrics_notice_seen 	= get_option('jobs_metrics_notice_seen');
+		$this->metrics_notice_seen 	= get_option('jobs_metrics_notice_seen_v2');
 		$this->metrics_shareable 	= get_option('jobs_metrics_shareable');
 
 		//var_dump($this->metrics_notice_seen);
@@ -76,8 +76,8 @@ class BG_Analytics{
 			$message .= sprintf(__( '<a href="%s">What info will we collect?</a>', 'job-posting'), esc_attr( site_url('/wp-admin/edit.php?post_type=jobs&page=jp-help#anonymous_metrics') ), $message ); ;
 
 			$message .= '<div class="jobs-notice-actions">';
-				$message .= __( '<a href="#agree" class="jobs-metrics-agree">I agree to share anonymous data</a>', 'job-posting' );
-				$message .= __( '<a href="#agree" class="jobs-metrics-cancel">No, next time</a>', 'job-posting' );
+				$message .= __( '<a href="#agree" class="jobs-metrics-agree button">I agree to share anonymous data</a>', 'job-posting' );
+				$message .= __( '<a href="#agree" class="jobs-metrics-cancel ">No, next time</a>', 'job-posting' );
 				$message .= '<span class="spinner"></span>';
 			$message .= '</div>';
 

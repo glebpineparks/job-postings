@@ -1,8 +1,8 @@
 === Jobs for WordPress ===
 Contributors: blueglassinteractive, cfoellmann
-Tags: jobs, structured data, json-ld, microdata, postings, employment
+Tags: jobs, structured data, json-ld, microdata, postings, employment, career, google, vacancy
 Requires at least: 4.3
-Tested up to: 5.2.2
+Tested up to: 5.2.3
 Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

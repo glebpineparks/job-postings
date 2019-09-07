@@ -376,6 +376,7 @@ class JobSingleView
 
 
                             if( $key != 'position_base_salary' ){
+                                
                                 switch ( $type ) {
                                     case 'textarea':
                                         # INPUT
@@ -392,6 +393,7 @@ class JobSingleView
 
                                     case 'location':
                                         # INPUT
+
                                         $city = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
 
                                         $streetAddress = isset( $values[$key.'_streetAddress'] ) ? esc_attr( $values[$key.'_streetAddress'][0] ) : '';
@@ -424,7 +426,7 @@ class JobSingleView
 
                                         if( $addressCountry )
                                             $full_address[] = $addressCountry;
-
+                                        
 
                                         $icon = Job_Postings_Helper::getRawSvg( 'pin.svg' );
 
