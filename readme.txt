@@ -44,9 +44,10 @@ Jobs for WordPress is a powerfull WordPress plugin that make it easy to add job 
 * Files now moved to secure location on the server after upload and accessible only from wp admin.
 * Now possible to change hiring organization per job offer.
 * Now possible to duplicate job offers out-of-the-box.
+* New entries are now highlighted in the list.
 * Fixed language parameter issue.
-* Fixed some issue in PDF
-* Fixed "All" filter link
+* Fixed some issue in PDF.
+* Fixed "All" filter link.
 
 = 2.2.9 =
 * Fixed issue when selected frontpage were not used for some users when plugin is activated

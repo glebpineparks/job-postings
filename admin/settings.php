@@ -1254,6 +1254,24 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										</div>
 									</div>
 
+									<br>
+									<h3>GDPR</h3>
+									<div class="row clearfix">
+										<label><?php echo __("Don't store user data", 'job-postings') ?></label>
+										<div class="jobs-settings-input">
+										<?php
+											$option_name = 'jobs_dont_store_user_data';
+											$store_user_data = get_option( $option_name );
+
+											echo '<input id="jobs_offer_ended_message_enabled" type="checkbox" name="'.$option_name.'" '.checked($store_user_data, 'on', false).' value="on">';
+										
+											echo '<p class="description jfw_hint">'.__('With this option enabled, plugin will only process user data to notify you by email and immidiatly deletes everything user has inputed, after email is sent successfully.', 'job-postings').'</p>';
+
+											echo '<p class="description jfw_hint">'.__('If your site has issues sending emails, the user data will be stored on the site in this case. You will have to delete it manually,  as soon you review the entry.', 'job-postings').'</p>';
+										?>
+										</div>
+									</div>
+
 									
 									<br>
 									<h3>reCaptcha</h3>

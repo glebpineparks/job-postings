@@ -149,6 +149,15 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 				<div class="toggle">
 					<a class="trigger" href="#">
 						<img src="<?php echo plugins_url( '../images/sort-down.svg', __FILE__ ); ?>" width="12" alt="">
+						<?php echo _x('Why I dont receive email notifications?', 'job-settings', 'job-postings') ?>
+					</a>
+					<div class="toggle-box" style="display: none;">
+						<?php echo _x('Check if your site is able to send any emails out. On some servers PHP mail() function is disabled. You will have to install one of the SMTP plugins and use it instead to allow your site to send emails out.', 'job-settings', 'job-postings') ?>
+					</div>
+				</div>
+				<div class="toggle">
+					<a class="trigger" href="#">
+						<img src="<?php echo plugins_url( '../images/sort-down.svg', __FILE__ ); ?>" width="12" alt="">
 						<?php echo _x('Where can I change the date format?', 'job-settings', 'job-postings') ?>
 					</a>
 					<div class="toggle-box" style="display: none;">

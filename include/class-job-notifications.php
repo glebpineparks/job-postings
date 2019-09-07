@@ -57,7 +57,8 @@ class JobNotifications
 	
 						if( strpos($key, 'jobs_attachment_') !== false ){
 							// Add files to attachments
-							$filepath = Job_Postings_Helper::getFilePath( $value );
+							$filepath = $meta['path'];
+							//$filepath = Job_Postings_Helper::getFilePath( $value, $path );
 							$attachments[] = $filepath;
 						}
 

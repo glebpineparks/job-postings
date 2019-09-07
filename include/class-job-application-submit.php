@@ -23,6 +23,8 @@ class JobApplicationSubmit
             die();
         }
 
+        $store_user_data = get_option( 'jobs_dont_store_user_data' );
+
         $site_key   = get_option( 'jobs_recaptcha_site_key' );
         $secret_key = get_option( 'jobs_recaptcha_secret_key' );
         $re_type    = get_option( 'jobs_recaptcha_type' );
@@ -299,7 +301,7 @@ class JobApplicationSubmit
                     continue;
                 }
 
-                $attachment_id = media_handle_upload( $key, $post_id );
+                $attachment_id = media_handle_upload( $key, $new_post_id );
 
                 if ( is_wp_error( $attachment_id ) ) {
                     /*
@@ -406,7 +408,7 @@ class JobApplicationSubmit
                         continue;
                     }
 
-                    $attachment_id = media_handle_upload( $key, $attachment_id );
+                    $attachment_id = media_handle_upload( $key, $new_post_id );
 
 
                     if ( is_wp_error( $attachment_id ) ) {
@@ -435,11 +437,15 @@ class JobApplicationSubmit
                         $response[$key]['attachment_id'] = $attachment_id;
                         $response[$key]['post_id']	= $post_id;
 
+                        // $url = esc_url_raw($url);
+                        // $value = array('label' => 'Attachment', 'value' => $url);
+                        // update_post_meta($new_post_id, 'jobs_attachment_'.$key, serialize($value));
+
                         $url = esc_url_raw($url);
-                        $value = array('label' => 'Attachment', 'value' => $url);
-                        update_post_meta($new_post_id, 'jobs_attachment_'.$key, serialize($value));
+                        $entry_data = array('label' => 'Attachment', 'value' => $url);
+                        //update_post_meta($new_post_id, 'jobs_attachment_'.$key, serialize($value));
 
-
+                        self::relocate_file( $attachment_id, $new_post_id, $key, $entry_data );
                     }
 
                     $i++;
@@ -471,10 +477,14 @@ class JobApplicationSubmit
 					// All good, die in peace
         			echo 'ok';
 				}else{
-					echo 'Error_sending_message';
+                    $store_user_data = 'off';
+					echo 'Error_sending_notification_message,_but_dont_worry,_We_stored_Your_data_securelly._Thank_you.';
 				}
-			}
-
+            }
+            
+            if( $store_user_data == 'on' ){
+                wp_delete_post( $new_post_id, true );
+            }
         }
 
         die();
@@ -519,7 +529,7 @@ class JobApplicationSubmit
         }
 
         // Get file path and filename
-        $file_path  = get_attached_file( $attachment_id );
+        $file_path      = get_attached_file( $attachment_id );
         $timestamp      = time();
         $filename       = $timestamp . '-' . basename ( $file_path );
         $new_file_location = $filedir .'/' . $filename;
@@ -532,8 +542,21 @@ class JobApplicationSubmit
 
         update_post_meta($entry_id, 'jobs_attachment_'.$key, serialize($entry_data));
 
-        // Force Delete file from WP default directory
-        wp_delete_attachment( $attachment_id, true );
+        // Force Delete file from WP Media
+        //wp_delete_attachment( $attachment_id, true );
+        $attachments = get_posts( array(
+            'post_type' => 'attachment',
+            'posts_per_page' => -1,
+            'post_parent' => $entry_id
+        ) );
+
+        if ( $attachments ) {
+            foreach ( $attachments as $attachment ) {
+                wp_delete_attachment( $attachment->ID, true );
+            }
+
+        }
+        
 
     }
     

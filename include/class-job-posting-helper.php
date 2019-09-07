@@ -222,7 +222,7 @@ class Job_Postings_Helper{
 	public static function getFilePath( $file_url ){
 		if( strpos($file_url, '/job-postings-get-file/') ){
 
-			$filedir = ABSPATH . '../jobs-dir/';
+			$filedir 	= apply_filters('job-postings/uploaded-files-path', JOBPOSTINGSFILESDIR);
 			$siteurl 	= get_option('siteurl');
 
 			$file_path 	= str_replace(trailingslashit($siteurl), trailingslashit($filedir), $file_url);

@@ -1763,6 +1763,35 @@ body.post-type-jobs .media-frame-toolbar {
 }
 
 
+#the-list .type-job-entry .column-title strong,
+#the-list .type-job-entry .column-title strong a{
+    font-weight: normal;
+}
+
+#the-list .jobs-new-entry .column-title strong,
+#the-list .jobs-new-entry .column-title strong a{
+    font-weight: bold;
+}
+
+#the-list .jobs-new-entry .column-title strong{
+    position: relative;
+}
+
+#the-list .jobs-new-entry .column-title strong:before{
+    content: 'NEW';
+    color: #fff;
+    background: #ca4a1f;
+    padding: 3px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 8px;
+    line-height: 8px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+}
+
 @media screen and (max-width: 1300px) {
     .jobs_plugin_settings .row .el33{
         float: left;

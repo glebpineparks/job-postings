@@ -368,7 +368,7 @@ if( re_type != 'on' && site_key ){
 							//clearInterval(intervalId);
 							//progressCRCL.svgDraw(1);
 
-							// Clear all smaces and newlines that can happen on response on some servers
+							// Clear all spaces and newlines that can happen on response on some servers
 							data = data.replace(/\s/g, "");
 
 			            	if( data == 'ok' ){

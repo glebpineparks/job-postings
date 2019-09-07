@@ -49,6 +49,8 @@ class JobSettings
         register_setting( 'jobs_options' , 'jobs_default_email' );
         register_setting( 'jobs_options' , 'jobs_max_filesize' );
 
+        register_setting( 'jobs_options' , 'jobs_dont_store_user_data' );
+
         register_setting( 'jobs_options' , 'jobs_recaptcha_type' );
         register_setting( 'jobs_options' , 'jobs_recaptcha_site_key' );
         register_setting( 'jobs_options' , 'jobs_recaptcha_secret_key' );

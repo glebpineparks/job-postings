@@ -6,6 +6,7 @@ abstract class JobEntry{
 		add_filter( 'manage_edit-job-entry_columns', array('JobEntry', 'job_entry_columns')  );
 		add_action( 'manage_posts_custom_column', array('JobEntry', 'job_entry_column_values') , 10, 2 );
 		add_action( 'admin_menu', array('JobEntry', 'remove_publish_box') );
+		add_filter(	'post_class', array('JobEntry', 'set_row_post_class'), 10, 3 );
 		add_action( 'before_delete_post', array('JobEntry', 'remove_uploaded_files') );
 	}
 
@@ -376,6 +377,23 @@ abstract class JobEntry{
 		}
 
 	}
+
+	public static function set_row_post_class($classes, $class, $post_id){
+		
+		if( is_admin() ){
+		  $screen = get_current_screen(); //verify which page we're on
+		  if ('job-entry' == $screen->post_type && 'edit' == $screen->base ) {
+
+			$entry_viewed = get_post_meta($post_id, 'job_entry_viewed', true);
+	
+			if( $entry_viewed == 'no' ){
+			  $classes[] = 'jobs-new-entry';
+			}
+		  }
+		}
+		
+		return $classes;
+	  }
 
 	public static function remove_uploaded_files( $post_id ){
 		// We check if the global post type isn't ours and just return

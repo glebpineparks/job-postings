@@ -663,9 +663,9 @@ class JobSingleView
                                         $out .= $icon . $job_valid_date;
                                     $out .= '</div>';
 
-                                    $date = date('c', strtotime($job_valid_date));
+                                    // $date = date('c', strtotime($job_valid_date));
 
-                                    self::$json_ld['validThrough'] = $date;
+                                    // self::$json_ld['validThrough'] = $date;
                                     //if($this->schema_type != 'json-ld') $out .= '<meta itemprop="validThrough" content="'.$date.'">';
                                 $out .= '</div>';
                             if( $meta_2 ) $out .= '</span>';
