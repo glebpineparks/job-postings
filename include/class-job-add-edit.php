@@ -1206,7 +1206,7 @@ class JobAddEdit
 		if( $datalists && $datalists_key ){
 			$table_name 	= $wpdb->prefix . "postmeta";
 			$out	= '';
-			$rows = $wpdb->get_results( "SELECT * FROM $table_name WHERE meta_key = '$key' AND meta_value != ''" );
+			$rows = $wpdb->get_results( "SELECT DISTINCT meta_value FROM $table_name WHERE meta_key = '$key' AND meta_value != ''" );
 			if( !empty($rows) ){
 				$out .= '<datalist id="datalist-'.$key.'">';
 					foreach ($rows as $key => $row) {
