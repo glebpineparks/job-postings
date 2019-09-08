@@ -283,7 +283,15 @@ class JobAddEdit
     			$placeholder_ar 	= isset($field['placeholder_ar']) ? $field['placeholder_ar'] : '';
     			$placeholder_cc 	= isset($field['placeholder_cc']) ? $field['placeholder_cc'] : '';
     			$placeholder_zip 	= isset($field['placeholder_zip']) ? $field['placeholder_zip'] : '';
-    			$placeholder_btn 	= isset($field['placeholder_btn']) ? $field['placeholder_btn'] : '';
+				$placeholder_btn 	= isset($field['placeholder_btn']) ? $field['placeholder_btn'] : '';
+				
+				$datalists 			= apply_filters('job-postings/datalists', true);
+				$datalists_key 		= apply_filters('job-postings/datalists/'.$key, true);
+				$datalists_fields 	= array('position_title', 'position_employment_type', 'position_industry');
+
+				if( ($datalists == false && in_array($key, $datalists_fields)) || $datalists_key == false ){
+					$placeholder = '';
+				}
 
     			$options 	= isset($field['options']) ? $field['options'] : array();
     			$teeny 		= isset($field['teeny']) ? $field['teeny'] : false;
@@ -1193,7 +1201,7 @@ class JobAddEdit
 		global $wpdb;
 		
 		$datalists = apply_filters('job-postings/datalists', true);
-		$datalists_key = apply_filters('job-postings/datalist/'.$key, true);
+		$datalists_key = apply_filters('job-postings/datalists/'.$key, true);
 
 		if( $datalists && $datalists_key ){
 			$table_name 	= $wpdb->prefix . "postmeta";

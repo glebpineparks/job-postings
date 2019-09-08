@@ -3,7 +3,7 @@ Contributors: blueglassinteractive, cfoellmann
 Tags: jobs, structured data, json-ld, microdata, postings, employment, career, google, vacancy
 Requires at least: 4.3
 Tested up to: 5.2.3
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Jobs for WordPress is a powerfull WordPress plugin that make it easy to add job 
 3. Use [job-postings] to print jobs listing
 
 == Changelog ==
+
+= 2.3.1 =
+* Added Hook to disable datalist's, use: add_filter('job-postings/datalists', '__return_false'); to disable all datalists, OR add_filter('job-postings/datalists/FIELD_KEY', '__return_false'); to disable datalist by key.
 
 = 2.3.0 =
 * Files now moved to secure location on the server after upload and accessible only from wp admin.
