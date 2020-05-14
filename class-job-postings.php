@@ -535,6 +535,7 @@ class Job_Postings extends Job_Postings_Helper{
 
 	public static function customStyles(){
 		if( defined("REST_REQUEST") && REST_REQUEST == true ) return;
+		if( in_array( 'Content-type: text/xml;charset=UTF-8', headers_list() ) ) return;
 
 		$jobs_button_bg_color 		= get_option( 'jobs_button_bg_color' );
 		$jobs_button_bg_color_hover = get_option( 'jobs_button_bg_color_hover' );
