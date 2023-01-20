@@ -1,0 +1,1184 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Project-Id-Version: Jobs for Wordpress\n"
+"POT-Creation-Date: 2018-10-11 22:59+0300\n"
+"PO-Revision-Date: 2018-10-14 22:22+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: job-postings.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Gleb Makarov\n"
+"Language: ru\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/settings.php:127
+msgid "Settings updated"
+msgstr "Настройки обновлены"
+
+#: admin/settings.php:133 admin/settings.php:154
+#: include/class-job-posting-helper.php:282
+msgid "Settings"
+msgstr "Настройки"
+
+#: admin/settings.php:135 admin/settings.php:690
+msgid "Style settings"
+msgstr "Настройки стиля"
+
+#: admin/settings.php:136 admin/settings.php:1025
+msgid "Global Options"
+msgstr "Глобальные опции"
+
+#: admin/settings.php:137
+msgid "Help"
+msgstr "Помощь"
+
+#: admin/settings.php:163 class-job-postings.php:580
+msgctxt "job-settings"
+msgid "Hiring organization"
+msgstr "Организация найма"
+
+#: admin/settings.php:171
+msgctxt "job-settings"
+msgid "Company name"
+msgstr "Название компании"
+
+#: admin/settings.php:177
+msgctxt "job-settings"
+msgid "Currency symbol"
+msgstr "Символ валюты"
+
+#: admin/settings.php:191
+msgctxt "job-settings"
+msgid "Currency symbol position"
+msgstr "Позиция символа валюты"
+
+#: admin/settings.php:202
+msgctxt "job-settings"
+msgid "Before"
+msgstr "До"
+
+#: admin/settings.php:203
+msgctxt "job-settings"
+msgid "After"
+msgstr "После"
+
+#: admin/settings.php:210
+msgctxt "job-settings"
+msgid "Preview CTA text"
+msgstr "Предпросмотр текста CTA"
+
+#: admin/settings.php:218 include/class-job-posting-helper.php:499
+msgctxt "job-postings"
+msgid "View"
+msgstr "Просмотр"
+
+#: admin/settings.php:225
+msgctxt "job-settings"
+msgid "Job archive page"
+msgstr "Страница списка/архива"
+
+#: admin/settings.php:235
+msgid "-- Select page --"
+msgstr "-- Выберите страницу --"
+
+#: admin/settings.php:261
+msgctxt "job-settings"
+msgid "Permalink slug"
+msgstr "Постоянная ссылка"
+
+#: admin/settings.php:269
+msgctxt "job-settings"
+msgid "Default slug: job"
+msgstr "По умолчанию: job"
+
+#: admin/settings.php:276
+msgctxt "job-settings"
+msgid "No offers message"
+msgstr "Нет предложений"
+
+#: admin/settings.php:284 include/class-job-posting-helper.php:478
+msgctxt "job-message"
+msgid "Currently no job offers available."
+msgstr "В настоящее время вакансий нет."
+
+#: admin/settings.php:291
+msgctxt "job-settings"
+msgid "Show \"Offer ended\" message when offer ends"
+msgstr "Показывать сообщение «Предложение закончилось», когда срок предложения заканчивается"
+
+#: admin/settings.php:306
+msgctxt "job-settings"
+msgid "\"Offer ended\" message"
+msgstr "Сообщение «Предложение закончилось»"
+
+#: admin/settings.php:315 class-job-postings.php:1823
+#: class-job-postings.php:1851
+#, php-format
+msgctxt "job-message"
+msgid "Offer ended on %s"
+msgstr "Предложение закончилось %s"
+
+#: admin/settings.php:319
+#, php-format
+msgctxt "job-message"
+msgid "Use %s where you would like to show offer ending date."
+msgstr "Используйте %s, где вы хотите показать дату окончания предложения."
+
+#: admin/settings.php:330 admin/settings.php:676 admin/settings.php:1011
+#: admin/settings.php:1118
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+#: admin/settings.php:350
+msgid "Apply modal options"
+msgstr "Опций модального окна"
+
+#: admin/settings.php:379
+msgid "Field type"
+msgstr "Тип поля"
+
+#: admin/settings.php:382
+msgid "Label"
+msgstr "Метка"
+
+#: admin/settings.php:385
+msgid "Placeholder"
+msgstr "Заполнитель"
+
+#: admin/settings.php:388
+msgid "Required field"
+msgstr "Обязательное поле"
+
+#: admin/settings.php:440 admin/settings.php:606
+msgid "Required"
+msgstr "Обязательно"
+
+#: admin/settings.php:448 admin/settings.php:475 admin/settings.php:502
+#: admin/settings.php:538 admin/settings.php:615
+msgid "Options"
+msgstr "Опции"
+
+#: admin/settings.php:449 admin/settings.php:476 admin/settings.php:616
+#: admin/settings.php:643
+msgid "One option per line."
+msgstr "Один вариант в каждой строке."
+
+#: admin/settings.php:461
+msgid "Preselected checkboxes indexes, eg.: 1,3,5"
+msgstr "Предварительно выбранные флажки, например: 1,3,5"
+
+#: admin/settings.php:488
+msgid "Preselected radio index, eg.: 3"
+msgstr "Предпочитаемый переключатель, например: 3"
+
+#: admin/settings.php:509 admin/settings.php:545
+msgid "Message"
+msgstr "Сообщение"
+
+#: admin/settings.php:522 admin/settings.php:558
+msgid "Accepted file extensions. (Example: .jpg, .gif, .png)"
+msgstr "Разрешённые расширения файлов. (Пример: .jpg, .gif, .png)"
+
+#: admin/settings.php:626 admin/settings.php:653
+msgid "Preselected"
+msgstr "Предварительно выбранная"
+
+#: admin/settings.php:627 admin/settings.php:654
+msgid "Preselected option"
+msgstr "Предварительно выбранная опция"
+
+#: admin/settings.php:642
+msgid "Radio"
+msgstr "Переключатель"
+
+#: admin/settings.php:693 admin/settings.php:1028
+msgid "These settings are global and independent to languages."
+msgstr "Эти настройки являются глобальными и независимыми от языков."
+
+#: admin/settings.php:700
+msgctxt "job-settings"
+msgid "Sidebar position"
+msgstr "Положение боковой панели"
+
+#: admin/settings.php:731
+msgctxt "job-settings"
+msgid "Button background"
+msgstr "Фон кнопки"
+
+#: admin/settings.php:748
+msgctxt "job-settings"
+msgid "Button background <b>:hover</b>"
+msgstr "Фон кнопки <b>:hove</b>"
+
+#: admin/settings.php:765
+msgctxt "job-settings"
+msgid "Button text color"
+msgstr "Цвет текста кнопки"
+
+#: admin/settings.php:782
+msgctxt "job-settings"
+msgid "Heading text color"
+msgstr "Цвет текста заголовка"
+
+#: admin/settings.php:799
+msgctxt "job-settings"
+msgid "Subheading text color"
+msgstr "Цвет текста подзаголовков"
+
+#: admin/settings.php:816
+msgctxt "job-settings"
+msgid "Box background"
+msgstr "Фон коробки"
+
+#: admin/settings.php:833
+msgctxt "job-settings"
+msgid "Box border"
+msgstr "Граница коробки"
+
+#: admin/settings.php:850
+msgctxt "job-settings"
+msgid "Content heading color"
+msgstr "Цвет заголовка"
+
+#: admin/settings.php:867
+msgctxt "job-settings"
+msgid "Content text color"
+msgstr "Цвет текста контента"
+
+#: admin/settings.php:885
+msgctxt "job-settings"
+msgid "Button border radius"
+msgstr "Радиус границы кнопки"
+
+#: admin/settings.php:906
+msgctxt "job-settings"
+msgid "Box border radius"
+msgstr "Радиус углов"
+
+#: admin/settings.php:928
+msgctxt "job-settings"
+msgid "Hide location in preview"
+msgstr "Скрыть местоположение в предварительном просмотре"
+
+#: admin/settings.php:944
+msgctxt "job-settings"
+msgid "Hide employment type in preview"
+msgstr "Скрыть тип занятости в предварительном просмотре"
+
+#: admin/settings.php:961
+msgctxt "job-settings"
+msgid "PREVIEW"
+msgstr "ПРЕДПРОСМОТР"
+
+#: admin/settings.php:962
+msgctxt "job-settings"
+msgid "Actual layout and some styling can look a bit different on the site, because of the theme used."
+msgstr "Фактическая компоновка и некоторые стили могут выглядеть немного по-другому на сайте, из-за используемой темы."
+
+#: admin/settings.php:992
+msgctxt "job-settings"
+msgid "Custom CSS"
+msgstr "Пользовательский CSS"
+
+#: admin/settings.php:1012
+msgid "Reset style settings"
+msgstr "Сбросить настройки стиля"
+
+#: admin/settings.php:1033
+msgctxt "job-settings"
+msgid "Company logo (for pdf)"
+msgstr "Логотип компании (для pdf)"
+
+#: admin/settings.php:1048 include/class-job-posting-helper.php:963
+msgid "Upload/Select file"
+msgstr "Загрузить / Выбрать файл"
+
+#: admin/settings.php:1055
+msgctxt "job-settings"
+msgid "Jobs per page"
+msgstr "Количество работа на странице"
+
+#: admin/settings.php:1070
+msgctxt "job-settings"
+msgid "Default email"
+msgstr "Электронная почта по умолчанию"
+
+#: admin/settings.php:1128
+msgctxt "job-settings"
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: admin/settings.php:1129
+msgctxt "job-settings"
+msgid "Place this shortcode on the page, where you want to show your job postings."
+msgstr "Поместите этот короткий код на страницу, где вы хотите показать свои вакансии."
+
+#: admin/settings.php:1131
+msgctxt "job-settings"
+msgid "Jobs listing:"
+msgstr "Список вакансий:"
+
+#: admin/settings.php:1136
+msgctxt "job-settings"
+msgid "Parameters:"
+msgstr "Параметры:"
+
+#: admin/settings.php:1147
+msgctxt "job-settings"
+msgid "Categories tree (For widget area. Not fully implemented!)"
+msgstr "Дерево категорий (для области виджета. Не полностью реализовано!)"
+
+#: admin/settings.php:1154
+msgctxt "job-settings"
+msgid "To show jobs list somewhere in your template, use function below:"
+msgstr "Чтобы показать список обьявления где-нибудь в вашем шаблоне, используйте следующую функцию:"
+
+#: admin/settings.php:1173
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree insettings\">I agree to share anonymous data</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-agree insettings\">Я согласен делиться анонимными данными</a>"
+
+#: admin/settings.php:1175
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel insettings\">Stop sharing</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-cancel insettings\">Прекратить обмен</a>"
+
+#: admin/settings.php:1179
+msgctxt "job-postings"
+msgid "What info we collect with analytics:"
+msgstr "Какую информацию мы собираем с помощью аналитики:"
+
+#: admin/settings.php:1195
+msgctxt "job-settings"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: admin/settings.php:1199
+msgctxt "job-settings"
+msgid "Where can I change the date format?"
+msgstr "Где я могу изменить формат даты?"
+
+#: admin/settings.php:1202
+msgctxt "job-settings"
+msgid "The date format of the field is taken from the WordPress settings page"
+msgstr "Формат даты берется со страницы настроек WordPress"
+
+#: admin/settings.php:1211
+msgctxt "job-settings"
+msgid "How can I change a field title?"
+msgstr "Как изменить заголовок?"
+
+#: admin/settings.php:1214
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens the field's settings, where you can input your custom title"
+msgstr "Каждое поле имеет значок «шестерня» в верхнем правом углу, он открывает настройки поля, где вы можете ввести свой собственный заголовок"
+
+#: admin/settings.php:1222
+msgctxt "job-settings"
+msgid "How can I hide/remove a title from appearing on the front-end?"
+msgstr "Как я могу скрыть / удалить заголовок из внешнего интерфейса?"
+
+#: admin/settings.php:1225
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens a field settings, where you can hide a title by selecting a option"
+msgstr "В каждом поле есть значок «шестерня» в верхнем правом углу, он открывает настройки поля, где вы можете скрыть заголовок, выбрав опцию"
+
+#: admin/settings.php:1233
+msgctxt "job-settings"
+msgid "I want to hide/remove some fields, how can I do this?"
+msgstr "Я хочу скрыть / удалить некоторые поля, как я могу это сделать?"
+
+#: admin/settings.php:1236
+msgctxt "job-settings"
+msgid "Every field has a \"trash can\" icon in the top right corner, by clicking it, the field is moved to the \"Inactive widgets\" section. You can also just drag and drop any field there. This will prevent it from appearing on the front-end."
+msgstr "Каждое поле имеет значок «корзина мусора» в верхнем правом углу, щелкнув его, поле перемещается в раздел «Неактивные виджеты». Вы также можете просто перетащить туда любое поле. Это предотвратит появление на интерфейсе."
+
+#: admin/settings.php:1237
+msgctxt "job-settings"
+msgid "If a field is empty, it will also not appear on the front-end."
+msgstr "Если поле пустое, оно также не будет отображаться в интерфейсе."
+
+#: admin/settings.php:1246
+msgctxt "job-settings"
+msgid "How can I edit the \"Thank you\" message?"
+msgstr "Как я могу изменить сообщение «Спасибо»?"
+
+#: admin/settings.php:1249
+msgctxt "job-settings"
+msgid "The notification message can be edited on the job edit page, under the \"Settings\" tab"
+msgstr "Сообщение уведомления может быть отредактировано на странице редактирования задания на вкладке «Настройки»"
+
+#: admin/settings.php:1257
+msgctxt "job-settings"
+msgid "How can I change the e-mail address of the person, who receives confirmation emails?"
+msgstr "Как я могу изменить адрес электронной почты человека, который получает письма с подтверждением?"
+
+#: admin/settings.php:1260
+msgctxt "job-settings"
+msgid "The confirmation e-mail address can be edited on the job edit page, under the \"Settings\" tab."
+msgstr "Подтверждающий адрес электронной почты можно редактировать на странице редактирования задания на вкладке «Настройки»."
+
+#: admin/settings.php:1261
+msgctxt "job-settings"
+msgid "By default, the recipient is the site admin."
+msgstr "По умолчанию получателем является администратор сайта."
+
+#: admin/settings.php:1269
+msgctxt "job-settings"
+msgid "Where are all the entries saved?"
+msgstr "Где хранятся все записи?"
+
+#: admin/settings.php:1272
+msgctxt "job-settings"
+msgid "All of the entries are saved in the \"Job entries\" subpage."
+msgstr "Все записи сохраняются в подстранице «Заявки»."
+
+#: admin/settings.php:1280
+msgctxt "job-settings"
+msgid "I have so much entries already, how can I navigate easier there?"
+msgstr "У меня так много записей, как я могу там легко перемещаться?"
+
+#: admin/settings.php:1283
+msgctxt "job-settings"
+msgid "You can filter the entries by position."
+msgstr "Вы можете отфильтровать записи по позиции."
+
+#: admin/settings.php:1286
+msgctxt "job-settings"
+msgid "You also can search entries by name, email or phone number."
+msgstr "Вы также можете искать записи по имени, электронной почте или номеру телефона."
+
+#: admin/settings.php:1294
+msgctxt "job-settings"
+msgid "How can I personalize the PDF?"
+msgstr "Как я могу персонализировать PDF-файл?"
+
+#: admin/settings.php:1297
+msgctxt "job-settings"
+msgid "You can add your logo in the \"Settings\" section under \"Global options\"."
+msgstr "Вы можете добавить свой логотип в раздел «Настройки» в разделе «Глобальные параметры»."
+
+#: admin/settings.php:1304
+msgctxt "job-settings"
+msgid "How can I add Structured Data to the fields?"
+msgstr "Как добавить структурированные данные в поля?"
+
+#: admin/settings.php:1307
+msgctxt "job-settings"
+msgid "You don't have to, we already took care of structured data and added it in the right place."
+msgstr "Вам не обязательно, мы уже позаботились о структурированных данных и добавили их в нужное место."
+
+#: admin/settings.php:1308
+msgctxt "job-settings"
+msgid "To test it, use this <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tool</a> and paste there a job url from your site there."
+msgstr "Чтобы проверить, используйте этот <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">инструмент</a> и вставьте туда URL-адрес обявления с вашего сайта."
+
+#: class-job-postings.php:364
+msgctxt "jobs-field"
+msgid "Position"
+msgstr "Позиция"
+
+#: class-job-postings.php:367 class-job-postings.php:376
+#: class-job-postings.php:400
+msgctxt "jobs-field"
+msgid "Start typing or double click to open suggestions"
+msgstr "Начните ввод или дважды щелкните, чтобы открыть предложения"
+
+#: class-job-postings.php:374
+msgctxt "jobs-field"
+msgid "Employment Type"
+msgstr "Тип занятости"
+
+#: class-job-postings.php:382
+msgctxt "jobs-field"
+msgid "Beginning of employment"
+msgstr "Начало работы"
+
+#: class-job-postings.php:384
+msgctxt "jobs-field"
+msgid "Input beginning of employment"
+msgstr "Введите дату начала работы"
+
+#: class-job-postings.php:390
+msgctxt "jobs-field"
+msgid "Duration of employment"
+msgstr "Продолжительность работы"
+
+#: class-job-postings.php:392
+msgctxt "jobs-field"
+msgid "Input duration of employment"
+msgstr "Введите продолжительность занятости"
+
+#: class-job-postings.php:398
+msgctxt "jobs-field"
+msgid "Industry"
+msgstr "Отрасль"
+
+#: class-job-postings.php:406
+msgctxt "jobs-field"
+msgid "Job Location"
+msgstr "Месторасположение"
+
+#: class-job-postings.php:408
+msgctxt "jobs-field"
+msgid "Street Address"
+msgstr "Адрес улицы"
+
+#: class-job-postings.php:409
+msgctxt "jobs-field"
+msgid "City"
+msgstr "Город"
+
+#: class-job-postings.php:410
+msgctxt "jobs-field"
+msgid "Address Locality"
+msgstr "Адресная область"
+
+#: class-job-postings.php:411
+msgctxt "jobs-field"
+msgid "Address Region"
+msgstr "Регион"
+
+#: class-job-postings.php:412
+msgctxt "jobs-field"
+msgid "Postal Code"
+msgstr "Почтовый индекс"
+
+#: class-job-postings.php:418
+msgctxt "jobs-field"
+msgid "Description"
+msgstr "Описание"
+
+#: class-job-postings.php:421
+msgctxt "jobs-field"
+msgid "Input position description"
+msgstr "Введите описание позиции"
+
+#: class-job-postings.php:427
+msgctxt "jobs-field"
+msgid "Responsibilities"
+msgstr "Обязанности"
+
+#: class-job-postings.php:430
+msgctxt "jobs-field"
+msgid "Input position responsibilities"
+msgstr "Введите обязанности позиции"
+
+#: class-job-postings.php:436
+msgctxt "jobs-field"
+msgid "Qualifications"
+msgstr "Квалификация"
+
+#: class-job-postings.php:439
+msgctxt "jobs-field"
+msgid "Input position qualifications"
+msgstr "Требования к исходной позиции"
+
+#: class-job-postings.php:445
+msgctxt "jobs-field"
+msgid "Job Benefits"
+msgstr "Преимущества работы"
+
+#: class-job-postings.php:448
+msgctxt "jobs-field"
+msgid "Input position benefits"
+msgstr "Введите преимущества позиции"
+
+#: class-job-postings.php:454
+msgctxt "jobs-field"
+msgid "Contacts"
+msgstr "Контакты"
+
+#: class-job-postings.php:457
+msgctxt "jobs-field"
+msgid "Input position contacts"
+msgstr "Введите контакты"
+
+#: class-job-postings.php:463
+msgctxt "jobs-field"
+msgid "Working Hours"
+msgstr "Рабочие часы"
+
+#: class-job-postings.php:465
+msgctxt "jobs-field"
+msgid "Input position working hours"
+msgstr "Рабочие часы"
+
+#: class-job-postings.php:472
+msgctxt "jobs-field"
+msgid "Base Salary"
+msgstr "Базовая зарплата"
+
+#: class-job-postings.php:474
+msgctxt "jobs-field"
+msgid "Input position base salary"
+msgstr "Базовая зарплата"
+
+#: class-job-postings.php:475
+msgctxt "jobs-field"
+msgid "Currency can be changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Валюту можно изменить в <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">настройках</a> ."
+
+#: class-job-postings.php:482 class-job-postings.php:1726
+#: include/class-pdf-export.php:390 include/class-pdf-export.php:532
+msgctxt "apply-now"
+msgid "Date posted"
+msgstr "Дата публикации"
+
+#: class-job-postings.php:484
+msgctxt "jobs-field"
+msgid "No settings for this field"
+msgstr "Для этого поля нет настроек"
+
+#: class-job-postings.php:490 class-job-postings.php:1794
+msgctxt "apply-now"
+msgid "PDF Export"
+msgstr "PDF Экспорт"
+
+#: class-job-postings.php:492 class-job-postings.php:1802
+msgctxt "apply-now"
+msgid "Export as PDF"
+msgstr "Экспорт в PDF"
+
+#: class-job-postings.php:498 class-job-postings.php:1832
+msgctxt "apply-now"
+msgid "Apply now"
+msgstr "Применить сейчас"
+
+#: class-job-postings.php:500
+msgctxt "jobs-field"
+msgid "Button that open modal window"
+msgstr "Кнопка, открывающая модальное окно"
+
+#: class-job-postings.php:501
+msgctxt "jobs-field"
+msgid "If you like to change button text, just edit it below."
+msgstr "Если вы хотите изменить текст кнопки, просто отредактируйте его ниже."
+
+#: class-job-postings.php:512
+msgctxt "jobs-field"
+msgid "Education"
+msgstr "Образование"
+
+#: class-job-postings.php:520
+msgctxt "jobs-field"
+msgid "Experience"
+msgstr "Опыт"
+
+#: class-job-postings.php:528
+msgctxt "jobs-field"
+msgid "Skills"
+msgstr "Навыки"
+
+#: class-job-postings.php:537
+msgctxt "jobs-field"
+msgid "Button"
+msgstr "Кнопка"
+
+#: class-job-postings.php:544
+msgctxt "jobs-field"
+msgid "Attachment"
+msgstr "Вложение"
+
+#: class-job-postings.php:546
+msgctxt "jobs-field"
+msgid "File URL"
+msgstr "Ссылка на файл"
+
+#: class-job-postings.php:547
+msgctxt "jobs-field"
+msgid "Button name"
+msgstr "Название кнопки"
+
+#: class-job-postings.php:554
+msgctxt "jobs-field"
+msgid "Custom text 1"
+msgstr "Пользовательский текст 1"
+
+#: class-job-postings.php:563
+msgctxt "jobs-field"
+msgid "Custom text 2"
+msgstr "Пользовательский текст 2"
+
+#: class-job-postings.php:572
+msgctxt "jobs-field"
+msgid "Custom text 3"
+msgstr "Пользовательский текст 3"
+
+#: class-job-postings.php:587 class-job-postings.php:1765
+msgctxt "jobs-field"
+msgid "Valid through"
+msgstr "Срок действия истекает"
+
+#: class-job-postings.php:597
+msgctxt "apply-now"
+msgid "Inline \"Apply now\" form"
+msgstr "Встроенная форма «Подать заявку»"
+
+#: class-job-postings.php:598
+msgctxt "jobs-field"
+msgid "For editing apply form, go to plugin settings."
+msgstr "Для редактирования формы, перейдите к настройкам плагина."
+
+#: class-job-postings.php:835
+msgid "Position details"
+msgstr "Детали позиции"
+
+#: class-job-postings.php:844
+msgid "Inactive widgets"
+msgstr "Неактивные виджеты"
+
+#: class-job-postings.php:853
+msgid "Entry details"
+msgstr "Сведения о заявке"
+
+#: class-job-postings.php:888
+msgctxt "job-meta-box"
+msgid "Position details"
+msgstr "Детали позиции"
+
+#: class-job-postings.php:889
+msgctxt "job-meta-box"
+msgid "Settings"
+msgstr "Настройки"
+
+#: class-job-postings.php:1955
+msgctxt "jobs-modal"
+msgid "Apply now"
+msgstr "Применить сейчас"
+
+#: class-job-postings.php:1958
+msgctxt "jobs-modal"
+msgid "Position: "
+msgstr "Позиция: "
+
+#: class-job-postings.php:2038
+msgctxt "jobs-modal"
+msgid "Required fields"
+msgstr "Обязательные поля"
+
+#: class-job-postings.php:2052
+msgctxt "jobs-modal"
+msgid "Name"
+msgstr "Имя"
+
+#: class-job-postings.php:2053
+msgctxt "jobs-modal"
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: class-job-postings.php:2062
+msgctxt "jobs-modal"
+msgid "E-mail"
+msgstr "E-mail"
+
+#: class-job-postings.php:2063
+msgctxt "jobs-modal"
+msgid "Your e-mail address"
+msgstr "Ваш адрес электронной почты"
+
+#: class-job-postings.php:2071
+msgctxt "jobs-modal"
+msgid "Phone"
+msgstr "Телефон"
+
+#: class-job-postings.php:2072
+msgctxt "jobs-modal"
+msgid "Your phone number"
+msgstr "Ваш номер телефона"
+
+#: class-job-postings.php:2085
+msgctxt "jobs-modal"
+msgid "Letter"
+msgstr "Письмо"
+
+#: class-job-postings.php:2086
+msgctxt "jobs-modal"
+msgid "Your letter"
+msgstr "Ваше письмо"
+
+#: class-job-postings.php:2089 class-job-postings.php:2102
+msgctxt "jobs-modal"
+msgid "Add"
+msgstr "Добавить"
+
+#: class-job-postings.php:2098
+msgctxt "jobs-modal"
+msgid "CV & Documents"
+msgstr "CV и документы"
+
+#: class-job-postings.php:2099
+msgctxt "jobs-modal"
+msgid "Your CV & Documents"
+msgstr "Ваше резюме и документы"
+
+#: class-job-postings.php:2115
+msgctxt "jobs-modal"
+msgid "Send Application"
+msgstr "Отправить предложение"
+
+#: class-job-postings.php:2151
+msgctxt "jobs-modal"
+msgid "Add file"
+msgstr "Добавить файл"
+
+#: class-job-postings.php:2280
+msgctxt "jobs-modal"
+msgid "Select file"
+msgstr "Выбрать файл"
+
+#: class-job-postings.php:2905
+msgctxt "job-modal-field"
+msgid "Name"
+msgstr "Имя"
+
+#: class-job-postings.php:2906
+msgctxt "job-modal-field"
+msgid "E-mail"
+msgstr "E-mail"
+
+#: class-job-postings.php:2907
+msgctxt "job-modal-field"
+msgid "Phone"
+msgstr "Телефон"
+
+#: class-job-postings.php:2908
+msgctxt "job-modal-field"
+msgid "Text"
+msgstr "Текст"
+
+#: class-job-postings.php:2909
+msgctxt "job-modal-field"
+msgid "Textarea"
+msgstr "Текстовая область"
+
+#: class-job-postings.php:2910
+msgctxt "job-modal-field"
+msgid "File upload"
+msgstr "Загрузить файл"
+
+#: class-job-postings.php:2911
+msgctxt "job-modal-field"
+msgid "Multi file upload"
+msgstr "Загрузка нескольких файлов"
+
+#: class-job-postings.php:2912
+msgctxt "job-modal-field"
+msgid "Checkbox"
+msgstr "Чекбокс"
+
+#: class-job-postings.php:2913
+msgctxt "job-modal-field"
+msgid "Radio"
+msgstr "Радио"
+
+#: include/class-bg-analytics.php:70
+msgid "Job for WordPress"
+msgstr "Работа для WordPress"
+
+#: include/class-bg-analytics.php:72
+msgid "We would like to collect some anonymous data about usage of the plugin. This will help us to improve the plugin in future releases. "
+msgstr "Мы хотели бы получить некоторые анонимные данные об использовании плагина. Это поможет нам улучшить плагин в будущих выпусках. "
+
+#: include/class-bg-analytics.php:76
+#, php-format
+msgid "<a href=\"%s\">What info will we collect?</a>"
+msgstr "<a href=\"%s\">Какую информацию мы собираем?</a>"
+
+#: include/class-bg-analytics.php:79
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree\">I agree to share anonymous data</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-agree\">Я согласен делиться анонимными данными</a>"
+
+#: include/class-bg-analytics.php:80
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel\">No, next time</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-cancel\">Нет, в следующий раз</a>"
+
+#: include/class-job-posting-helper.php:80
+#: include/class-job-posting-helper.php:161
+msgid "Please input template name."
+msgstr "Введите имя шаблона."
+
+#: include/class-job-posting-helper.php:223
+msgid "Filter by position"
+msgstr "Фильтровать по позиции"
+
+#: include/class-job-posting-helper.php:282
+msgid "Jobs for Wordpress - Settings"
+msgstr "Вакансии для Wordpress - Настройки"
+
+#: include/class-job-posting-helper.php:556
+msgid "Jobs"
+msgstr "Вакансии"
+
+#: include/class-job-posting-helper.php:557
+msgid "Job"
+msgstr "Работа"
+
+#: include/class-job-posting-helper.php:558
+#: include/class-job-posting-helper.php:559
+msgid "Add new position"
+msgstr "Добавить новую должность"
+
+#: include/class-job-posting-helper.php:560
+msgid "New job position"
+msgstr "Новая должность"
+
+#: include/class-job-posting-helper.php:561
+msgid "Update job"
+msgstr "Обновить"
+
+#: include/class-job-posting-helper.php:562
+msgid "View job"
+msgstr "Смотреть работу"
+
+#: include/class-job-posting-helper.php:563
+msgid "All positions"
+msgstr "Все позиции"
+
+#: include/class-job-posting-helper.php:568
+msgctxt "jobs_slug"
+msgid "job"
+msgstr "job"
+
+#: include/class-job-posting-helper.php:598
+msgctxt "jobs_categories"
+msgid "Categories"
+msgstr "Категории"
+
+#: include/class-job-posting-helper.php:599
+msgctxt "jobs_category"
+msgid "Category"
+msgstr "Категория"
+
+#: include/class-job-posting-helper.php:609
+#: include/class-job-posting-helper.php:610
+msgid "Job entry"
+msgstr "Заявка на позицию"
+
+#: include/class-job-posting-helper.php:611
+#: include/class-job-posting-helper.php:612
+msgid "Add new entry"
+msgstr "Добавить новую запись"
+
+#: include/class-job-posting-helper.php:613
+msgid "New job entry"
+msgstr "Новая запись о работе"
+
+#: include/class-job-posting-helper.php:614
+msgid "Update entry"
+msgstr "Обновить запись"
+
+#: include/class-job-posting-helper.php:615
+msgid "Job entries"
+msgstr "Заявки на позицию"
+
+#: include/class-job-posting-helper.php:620
+msgctxt "jobs_entry_slug"
+msgid "job-entry"
+msgstr "job-entry"
+
+#: include/class-job-posting-helper.php:833
+msgctxt "job-settings"
+msgid "Logo can be added/changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Логотип можно добавить / изменить в <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">настройках</a> ."
+
+#: include/class-job-posting-helper.php:1039
+msgctxt "jobs-field"
+msgid "Starting"
+msgstr "Начало"
+
+#: include/class-job-posting-helper.php:1047
+msgctxt "jobs-field"
+msgid "Up to"
+msgstr "до"
+
+#: include/class-job-posting-helper.php:1091
+msgctxt "jobs-field"
+msgid "Custom title"
+msgstr "Пользовательский заголовок"
+
+#: include/class-job-posting-helper.php:1104
+msgctxt "jobs-field"
+msgid "Hide title"
+msgstr "Скрыть заголовок"
+
+#: include/class-job-posting-helper.php:1118
+msgctxt "jobs-field"
+msgid "URL"
+msgstr "URL"
+
+#: include/class-job-posting-helper.php:1129
+msgctxt "jobs-field"
+msgid "Link target"
+msgstr "Целевая ссылка"
+
+#: include/class-job-posting-helper.php:1132
+msgid "New tab/window"
+msgstr "В новой вкладке/окне"
+
+#: include/class-job-posting-helper.php:1133
+msgid "Same tab/window"
+msgstr "Та же вкладка / окно"
+
+#: include/class-job-posting-helper.php:1143
+msgctxt "jobs-field"
+msgid "Style"
+msgstr "Стиль"
+
+#: include/class-job-posting-helper.php:1146
+msgid "Primary"
+msgstr "Основной"
+
+#: include/class-job-posting-helper.php:1147
+msgid "Secondary"
+msgstr "Вторичный"
+
+#: include/class-job-posting-helper.php:1357
+msgctxt "job-entry-name"
+msgid "Name"
+msgstr "Имя"
+
+#: include/class-job-posting-helper.php:1369
+msgctxt "job-entry-name"
+msgid "E-mail"
+msgstr "E-mail"
+
+#: include/class-job-posting-helper.php:1381
+msgctxt "job-entry-name"
+msgid "Phone"
+msgstr "Телефон"
+
+#: include/class-job-posting-helper.php:1393
+msgctxt "job-entry-name"
+msgid "Letter"
+msgstr "Письмо"
+
+#: include/class-job-posting-helper.php:1419
+msgctxt "job-entry-name"
+msgid "Attachment"
+msgstr "Вложение"
+
+#: include/class-job-posting-helper.php:1456
+msgctxt "job-entry-email"
+msgid "New entry for "
+msgstr "Новая заявка для "
+
+#: include/class-job-posting-helper.php:1457
+msgctxt "job-entry-email"
+msgid "Position: "
+msgstr "Позиция: "
+
+#: include/class-job-posting-helper.php:1598
+msgctxt "job-entry-email"
+msgid "Job entry: "
+msgstr "Заявка: "
+
+#: include/models/job-settings.php:9
+msgctxt "apply-now-confirmation"
+msgid "<p style=\"text-align: center;\">Thank you for submitting your application. We will contact you shortly!</p>"
+msgstr "<p style=\"text-align: center;\"> Спасибо, что подали заявку. Мы скоро с Вами свяжемся! </p>"
+
+#: include/models/job-settings.php:18
+msgctxt "job-settings"
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: include/models/job-settings.php:22 include/models/job-settings.php:28
+msgctxt "job-settings"
+msgid "Custom excerpt"
+msgstr "Пользовательская выдержка"
+
+#: include/models/job-settings.php:33
+msgctxt "job-settings"
+msgid "Notification"
+msgstr "Уведомление"
+
+#: include/models/job-settings.php:37
+msgctxt "job-settings"
+msgid "Notification message"
+msgstr "Сообщение уведомления"
+
+#: include/models/job-settings.php:51
+msgctxt "job-settings"
+msgid "Confirmation"
+msgstr "Подтверждение"
+
+#: include/models/job-settings.php:55
+msgctxt "job-settings"
+msgid "Who receives confirmation?"
+msgstr "Кто получает подтверждение?"
+
+#: include/models/job-settings.php:62
+msgctxt "job-settings"
+msgid "E-mail address"
+msgstr "Адрес электронной почты"
+
+#: templates/include/job-categories.php:29
+msgctxt "job-categories"
+msgid "All"
+msgstr "Все"
+
+#. Plugin Name of the plugin/theme
+msgid "Jobs for Wordpress"
+msgstr "Вакансии для Wordpress"
+
+#. Description of the plugin/theme
+msgid "Wordpress plugin for easily adding job postings to your companys website in a structured way."
+msgstr "Wordpress плагин для легкого добавления публикации вакансий на ваш сайт компании структурированным способом."
+
+#. Author of the plugin/theme
+msgid "BlueGlass"
+msgstr "BlueGlass"
+
+#. Author URI of the plugin/theme
+msgid "http://blueglass.ee/en/"
+msgstr "http://blueglass.ee/ru/"
+
+msgid "Apply Form"
+msgstr "Форма заявки"
+
+msgid "Apply Form fields"
+msgstr "Поля форма заявки"
+
+msgid "Max allowed file size"
+msgstr "Допустимый размер файла"
+
+msgid "For example: <b>12</b> or <b>0.5</b>."
+msgstr "Например: <b>12</b> или <b>0.5</b>."
+
+msgid "File size exceeded message"
+msgstr "Сообщение при превышенном размере файла"
+
+msgid "Use %1$s where you would like to show allowed file size. Use %2$s where you would like to show file name.<br>You can update allowed file size in \"Global options\"."
+msgstr "Используйте %1$s, где вы хотели бы показать допустимый размер файла. Используйте %2$s, где вы хотели бы показать имя файла.<br>Вы можете изменить разрешенный размер фаила в «Глобальных настройках»."
+
+msgid "File %2$s exceeds the allowed file size of %1$s MB."
+msgstr "Загруженный файл %2$s превышает максимально допустимый размер на сайте: %1$s МБ."
+
+msgid "Page where you list jobs"
+msgstr "Страница вакансий"
+
+msgid "Used for propper linking of category and other functions."
+msgstr "Используется для правильной связи категорий и других функции."
+
+msgctxt "job-settings"
+msgid "Filters layout"
+msgstr "Макеты фильтров"
+
+msgid "Filters"
+msgstr "Фильтры"
+
+msgid "This is the filters that you see when use show_filters=\"true\" on [job-postings] shortcode"
+msgstr "Это фильтры, которые вы видите при использовании show_filters = \"true\" в коротком коде [job-postings]"
+
+msgid "Jobs for Wordpress - Help"
+msgstr "Вакансии для Wordpress - Справка"
+
+msgid "Vacancy Search"
+msgstr "Поиск вакансий"

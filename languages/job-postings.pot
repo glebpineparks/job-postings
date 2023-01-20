@@ -1,0 +1,1416 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Jobs for Wordpress\n"
+"POT-Creation-Date: 2019-09-02 14:31+0200\n"
+"PO-Revision-Date: 2018-10-11 22:57+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: job-postings.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/help.php:25 admin/settings.php:147
+msgid "Settings updated"
+msgstr ""
+
+#: admin/help.php:35
+msgctxt "job-settings"
+msgid "Shortcodes"
+msgstr ""
+
+#: admin/help.php:36
+msgctxt "job-settings"
+msgid "Place this shortcode on the page, where you want to show your job postings or ui elements."
+msgstr ""
+
+#: admin/help.php:38
+msgctxt "job-settings"
+msgid "Jobs listing:"
+msgstr ""
+
+#: admin/help.php:43
+msgctxt "job-settings"
+msgid "Parameters:"
+msgstr ""
+
+#: admin/help.php:73
+msgctxt "job-settings"
+msgid "Jobs single:"
+msgstr ""
+
+#: admin/help.php:83
+msgctxt "job-settings"
+msgid "Categories"
+msgstr ""
+
+#: admin/help.php:89
+msgctxt "job-settings"
+msgid "Categories tree"
+msgstr ""
+
+#: admin/help.php:99
+msgctxt "job-settings"
+msgid "Search"
+msgstr ""
+
+#: admin/help.php:107
+msgctxt "job-settings"
+msgid "To show jobs list somewhere in your template, use function below:"
+msgstr ""
+
+#: admin/help.php:126
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree insettings\">I agree to share anonymous data</a>"
+msgstr ""
+
+#: admin/help.php:128
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel insettings\">Stop sharing</a>"
+msgstr ""
+
+#: admin/help.php:132
+msgctxt "job-postings"
+msgid "What info we collect with analytics:"
+msgstr ""
+
+#: admin/help.php:148
+msgctxt "job-settings"
+msgid "FAQ"
+msgstr ""
+
+#: admin/help.php:152
+msgctxt "job-settings"
+msgid "Where can I change the date format?"
+msgstr ""
+
+#: admin/help.php:155
+msgctxt "job-settings"
+msgid "The date format of the field is taken from the WordPress settings page"
+msgstr ""
+
+#: admin/help.php:164
+msgctxt "job-settings"
+msgid "How can I change a field title?"
+msgstr ""
+
+#: admin/help.php:167
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens the field's settings, where you can input your custom title"
+msgstr ""
+
+#: admin/help.php:175
+msgctxt "job-settings"
+msgid "How can I hide/remove a title from appearing on the front-end?"
+msgstr ""
+
+#: admin/help.php:178
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens a field settings, where you can hide a title by selecting a option"
+msgstr ""
+
+#: admin/help.php:186
+msgctxt "job-settings"
+msgid "I want to hide/remove some fields, how can I do this?"
+msgstr ""
+
+#: admin/help.php:189
+msgctxt "job-settings"
+msgid ""
+"Every field has a \"trash can\" icon in the top right corner, by clicking it, the field is moved to the \"Inactive widgets\" section. You can also just drag and drop "
+"any field there. This will prevent it from appearing on the front-end."
+msgstr ""
+
+#: admin/help.php:190
+msgctxt "job-settings"
+msgid "If a field is empty, it will also not appear on the front-end."
+msgstr ""
+
+#: admin/help.php:199
+msgctxt "job-settings"
+msgid "How can I edit the \"Thank you\" message?"
+msgstr ""
+
+#: admin/help.php:202
+msgctxt "job-settings"
+msgid "The notification message can be edited on the job edit page, under the \"Settings\" tab"
+msgstr ""
+
+#: admin/help.php:210
+msgctxt "job-settings"
+msgid "How can I change the e-mail address of the person, who receives confirmation emails?"
+msgstr ""
+
+#: admin/help.php:213
+msgctxt "job-settings"
+msgid "The confirmation e-mail address can be edited on the job edit page, under the \"Settings\" tab."
+msgstr ""
+
+#: admin/help.php:214
+msgctxt "job-settings"
+msgid "By default, the recipient is the site admin."
+msgstr ""
+
+#: admin/help.php:222
+msgctxt "job-settings"
+msgid "Where are all the entries saved?"
+msgstr ""
+
+#: admin/help.php:225
+msgctxt "job-settings"
+msgid "All of the entries are saved in the \"Job entries\" subpage."
+msgstr ""
+
+#: admin/help.php:233
+msgctxt "job-settings"
+msgid "I have so much entries already, how can I navigate easier there?"
+msgstr ""
+
+#: admin/help.php:236
+msgctxt "job-settings"
+msgid "You can filter the entries by position."
+msgstr ""
+
+#: admin/help.php:239
+msgctxt "job-settings"
+msgid "You also can search entries by name, email or phone number."
+msgstr ""
+
+#: admin/help.php:247
+msgctxt "job-settings"
+msgid "How can I personalize the PDF?"
+msgstr ""
+
+#: admin/help.php:250
+msgctxt "job-settings"
+msgid "You can add your logo in the \"Settings\" section under \"Global options\"."
+msgstr ""
+
+#: admin/help.php:257
+msgctxt "job-settings"
+msgid "How can I add Structured Data to the fields?"
+msgstr ""
+
+#: admin/help.php:260
+msgctxt "job-settings"
+msgid "You don't have to, we already took care of structured data and added it in the right place."
+msgstr ""
+
+#: admin/help.php:261
+msgctxt "job-settings"
+msgid ""
+"To test it, use this <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tool</a> and paste there a job url from your site there."
+msgstr ""
+
+#: admin/settings.php:131 admin/settings.php:181 include/class-job-add-edit.php:334 include/class-job-settings.php:14
+msgid "Settings"
+msgstr ""
+
+#: admin/settings.php:132
+msgid "Apply Form"
+msgstr ""
+
+#: admin/settings.php:133
+msgid "Styles"
+msgstr ""
+
+#: admin/settings.php:134
+msgid "Global Options"
+msgstr ""
+
+#: admin/settings.php:135 admin/tabs/fields.php:27
+msgid "Default fields"
+msgstr ""
+
+#: admin/settings.php:190 class-job-postings.php:111
+msgctxt "job-settings"
+msgid "Hiring organization"
+msgstr ""
+
+#: admin/settings.php:198
+msgctxt "job-settings"
+msgid "Company name"
+msgstr ""
+
+#: admin/settings.php:204
+msgctxt "job-settings"
+msgid "Currency symbol"
+msgstr ""
+
+#: admin/settings.php:218
+msgctxt "job-settings"
+msgid "Currency symbol position"
+msgstr ""
+
+#: admin/settings.php:229
+msgctxt "job-settings"
+msgid "Before"
+msgstr ""
+
+#: admin/settings.php:230
+msgctxt "job-settings"
+msgid "After"
+msgstr ""
+
+#: admin/settings.php:237
+msgctxt "job-settings"
+msgid "Preview CTA text"
+msgstr ""
+
+#: admin/settings.php:245 include/shortcodes/class-job-list.php:203
+msgctxt "job-postings"
+msgid "View"
+msgstr ""
+
+#: admin/settings.php:252
+msgctxt "job-settings"
+msgid "Page where you list jobs"
+msgstr ""
+
+#: admin/settings.php:262
+msgid "-- Select page --"
+msgstr ""
+
+#: admin/settings.php:283
+msgid "Used for propper linking of category and other functions."
+msgstr ""
+
+#: admin/settings.php:289
+msgctxt "job-settings"
+msgid "Permalink slug"
+msgstr ""
+
+#: admin/settings.php:297
+msgctxt "job-settings"
+msgid "Default slug: job"
+msgstr ""
+
+#: admin/settings.php:304
+msgctxt "job-settings"
+msgid "No offers message"
+msgstr ""
+
+#: admin/settings.php:312 include/shortcodes/class-job-list.php:182
+msgctxt "job-message"
+msgid "Currently no job offers available."
+msgstr ""
+
+#: admin/settings.php:319
+msgctxt "job-settings"
+msgid "Show \"Offer ended\" message when offer ends"
+msgstr ""
+
+#: admin/settings.php:334
+msgctxt "job-settings"
+msgid "\"Offer ended\" message"
+msgstr ""
+
+#: admin/settings.php:343 include/class-job-single-view.php:711 include/class-job-single-view.php:738
+#, php-format
+msgctxt "job-message"
+msgid "Offer ended on %s"
+msgstr ""
+
+#: admin/settings.php:347
+#, php-format
+msgctxt "job-message"
+msgid "Use %s where you would like to show offer ending date."
+msgstr ""
+
+#: admin/settings.php:355
+msgid "File size exceeded message"
+msgstr ""
+
+#: admin/settings.php:364 include/class-job-application-submit.php:111 include/class-job-dependencies.php:110
+#, php-format
+msgid "File %2$s exceeds the allowed file size of %1$s MB."
+msgstr ""
+
+#: admin/settings.php:368
+#, php-format
+msgid ""
+"Use %1$s where you would like to show allowed file size. Use %2$s where you would like to show file name.<br>You can update allowed file size in \"Global options\"."
+msgstr ""
+
+#: admin/settings.php:378 admin/settings.php:786 admin/settings.php:1169 admin/settings.php:1337
+msgid "Save settings"
+msgstr ""
+
+#: admin/settings.php:403
+msgid "Apply Form fields"
+msgstr ""
+
+#: admin/settings.php:435
+msgid "Field type"
+msgstr ""
+
+#: admin/settings.php:438 admin/settings.php:481 admin/settings.php:675
+msgid "Label"
+msgstr ""
+
+#: admin/settings.php:441 admin/settings.php:490 admin/settings.php:683
+msgid "Placeholder"
+msgstr ""
+
+#: admin/settings.php:444
+msgid "Required field"
+msgstr ""
+
+#: admin/settings.php:496 admin/settings.php:689
+msgid "Required"
+msgstr ""
+
+#: admin/settings.php:504 admin/settings.php:512 admin/settings.php:531 admin/settings.php:539 admin/settings.php:558 admin/settings.php:566 admin/settings.php:585
+#: admin/settings.php:621 admin/settings.php:698 admin/settings.php:703 admin/settings.php:730 admin/settings.php:752 admin/settings.php:759
+msgid "Options"
+msgstr ""
+
+#: admin/settings.php:505 admin/settings.php:532 admin/settings.php:559 admin/settings.php:699 admin/settings.php:726 admin/settings.php:753
+msgid "One option per line."
+msgstr ""
+
+#: admin/settings.php:517
+msgid "Preselected checkboxes indexes, eg.: 1,3,5"
+msgstr ""
+
+#: admin/settings.php:544
+msgid "Preselected radio index, eg.: 3"
+msgstr ""
+
+#: admin/settings.php:571 admin/settings.php:763
+msgid "Preselected index, eg.: 3"
+msgstr ""
+
+#: admin/settings.php:592 admin/settings.php:628
+msgid "Message"
+msgstr ""
+
+#: admin/settings.php:605 admin/settings.php:641
+msgid "Accepted file extensions. (Example: .jpg, .gif, .png)"
+msgstr ""
+
+#: admin/settings.php:709 admin/settings.php:713 admin/settings.php:736 admin/settings.php:740
+msgid "Preselected"
+msgstr ""
+
+#: admin/settings.php:710 admin/settings.php:737
+msgid "Preselected option"
+msgstr ""
+
+#: admin/settings.php:725
+msgid "Radio"
+msgstr ""
+
+#: admin/settings.php:800
+msgid "Style settings"
+msgstr ""
+
+#: admin/settings.php:803 admin/settings.php:1186
+msgid "These settings are global and independent to languages."
+msgstr ""
+
+#: admin/settings.php:810
+msgctxt "job-settings"
+msgid "Sidebar position"
+msgstr ""
+
+#: admin/settings.php:841
+msgctxt "job-settings"
+msgid "Button"
+msgstr ""
+
+#: admin/settings.php:858
+msgctxt "job-settings"
+msgid "Button <b>:hover</b>"
+msgstr ""
+
+#: admin/settings.php:875
+msgctxt "job-settings"
+msgid "Button text color"
+msgstr ""
+
+#: admin/settings.php:892
+msgctxt "job-settings"
+msgid "Heading text color"
+msgstr ""
+
+#: admin/settings.php:909
+msgctxt "job-settings"
+msgid "Subheading text color"
+msgstr ""
+
+#: admin/settings.php:926
+msgctxt "job-settings"
+msgid "Box background"
+msgstr ""
+
+#: admin/settings.php:943
+msgctxt "job-settings"
+msgid "Box border"
+msgstr ""
+
+#: admin/settings.php:960
+msgctxt "job-settings"
+msgid "Content heading color"
+msgstr ""
+
+#: admin/settings.php:977
+msgctxt "job-settings"
+msgid "Content text color"
+msgstr ""
+
+#: admin/settings.php:995
+msgctxt "job-settings"
+msgid "Button border radius"
+msgstr ""
+
+#: admin/settings.php:1016
+msgctxt "job-settings"
+msgid "Box border radius"
+msgstr ""
+
+#: admin/settings.php:1038
+msgctxt "job-settings"
+msgid "Filters layout"
+msgstr ""
+
+#: admin/settings.php:1058
+msgctxt "job-settings"
+msgid "Hide location in preview"
+msgstr ""
+
+#: admin/settings.php:1074
+msgctxt "job-settings"
+msgid "Hide employment type in preview"
+msgstr ""
+
+#: admin/settings.php:1091
+msgctxt "job-settings"
+msgid "PREVIEW"
+msgstr ""
+
+#: admin/settings.php:1092
+msgctxt "job-settings"
+msgid "Actual layout and some styling can look a bit different on the site, because of the theme used."
+msgstr ""
+
+#: admin/settings.php:1097
+msgid "Filters"
+msgstr ""
+
+#: admin/settings.php:1098
+msgid "This is the filters that you see when use show_filters=\"true\" on [job-postings] shortcode"
+msgstr ""
+
+#: admin/settings.php:1150
+msgctxt "job-settings"
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/settings.php:1170
+msgid "Reset style settings"
+msgstr ""
+
+#: admin/settings.php:1183
+msgid "Global options"
+msgstr ""
+
+#: admin/settings.php:1191
+msgctxt "job-settings"
+msgid "Company logo"
+msgstr ""
+
+#: admin/settings.php:1205 include/class-job-add-edit.php:572
+msgid "Upload/Select file"
+msgstr ""
+
+#: admin/settings.php:1212
+msgctxt "job-settings"
+msgid "Jobs per page"
+msgstr ""
+
+#: admin/settings.php:1227
+msgctxt "job-settings"
+msgid "Default email"
+msgstr ""
+
+#: admin/settings.php:1242
+msgid "Max allowed file size"
+msgstr ""
+
+#: admin/settings.php:1252
+msgid "For example: <b>12</b> or <b>0.5</b>."
+msgstr ""
+
+#: admin/settings.php:1262
+msgctxt "job-settings"
+msgid "Site Key"
+msgstr ""
+
+#: admin/settings.php:1273
+msgctxt "job-settings"
+msgid "Secret Key"
+msgstr ""
+
+#: admin/settings.php:1281
+msgid "To get your keys, go to <a href=\"https://www.google.com/recaptcha/\" target=\"_blank\">reCaptcha page</a>."
+msgstr ""
+
+#: admin/settings.php:1287
+msgctxt "job-settings"
+msgid "Enable V3"
+msgstr ""
+
+#: admin/settings.php:1297
+msgid "By default reCaptcha V2 is used. When V3 is enabled, validation will happen in the background, without user interaction."
+msgstr ""
+
+#: admin/tabs/fields.php:72
+msgid "Content area"
+msgstr ""
+
+#: admin/tabs/fields.php:107
+msgid "Side area"
+msgstr ""
+
+#: admin/tabs/fields.php:140
+msgid "Disabled fields"
+msgstr ""
+
+#: admin/tabs/fields.php:172
+msgid "Save default fields"
+msgstr ""
+
+#: class-job-postings.php:100
+msgctxt "jobs-field"
+msgid "Position title"
+msgstr ""
+
+#: class-job-postings.php:104 class-job-postings.php:122 class-job-postings.php:146
+msgctxt "jobs-field"
+msgid "Start typing or double click to open suggestions"
+msgstr ""
+
+#: class-job-postings.php:119
+msgctxt "jobs-field"
+msgid "Employment Type"
+msgstr ""
+
+#: class-job-postings.php:128
+msgctxt "jobs-field"
+msgid "Beginning of employment"
+msgstr ""
+
+#: class-job-postings.php:130
+msgctxt "jobs-field"
+msgid "Input beginning of employment"
+msgstr ""
+
+#: class-job-postings.php:136
+msgctxt "jobs-field"
+msgid "Duration of employment"
+msgstr ""
+
+#: class-job-postings.php:138
+msgctxt "jobs-field"
+msgid "Input duration of employment"
+msgstr ""
+
+#: class-job-postings.php:144
+msgctxt "jobs-field"
+msgid "Industry"
+msgstr ""
+
+#: class-job-postings.php:152
+msgctxt "jobs-field"
+msgid "Job Location"
+msgstr ""
+
+#: class-job-postings.php:155
+msgctxt "jobs-field"
+msgid "Street Address"
+msgstr ""
+
+#: class-job-postings.php:156
+msgctxt "jobs-field"
+msgid "City"
+msgstr ""
+
+#: class-job-postings.php:157
+msgctxt "jobs-field"
+msgid "Locality"
+msgstr ""
+
+#: class-job-postings.php:158
+msgctxt "jobs-field"
+msgid "Region"
+msgstr ""
+
+#: class-job-postings.php:159
+msgctxt "jobs-field"
+msgid "Country"
+msgstr ""
+
+#: class-job-postings.php:160
+msgctxt "jobs-field"
+msgid "Postal Code"
+msgstr ""
+
+#: class-job-postings.php:166
+msgctxt "jobs-field"
+msgid "Description"
+msgstr ""
+
+#: class-job-postings.php:170
+msgctxt "jobs-field"
+msgid "Input position description"
+msgstr ""
+
+#: class-job-postings.php:176
+msgctxt "jobs-field"
+msgid "Responsibilities"
+msgstr ""
+
+#: class-job-postings.php:179
+msgctxt "jobs-field"
+msgid "Input position responsibilities"
+msgstr ""
+
+#: class-job-postings.php:185
+msgctxt "jobs-field"
+msgid "Qualifications"
+msgstr ""
+
+#: class-job-postings.php:188
+msgctxt "jobs-field"
+msgid "Input position qualifications"
+msgstr ""
+
+#: class-job-postings.php:194
+msgctxt "jobs-field"
+msgid "Job Benefits"
+msgstr ""
+
+#: class-job-postings.php:197
+msgctxt "jobs-field"
+msgid "Input position benefits"
+msgstr ""
+
+#: class-job-postings.php:203
+msgctxt "jobs-field"
+msgid "Contacts"
+msgstr ""
+
+#: class-job-postings.php:206
+msgctxt "jobs-field"
+msgid "Input position contacts"
+msgstr ""
+
+#: class-job-postings.php:212
+msgctxt "jobs-field"
+msgid "Working Hours"
+msgstr ""
+
+#: class-job-postings.php:214
+msgctxt "jobs-field"
+msgid "Input position working hours"
+msgstr ""
+
+#: class-job-postings.php:221
+msgctxt "jobs-field"
+msgid "Base Salary"
+msgstr ""
+
+#: class-job-postings.php:224
+msgctxt "jobs-field"
+msgid "Input position base salary"
+msgstr ""
+
+#: class-job-postings.php:225
+msgctxt "jobs-field"
+msgid "Currency can be changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr ""
+
+#: class-job-postings.php:232 include/class-job-single-view.php:618 include/class-pdf-export.php:387 include/class-pdf-export.php:532
+msgctxt "apply-now"
+msgid "Date posted"
+msgstr ""
+
+#: class-job-postings.php:234
+msgctxt "jobs-field"
+msgid "No settings for this field"
+msgstr ""
+
+#: class-job-postings.php:241 include/class-job-single-view.php:653
+msgctxt "jobs-field"
+msgid "Valid through"
+msgstr ""
+
+#: class-job-postings.php:249 include/class-job-single-view.php:682
+msgctxt "apply-now"
+msgid "PDF Export"
+msgstr ""
+
+#: class-job-postings.php:251 include/class-job-single-view.php:690
+msgctxt "apply-now"
+msgid "Export as PDF"
+msgstr ""
+
+#: class-job-postings.php:257 include/class-job-single-view.php:719
+msgctxt "apply-now"
+msgid "Apply now"
+msgstr ""
+
+#: class-job-postings.php:259
+msgctxt "jobs-field"
+msgid "Button that open modal window"
+msgstr ""
+
+#: class-job-postings.php:260
+msgctxt "jobs-field"
+msgid "If you like to change button text, just edit it below."
+msgstr ""
+
+#: class-job-postings.php:271
+msgctxt "jobs-field"
+msgid "Education"
+msgstr ""
+
+#: class-job-postings.php:279
+msgctxt "jobs-field"
+msgid "Experience"
+msgstr ""
+
+#: class-job-postings.php:287
+msgctxt "jobs-field"
+msgid "Skills"
+msgstr ""
+
+#: class-job-postings.php:296
+msgctxt "jobs-field"
+msgid "Button"
+msgstr ""
+
+#: class-job-postings.php:303
+msgctxt "jobs-field"
+msgid "Attachment"
+msgstr ""
+
+#: class-job-postings.php:305
+msgctxt "jobs-field"
+msgid "File URL"
+msgstr ""
+
+#: class-job-postings.php:306
+msgctxt "jobs-field"
+msgid "Button name"
+msgstr ""
+
+#: class-job-postings.php:313
+msgctxt "jobs-field"
+msgid "Custom text 1"
+msgstr ""
+
+#: class-job-postings.php:322
+msgctxt "jobs-field"
+msgid "Custom text 2"
+msgstr ""
+
+#: class-job-postings.php:331
+msgctxt "jobs-field"
+msgid "Custom text 3"
+msgstr ""
+
+#: class-job-postings.php:341
+msgctxt "apply-now"
+msgid "Inline \"Apply now\" form"
+msgstr ""
+
+#: class-job-postings.php:342
+msgctxt "jobs-field"
+msgid "For editing apply form, go to plugin settings."
+msgstr ""
+
+#: class-job-postings.php:722
+msgctxt "job-modal-field"
+msgid "Name"
+msgstr ""
+
+#: class-job-postings.php:723
+msgctxt "job-modal-field"
+msgid "E-mail"
+msgstr ""
+
+#: class-job-postings.php:724
+msgctxt "job-modal-field"
+msgid "Phone"
+msgstr ""
+
+#: class-job-postings.php:725
+msgctxt "job-modal-field"
+msgid "Text"
+msgstr ""
+
+#: class-job-postings.php:726
+msgctxt "job-modal-field"
+msgid "Textarea"
+msgstr ""
+
+#: class-job-postings.php:727
+msgctxt "job-modal-field"
+msgid "File upload"
+msgstr ""
+
+#: class-job-postings.php:728
+msgctxt "job-modal-field"
+msgid "Multi file upload"
+msgstr ""
+
+#: class-job-postings.php:729
+msgctxt "job-modal-field"
+msgid "Checkbox"
+msgstr ""
+
+#: class-job-postings.php:730
+msgctxt "job-modal-field"
+msgid "Radio"
+msgstr ""
+
+#: class-job-postings.php:731
+msgctxt "job-modal-field"
+msgid "Select"
+msgstr ""
+
+#: class-job-postings.php:732
+msgctxt "job-modal-field"
+msgid "Section"
+msgstr ""
+
+#: include/class-bg-analytics.php:70
+msgid "Job for WordPress"
+msgstr ""
+
+#: include/class-bg-analytics.php:72
+msgid "We would like to collect some anonymous data about usage of the plugin. This will help us to improve the plugin in future releases. "
+msgstr ""
+
+#: include/class-bg-analytics.php:76
+#, php-format
+msgid "<a href=\"%s\">What info will we collect?</a>"
+msgstr ""
+
+#: include/class-bg-analytics.php:79
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree\">I agree to share anonymous data</a>"
+msgstr ""
+
+#: include/class-bg-analytics.php:80
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel\">No, next time</a>"
+msgstr ""
+
+#: include/class-job-add-edit.php:12
+msgctxt "job-meta-box"
+msgid "Position details"
+msgstr ""
+
+#: include/class-job-add-edit.php:13
+msgctxt "job-meta-box"
+msgid "Settings"
+msgstr ""
+
+#: include/class-job-add-edit.php:14
+msgctxt "job-meta-box"
+msgid "Confirmation"
+msgstr ""
+
+#: include/class-job-add-edit.php:15
+msgctxt "job-meta-box"
+msgid "Notification"
+msgstr ""
+
+#: include/class-job-add-edit.php:46
+msgid "Position details"
+msgstr ""
+
+#: include/class-job-add-edit.php:55
+msgid "Inactive widgets"
+msgstr ""
+
+#: include/class-job-add-edit.php:300
+msgctxt "jobs-field"
+msgid "Required"
+msgstr ""
+
+#: include/class-job-add-edit.php:305
+msgctxt "jobs-field"
+msgid "Recommended"
+msgstr ""
+
+#: include/class-job-add-edit.php:365
+msgctxt "job-settings"
+msgid "Logo can be added/changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr ""
+
+#: include/class-job-add-edit.php:437
+msgid "Need help?"
+msgstr ""
+
+#: include/class-job-add-edit.php:440
+msgid "<b>Physical work on site only:</b> Input address location, but leave \"Job is remote\" switch off."
+msgstr ""
+
+#: include/class-job-add-edit.php:442
+msgid "<b>Physical work on site OR remote within the same country:</b> Input address location and enable \"Job is remote\" switch."
+msgstr ""
+
+#: include/class-job-add-edit.php:444
+msgid "<b>Remote work only:</b> Leave inputs below empty and enable \"Job is remote\" switch."
+msgstr ""
+
+#: include/class-job-add-edit.php:446
+msgid ""
+"<b>Remote work only and limited to State/Country:</b> Leave inputs below empty, enable \"Job is remote\" switch and add geographical restrictions for where the remote "
+"work can be performed."
+msgstr ""
+
+#: include/class-job-add-edit.php:448
+msgid ""
+"<b>Physical work on site OR remote with restrictions:</b> Input address location, enable \"Job is remote\" switch and add geographical restrictions for where the "
+"remote work can be performed."
+msgstr ""
+
+#: include/class-job-add-edit.php:487
+msgid "Job is remote"
+msgstr ""
+
+#: include/class-job-add-edit.php:494
+msgid "Remote job restrictions"
+msgstr ""
+
+#: include/class-job-add-edit.php:496
+msgid "You can add geographical restrictions for where the remote work can be performed. (Optional)"
+msgstr ""
+
+#: include/class-job-add-edit.php:506 include/class-job-add-edit.php:522
+msgid "Type"
+msgstr ""
+
+#: include/class-job-add-edit.php:507 include/class-job-add-edit.php:523
+msgid "Example: USA"
+msgstr ""
+
+#: include/class-job-add-edit.php:507 include/class-job-add-edit.php:523
+msgid "Example: Texas, USA"
+msgstr ""
+
+#: include/class-job-add-edit.php:514 include/class-job-add-edit.php:529
+msgid "Location"
+msgstr ""
+
+#: include/class-job-add-edit.php:648
+msgctxt "jobs-field"
+msgid "Starting"
+msgstr ""
+
+#: include/class-job-add-edit.php:656
+msgctxt "jobs-field"
+msgid "Up to"
+msgstr ""
+
+#: include/class-job-add-edit.php:700
+msgctxt "jobs-field"
+msgid "Custom title"
+msgstr ""
+
+#: include/class-job-add-edit.php:713
+msgctxt "jobs-field"
+msgid "Hide title"
+msgstr ""
+
+#: include/class-job-add-edit.php:728
+msgctxt "jobs-field"
+msgid "Hide field"
+msgstr ""
+
+#: include/class-job-add-edit.php:744
+msgctxt "jobs-field"
+msgid "HTML Tag"
+msgstr ""
+
+#: include/class-job-add-edit.php:765
+msgctxt "jobs-field"
+msgid "Custom CSS class"
+msgstr ""
+
+#: include/class-job-add-edit.php:778
+msgctxt "jobs-field"
+msgid "URL"
+msgstr ""
+
+#: include/class-job-add-edit.php:789
+msgctxt "jobs-field"
+msgid "Link target"
+msgstr ""
+
+#: include/class-job-add-edit.php:792
+msgid "New tab/window"
+msgstr ""
+
+#: include/class-job-add-edit.php:793
+msgid "Same tab/window"
+msgstr ""
+
+#: include/class-job-add-edit.php:803
+msgctxt "jobs-field"
+msgid "Style"
+msgstr ""
+
+#: include/class-job-add-edit.php:806
+msgid "Primary"
+msgstr ""
+
+#: include/class-job-add-edit.php:807
+msgid "Secondary"
+msgstr ""
+
+#: include/class-job-add-edit.php:824
+msgctxt "jobs-field"
+msgid "For Developers"
+msgstr ""
+
+#: include/class-job-add-edit.php:830
+msgctxt "jobs-field"
+msgid "Field Key"
+msgstr ""
+
+#: include/class-job-apply-form.php:51
+msgctxt "jobs-modal"
+msgid "Apply now"
+msgstr ""
+
+#: include/class-job-apply-form.php:54
+msgctxt "jobs-modal"
+msgid "Position: "
+msgstr ""
+
+#: include/class-job-apply-form.php:140
+msgctxt "jobs-modal"
+msgid "Required fields"
+msgstr ""
+
+#: include/class-job-apply-form.php:155
+msgctxt "jobs-modal"
+msgid "Name"
+msgstr ""
+
+#: include/class-job-apply-form.php:156
+msgctxt "jobs-modal"
+msgid "Your name"
+msgstr ""
+
+#: include/class-job-apply-form.php:165
+msgctxt "jobs-modal"
+msgid "E-mail"
+msgstr ""
+
+#: include/class-job-apply-form.php:166
+msgctxt "jobs-modal"
+msgid "Your e-mail address"
+msgstr ""
+
+#: include/class-job-apply-form.php:174 include/class-job-apply-form.php:215 include/class-job-apply-form.php:216
+msgctxt "jobs-modal"
+msgid "Phone"
+msgstr ""
+
+#: include/class-job-apply-form.php:175
+msgctxt "jobs-modal"
+msgid "Your phone number"
+msgstr ""
+
+#: include/class-job-apply-form.php:188
+msgctxt "jobs-modal"
+msgid "Letter"
+msgstr ""
+
+#: include/class-job-apply-form.php:189
+msgctxt "jobs-modal"
+msgid "Your letter"
+msgstr ""
+
+#: include/class-job-apply-form.php:192 include/class-job-apply-form.php:205
+msgctxt "jobs-modal"
+msgid "Add"
+msgstr ""
+
+#: include/class-job-apply-form.php:201
+msgctxt "jobs-modal"
+msgid "CV & Documents"
+msgstr ""
+
+#: include/class-job-apply-form.php:202
+msgctxt "jobs-modal"
+msgid "Your CV & Documents"
+msgstr ""
+
+#: include/class-job-apply-form.php:243
+msgctxt "jobs-modal"
+msgid "Send Application"
+msgstr ""
+
+#: include/class-job-apply-form.php:282
+msgctxt "jobs-modal"
+msgid "Add file"
+msgstr ""
+
+#: include/class-job-apply-form.php:446
+msgctxt "jobs-modal"
+msgid "Select file"
+msgstr ""
+
+#: include/class-job-dependencies.php:64 include/class-job-dependencies.php:105
+msgid "Please input template name."
+msgstr ""
+
+#: include/class-job-dependencies.php:108
+msgid "Ups... reCaptcha identified you as a bot. If you are not, please reload and try again."
+msgstr ""
+
+#: include/class-job-entry.php:24
+msgid "Entry details"
+msgstr ""
+
+#: include/class-job-entry.php:213
+msgctxt "job-entry-name"
+msgid "Name"
+msgstr ""
+
+#: include/class-job-entry.php:225
+msgctxt "job-entry-name"
+msgid "E-mail"
+msgstr ""
+
+#: include/class-job-entry.php:237
+msgctxt "job-entry-name"
+msgid "Phone"
+msgstr ""
+
+#: include/class-job-entry.php:249
+msgctxt "job-entry-name"
+msgid "Letter"
+msgstr ""
+
+#: include/class-job-entry.php:288
+msgctxt "job-entry-name"
+msgid "Attachment"
+msgstr ""
+
+#: include/class-job-notifications.php:21
+msgctxt "job-entry-email"
+msgid "New entry for "
+msgstr ""
+
+#: include/class-job-notifications.php:136
+msgctxt "job-entry-email"
+msgid "Job entry: "
+msgstr ""
+
+#: include/class-job-notifications.php:158
+msgctxt "job-entry-email"
+msgid "Field"
+msgstr ""
+
+#: include/class-job-notifications.php:158
+msgctxt "job-entry-email"
+msgid "Value"
+msgstr ""
+
+#: include/class-job-notifications.php:161
+msgctxt "job-entry-email"
+msgid "Position"
+msgstr ""
+
+#: include/class-job-post-type.php:258 include/class-job-post-type.php:259
+msgid "Jobs"
+msgstr ""
+
+#: include/class-job-post-type.php:260
+msgid "Job"
+msgstr ""
+
+#: include/class-job-post-type.php:261 include/class-job-post-type.php:262
+msgid "Add new position"
+msgstr ""
+
+#: include/class-job-post-type.php:263
+msgid "New job position"
+msgstr ""
+
+#: include/class-job-post-type.php:264
+msgid "Update job"
+msgstr ""
+
+#: include/class-job-post-type.php:265
+msgid "View job"
+msgstr ""
+
+#: include/class-job-post-type.php:266
+msgid "All positions"
+msgstr ""
+
+#: include/class-job-post-type.php:271
+msgctxt "jobs_slug"
+msgid "job"
+msgstr ""
+
+#: include/class-job-post-type.php:304
+msgctxt "jobs_categories"
+msgid "Categories"
+msgstr ""
+
+#: include/class-job-post-type.php:305
+msgctxt "jobs_category"
+msgid "Category"
+msgstr ""
+
+#: include/class-job-post-type.php:312 include/class-job-post-type.php:313 include/class-job-post-type.php:314
+msgid "Job entry"
+msgstr ""
+
+#: include/class-job-post-type.php:315 include/class-job-post-type.php:316
+msgid "Add new entry"
+msgstr ""
+
+#: include/class-job-post-type.php:317
+msgid "New job entry"
+msgstr ""
+
+#: include/class-job-post-type.php:318
+msgid "Update entry"
+msgstr ""
+
+#: include/class-job-post-type.php:319
+msgid "Job entries"
+msgstr ""
+
+#: include/class-job-post-type.php:324
+msgctxt "jobs_entry_slug"
+msgid "job-entry"
+msgstr ""
+
+#: include/class-job-post-type.php:390
+msgid "Filter by position"
+msgstr ""
+
+#: include/class-job-settings.php:14
+msgid "Jobs for Wordpress - Settings"
+msgstr ""
+
+#: include/class-job-settings.php:16
+msgid "Jobs for Wordpress - Help"
+msgstr ""
+
+#: include/class-job-settings.php:16
+msgid "Help"
+msgstr ""
+
+#: include/class-job-single-view.php:440
+msgid "Remote work possible"
+msgstr ""
+
+#: include/class-job-single-view.php:442
+msgid "Remote work from"
+msgstr ""
+
+#: include/shortcodes/class-job-search.php:18
+msgid "Vacancy Search"
+msgstr ""
+
+#: include/views/job-confirmation.php:11
+msgctxt "apply-now-confirmation"
+msgid "Thank you for submitting your application. We will contact you shortly!"
+msgstr ""
+
+#: include/views/job-confirmation.php:19
+msgctxt "job-settings"
+msgid "Confirmation"
+msgstr ""
+
+#: include/views/job-confirmation.php:23
+msgctxt "job-settings"
+msgid "Notification message"
+msgstr ""
+
+#: include/views/job-notification.php:7
+msgctxt "job-settings"
+msgid "Notification"
+msgstr ""
+
+#: include/views/job-notification.php:13
+msgctxt "job-settings"
+msgid "Who receives notification?"
+msgstr ""
+
+#: include/views/job-notification.php:20
+msgctxt "job-settings"
+msgid "E-mail address"
+msgstr ""
+
+#: include/views/job-notification.php:26
+msgid "Custom Notification"
+msgstr ""
+
+#: include/views/job-notification.php:30
+msgctxt "job-postings"
+msgid "Custom Notification Message"
+msgstr ""
+
+#: include/views/job-settings.php:7
+msgctxt "job-settings"
+msgid "Settings"
+msgstr ""
+
+#: include/views/job-settings.php:11 include/views/job-settings.php:17
+msgctxt "job-settings"
+msgid "Custom excerpt"
+msgstr ""
+
+#: templates/include/job-categories.php:42
+msgctxt "job-categories"
+msgid "All"
+msgstr ""
+
+#: verify/class-jobs-module-verify.php:99
+msgid "Purchase code is from other product.  Please check and try again with correct one."
+msgstr ""
+
+#: verify/class-jobs-module-verify.php:104
+msgid "Not valid purchase code provided. Please check and try again."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Jobs for Wordpress"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/job-postings/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WordPress plugin that make it easy to add job postings to your company’s website in a structured way."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BlueGlass"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://blueglass.ee/en/"
+msgstr ""

@@ -1,0 +1,1340 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Jobs for Wordpress\n"
+"POT-Creation-Date: 2018-10-11 22:59+0300\n"
+"PO-Revision-Date: 2018-10-14 22:23+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: job-postings.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"Last-Translator: Gleb Makarov\n"
+"Language: fi_FI\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/settings.php:127
+#, fuzzy
+msgid "Settings updated"
+msgstr "Asetukset päivitetty"
+
+#: admin/settings.php:133 admin/settings.php:154 include/class-job-posting-helper.php:282
+msgid "Settings"
+msgstr "Asetukset"
+
+#: admin/settings.php:135 admin/settings.php:690
+msgid "Style settings"
+msgstr "Tyyliasetukset"
+
+#: admin/settings.php:136 admin/settings.php:1025
+#, fuzzy
+msgid "Global Options"
+msgstr "Globaalit vaihtoehdot"
+
+#: admin/settings.php:137
+msgid "Help"
+msgstr "Ohje"
+
+#: admin/settings.php:163 class-job-postings.php:580
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hiring organization"
+msgstr "Hankintaorganisaatio"
+
+#: admin/settings.php:171
+msgctxt "job-settings"
+msgid "Company name"
+msgstr "Yrityksen nimi"
+
+#: admin/settings.php:177
+msgctxt "job-settings"
+msgid "Currency symbol"
+msgstr "Valuutan symboli"
+
+#: admin/settings.php:191
+#, fuzzy
+msgctxt "job-settings"
+msgid "Currency symbol position"
+msgstr "Valuutan symbolipaikka"
+
+#: admin/settings.php:202
+msgctxt "job-settings"
+msgid "Before"
+msgstr "Ennen"
+
+#: admin/settings.php:203
+msgctxt "job-settings"
+msgid "After"
+msgstr "Jälkeen"
+
+#: admin/settings.php:210
+#, fuzzy
+msgctxt "job-settings"
+msgid "Preview CTA text"
+msgstr "Esikatsele CTA-tekstiä"
+
+#: admin/settings.php:218 include/class-job-posting-helper.php:499
+msgctxt "job-postings"
+msgid "View"
+msgstr "Näytä"
+
+#: admin/settings.php:225
+#, fuzzy
+msgctxt "job-settings"
+msgid "Job archive page"
+msgstr "Työn arkistointi -sivu"
+
+#: admin/settings.php:235
+#, fuzzy
+msgid "-- Select page --"
+msgstr "- Valitse sivu -"
+
+#: admin/settings.php:261
+#, fuzzy
+msgctxt "job-settings"
+msgid "Permalink slug"
+msgstr "Permalink slug"
+
+#: admin/settings.php:269
+#, fuzzy
+msgctxt "job-settings"
+msgid "Default slug: job"
+msgstr "Oletuslaulu: työ"
+
+#: admin/settings.php:276
+#, fuzzy
+msgctxt "job-settings"
+msgid "No offers message"
+msgstr "Ei tarjouksia"
+
+#: admin/settings.php:284 include/class-job-posting-helper.php:478
+#, fuzzy
+msgctxt "job-message"
+msgid "Currently no job offers available."
+msgstr "Tällä hetkellä ei ole saatavilla työpaikkoja."
+
+#: admin/settings.php:291
+#, fuzzy
+msgctxt "job-settings"
+msgid "Show \"Offer ended\" message when offer ends"
+msgstr "Näytä tarjous päättyy, kun tarjous päättyy"
+
+#: admin/settings.php:306
+#, fuzzy
+msgctxt "job-settings"
+msgid "\"Offer ended\" message"
+msgstr "Tarjous päättyi"
+
+#: admin/settings.php:315 class-job-postings.php:1823 class-job-postings.php:1851
+#, fuzzy, php-format
+msgctxt "job-message"
+msgid "Offer ended on %s"
+msgstr "Tarjous päättyi %s"
+
+#: admin/settings.php:319
+#, fuzzy, php-format
+msgctxt "job-message"
+msgid "Use %s where you would like to show offer ending date."
+msgstr "Käytä %s, jossa haluat näyttää tarjouksen päättymispäivän."
+
+#: admin/settings.php:330 admin/settings.php:676 admin/settings.php:1011 admin/settings.php:1118
+msgid "Save settings"
+msgstr "Tallenna asetukset"
+
+#: admin/settings.php:350
+#, fuzzy
+msgid "Apply modal options"
+msgstr "Käytä modaalivaihtoehtoja"
+
+#: admin/settings.php:379
+#, fuzzy
+msgid "Field type"
+msgstr "Kentän tyyppi"
+
+#: admin/settings.php:382
+msgid "Label"
+msgstr "Kentän nimi"
+
+#: admin/settings.php:385
+msgid "Placeholder"
+msgstr "Paikkamerkki"
+
+#: admin/settings.php:388
+msgid "Required field"
+msgstr "Pakollinen kenttä"
+
+#: admin/settings.php:440 admin/settings.php:606
+msgid "Required"
+msgstr "Pakollinen"
+
+#: admin/settings.php:448 admin/settings.php:475 admin/settings.php:502 admin/settings.php:538 admin/settings.php:615
+msgid "Options"
+msgstr "Asetukset"
+
+#: admin/settings.php:449 admin/settings.php:476 admin/settings.php:616 admin/settings.php:643
+msgid "One option per line."
+msgstr "Yksi vaihtoehto per rivi."
+
+#: admin/settings.php:461
+#, fuzzy
+msgid "Preselected checkboxes indexes, eg.: 1,3,5"
+msgstr "Esiasetetut valintaruudut indeksit, esim .: 1,3,5"
+
+#: admin/settings.php:488
+#, fuzzy
+msgid "Preselected radio index, eg.: 3"
+msgstr "Esivalittu radioindeksi, esim .: 3"
+
+#: admin/settings.php:509 admin/settings.php:545
+msgid "Message"
+msgstr "Viesti"
+
+#: admin/settings.php:522 admin/settings.php:558
+#, fuzzy
+msgid "Accepted file extensions. (Example: .jpg, .gif, .png)"
+msgstr "Hyväksytyt tiedostopäätteet. (Esimerkki: .jpg, .gif, .png)"
+
+#: admin/settings.php:626 admin/settings.php:653
+#, fuzzy
+msgid "Preselected"
+msgstr "esivalittu"
+
+#: admin/settings.php:627 admin/settings.php:654
+#, fuzzy
+msgid "Preselected option"
+msgstr "Esivalittu vaihtoehto"
+
+#: admin/settings.php:642
+msgid "Radio"
+msgstr "Valintapainike"
+
+#: admin/settings.php:693 admin/settings.php:1028
+#, fuzzy
+msgid "These settings are global and independent to languages."
+msgstr "Nämä asetukset ovat globaaleja ja kieliä riippumattomia."
+
+#: admin/settings.php:700
+#, fuzzy
+msgctxt "job-settings"
+msgid "Sidebar position"
+msgstr "Sivupalkin sijainti"
+
+#: admin/settings.php:731
+msgctxt "job-settings"
+msgid "Button background"
+msgstr "Painikkeen tausta"
+
+#: admin/settings.php:748
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button background <b>:hover</b>"
+msgstr "Painikkeen tausta <b>: hiiren osoitin</b>"
+
+#: admin/settings.php:765
+#, fuzzy
+msgctxt "job-settings"
+msgid "Button text color"
+msgstr "Painikkeen tekstin väri"
+
+#: admin/settings.php:782
+msgctxt "job-settings"
+msgid "Heading text color"
+msgstr "Otsakkeen tekstin väri"
+
+#: admin/settings.php:799
+#, fuzzy
+msgctxt "job-settings"
+msgid "Subheading text color"
+msgstr "Alaotsikon tekstin väri"
+
+#: admin/settings.php:816
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box background"
+msgstr "Laatikon tausta"
+
+#: admin/settings.php:833
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box border"
+msgstr "Laatikon raja"
+
+#: admin/settings.php:850
+#, fuzzy
+msgctxt "job-settings"
+msgid "Content heading color"
+msgstr "Sisältöotsikon väri"
+
+#: admin/settings.php:867
+#, fuzzy
+msgctxt "job-settings"
+msgid "Content text color"
+msgstr "Sisältötekstin väri"
+
+#: admin/settings.php:885
+msgctxt "job-settings"
+msgid "Button border radius"
+msgstr "Painikkeen reunan pyöristys"
+
+#: admin/settings.php:906
+#, fuzzy
+msgctxt "job-settings"
+msgid "Box border radius"
+msgstr "Laatikon raja-alue"
+
+#: admin/settings.php:928
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hide location in preview"
+msgstr "Piilota sijainti esikatselussa"
+
+#: admin/settings.php:944
+#, fuzzy
+msgctxt "job-settings"
+msgid "Hide employment type in preview"
+msgstr "Piilota työllisyystyyppi esikatselussa"
+
+#: admin/settings.php:961
+#, fuzzy
+msgctxt "job-settings"
+msgid "PREVIEW"
+msgstr "ESIKATSELU"
+
+#: admin/settings.php:962
+#, fuzzy
+msgctxt "job-settings"
+msgid "Actual layout and some styling can look a bit different on the site, because of the theme used."
+msgstr "Todellinen ulkoasu ja jotkut muotoilut voivat näyttää hieman eri sivustolta käytetyn teeman vuoksi."
+
+#: admin/settings.php:992
+msgctxt "job-settings"
+msgid "Custom CSS"
+msgstr "Mukautettu CSS"
+
+#: admin/settings.php:1012
+#, fuzzy
+msgid "Reset style settings"
+msgstr "Nollaa tyyliasetukset"
+
+#: admin/settings.php:1033
+#, fuzzy
+msgctxt "job-settings"
+msgid "Company logo (for pdf)"
+msgstr "Yrityksen logo (pdf)"
+
+#: admin/settings.php:1048 include/class-job-posting-helper.php:963
+#, fuzzy
+msgid "Upload/Select file"
+msgstr "Lataa / valitse tiedosto"
+
+#: admin/settings.php:1055
+#, fuzzy
+msgctxt "job-settings"
+msgid "Jobs per page"
+msgstr "Työt sivua kohden"
+
+#: admin/settings.php:1070
+#, fuzzy
+msgctxt "job-settings"
+msgid "Default email"
+msgstr "Oletussähköposti"
+
+#: admin/settings.php:1128
+msgctxt "job-settings"
+msgid "Shortcode"
+msgstr "Lyhytkoodi"
+
+#: admin/settings.php:1129
+#, fuzzy
+msgctxt "job-settings"
+msgid "Place this shortcode on the page, where you want to show your job postings."
+msgstr "Aseta tämä lyhytkoodi sivulle, jossa haluat näyttää työpaikkailmoituksesi."
+
+#: admin/settings.php:1131
+#, fuzzy
+msgctxt "job-settings"
+msgid "Jobs listing:"
+msgstr "Työpaikat:"
+
+#: admin/settings.php:1136
+#, fuzzy
+msgctxt "job-settings"
+msgid "Parameters:"
+msgstr "parametrit:"
+
+#: admin/settings.php:1147
+#, fuzzy
+msgctxt "job-settings"
+msgid "Categories tree (For widget area. Not fully implemented!)"
+msgstr "Kategoriat puu (widget-alueelle ei ole täysin toteutettu!)"
+
+#: admin/settings.php:1154
+#, fuzzy
+msgctxt "job-settings"
+msgid "To show jobs list somewhere in your template, use function below:"
+msgstr "Jos haluat näyttää työpaikat jonnekin malliin, käytä alla olevaa toimintoa:"
+
+#: admin/settings.php:1173
+#, fuzzy
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree insettings\">I agree to share anonymous data</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-agree insettings\">Hyväksyn jakaa nimettömät tiedot</a>"
+
+#: admin/settings.php:1175
+#, fuzzy
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel insettings\">Stop sharing</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-cancel insettings\">Lopeta jakaminen</a>"
+
+#: admin/settings.php:1179
+#, fuzzy
+msgctxt "job-postings"
+msgid "What info we collect with analytics:"
+msgstr "Mitä tietoja kerätään analytiikan avulla:"
+
+#: admin/settings.php:1195
+msgctxt "job-settings"
+msgid "FAQ"
+msgstr "UKK"
+
+#: admin/settings.php:1199
+#, fuzzy
+msgctxt "job-settings"
+msgid "Where can I change the date format?"
+msgstr "Mistä voin vaihtaa päivämäärämuotoa?"
+
+#: admin/settings.php:1202
+#, fuzzy
+msgctxt "job-settings"
+msgid "The date format of the field is taken from the WordPress settings page"
+msgstr "Kentän päivämäärämuoto otetaan WordPress-asetussivulta"
+
+#: admin/settings.php:1211
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I change a field title?"
+msgstr "Miten voin vaihtaa kentän otsikon?"
+
+#: admin/settings.php:1214
+#, fuzzy
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens the field's settings, where you can input your custom title"
+msgstr "Jokaisella kentällä on &quot;vaihde&quot; -kuvake oikeassa yläkulmassa, se avaa kentän asetukset, joihin voit syöttää oman otsikon"
+
+#: admin/settings.php:1222
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I hide/remove a title from appearing on the front-end?"
+msgstr "Kuinka voin piilottaa tai poistaa otsikon näkyvän etupuolella?"
+
+#: admin/settings.php:1225
+#, fuzzy
+msgctxt "job-settings"
+msgid "Every field has a \"gear\" icon in the top right corner, it opens a field settings, where you can hide a title by selecting a option"
+msgstr "Jokaisella kentällä on &quot;vaihde&quot; -kuvake oikeassa yläkulmassa, se avaa kentän asetukset, joissa voit piilottaa nimikkeen valitsemalla vaihtoehdon"
+
+#: admin/settings.php:1233
+#, fuzzy
+msgctxt "job-settings"
+msgid "I want to hide/remove some fields, how can I do this?"
+msgstr "Haluan piilottaa / poistaa joitain kenttiä, miten voin tehdä tämän?"
+
+#: admin/settings.php:1236
+#, fuzzy
+msgctxt "job-settings"
+msgid ""
+"Every field has a \"trash can\" icon in the top right corner, by clicking it, the field is moved to the \"Inactive widgets\" section. You can also just drag and drop "
+"any field there. This will prevent it from appearing on the front-end."
+msgstr ""
+"Jokaisella kentällä on &quot;roskakori&quot; -kuvake oikeassa yläkulmassa, napsauttamalla sitä, kenttä siirtyy &quot;Inactive widgets&quot; -osiosta. Voit myös vetää "
+"ja pudottaa minkä tahansa kentän. Tämä estää sen näkyvän etupaneelissa."
+
+#: admin/settings.php:1237
+#, fuzzy
+msgctxt "job-settings"
+msgid "If a field is empty, it will also not appear on the front-end."
+msgstr "Jos kenttä on tyhjä, se ei myöskään näy etupaneelissa."
+
+#: admin/settings.php:1246
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I edit the \"Thank you\" message?"
+msgstr "Miten voin muokata &quot;Kiitos&quot; -viestiä?"
+
+#: admin/settings.php:1249
+#, fuzzy
+msgctxt "job-settings"
+msgid "The notification message can be edited on the job edit page, under the \"Settings\" tab"
+msgstr "Ilmoitusviestiä voidaan muokata työn muokkaussivulla &quot;Asetukset&quot; -välilehdessä"
+
+#: admin/settings.php:1257
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I change the e-mail address of the person, who receives confirmation emails?"
+msgstr "Kuinka voin vaihtaa henkilön sähköpostiosoitetta, joka vastaanottaa vahvistusviestejä?"
+
+#: admin/settings.php:1260
+#, fuzzy
+msgctxt "job-settings"
+msgid "The confirmation e-mail address can be edited on the job edit page, under the \"Settings\" tab."
+msgstr "Vahvistus-sähköpostiosoitetta voi muokata työn muokkaussivulla Asetukset-välilehdellä."
+
+#: admin/settings.php:1261
+#, fuzzy
+msgctxt "job-settings"
+msgid "By default, the recipient is the site admin."
+msgstr "Oletuksena vastaanottaja on sivuston ylläpitäjä."
+
+#: admin/settings.php:1269
+#, fuzzy
+msgctxt "job-settings"
+msgid "Where are all the entries saved?"
+msgstr "Missä kaikki merkinnät tallennetaan?"
+
+#: admin/settings.php:1272
+#, fuzzy
+msgctxt "job-settings"
+msgid "All of the entries are saved in the \"Job entries\" subpage."
+msgstr "Kaikki merkinnät tallennetaan &quot;Työn tiedot&quot; -alasivulle."
+
+#: admin/settings.php:1280
+#, fuzzy
+msgctxt "job-settings"
+msgid "I have so much entries already, how can I navigate easier there?"
+msgstr "Minulla on niin paljon merkintöjä, miten voin navigoida siellä helpommin?"
+
+#: admin/settings.php:1283
+#, fuzzy
+msgctxt "job-settings"
+msgid "You can filter the entries by position."
+msgstr "Voit suodattaa merkinnät sijainnin mukaan."
+
+#: admin/settings.php:1286
+#, fuzzy
+msgctxt "job-settings"
+msgid "You also can search entries by name, email or phone number."
+msgstr "Voit myös hakea merkintöjä nimen, sähköpostin tai puhelinnumeron perusteella."
+
+#: admin/settings.php:1294
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I personalize the PDF?"
+msgstr "Miten voin mukauttaa PDF: n?"
+
+#: admin/settings.php:1297
+#, fuzzy
+msgctxt "job-settings"
+msgid "You can add your logo in the \"Settings\" section under \"Global options\"."
+msgstr "Voit lisätä logon Asetukset-osiossa kohdassa &quot;Yleiset asetukset&quot;."
+
+#: admin/settings.php:1304
+#, fuzzy
+msgctxt "job-settings"
+msgid "How can I add Structured Data to the fields?"
+msgstr "Miten lisätään Structured Data kenttiin?"
+
+#: admin/settings.php:1307
+#, fuzzy
+msgctxt "job-settings"
+msgid "You don't have to, we already took care of structured data and added it in the right place."
+msgstr "Sinun ei tarvitse, olemme jo huolehtineet jäsennellyistä tiedoista ja lisäsimme sen oikeaan paikkaan."
+
+#: admin/settings.php:1308
+#, fuzzy
+msgctxt "job-settings"
+msgid ""
+"To test it, use this <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">tool</a> and paste there a job url from your site there."
+msgstr ""
+"Testaa se käyttämällä tätä <a href=\"https://search.google.com/structured-data/testing-tool/\" target=\"_blank\">työkalua</a> ja liitä sinne siellä oleva työpaikka-URL."
+
+#: class-job-postings.php:364
+msgctxt "jobs-field"
+msgid "Position"
+msgstr "Asemointi"
+
+#: class-job-postings.php:367 class-job-postings.php:376 class-job-postings.php:400
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Start typing or double click to open suggestions"
+msgstr "Aloita kirjoittamalla tai kaksoisnapsauttamalla ehdotuksia"
+
+#: class-job-postings.php:374
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Employment Type"
+msgstr "Työn tyyppi"
+
+#: class-job-postings.php:382
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Beginning of employment"
+msgstr "Työn alkaminen"
+
+#: class-job-postings.php:384
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input beginning of employment"
+msgstr "Työn aloittaminen"
+
+#: class-job-postings.php:390
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Duration of employment"
+msgstr "Työn kesto"
+
+#: class-job-postings.php:392
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input duration of employment"
+msgstr "Työntekijöiden kesto"
+
+#: class-job-postings.php:398
+msgctxt "jobs-field"
+msgid "Industry"
+msgstr "Teollisuus"
+
+#: class-job-postings.php:406
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Job Location"
+msgstr "Työpaikka"
+
+#: class-job-postings.php:408
+msgctxt "jobs-field"
+msgid "Street Address"
+msgstr "Katuosoite"
+
+#: class-job-postings.php:409
+msgctxt "jobs-field"
+msgid "City"
+msgstr "Kaupunki"
+
+#: class-job-postings.php:410
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Address Locality"
+msgstr "Osoitteen sijainti"
+
+#: class-job-postings.php:411
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Address Region"
+msgstr "Osoite Alue"
+
+#: class-job-postings.php:412
+msgctxt "jobs-field"
+msgid "Postal Code"
+msgstr "Postinumero"
+
+#: class-job-postings.php:418
+msgctxt "jobs-field"
+msgid "Description"
+msgstr "Kuvaus"
+
+#: class-job-postings.php:421
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position description"
+msgstr "Syöttöaseman kuvaus"
+
+#: class-job-postings.php:427
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Responsibilities"
+msgstr "vastuut"
+
+#: class-job-postings.php:430
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position responsibilities"
+msgstr "Syöttöaseman vastuut"
+
+#: class-job-postings.php:436
+msgctxt "jobs-field"
+msgid "Qualifications"
+msgstr "Tutkinnot"
+
+#: class-job-postings.php:439
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position qualifications"
+msgstr "Syöttöaseman pätevyys"
+
+#: class-job-postings.php:445
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Job Benefits"
+msgstr "Työn etuja"
+
+#: class-job-postings.php:448
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position benefits"
+msgstr "Syöttöaseman edut"
+
+#: class-job-postings.php:454
+msgctxt "jobs-field"
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+#: class-job-postings.php:457
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position contacts"
+msgstr "Syöttöaseman yhteystiedot"
+
+#: class-job-postings.php:463
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Working Hours"
+msgstr "Työtunnit"
+
+#: class-job-postings.php:465
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position working hours"
+msgstr "Syöttöpaikan työaika"
+
+#: class-job-postings.php:472
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Base Salary"
+msgstr "Peruspalkka"
+
+#: class-job-postings.php:474
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Input position base salary"
+msgstr "Syöttöaseman peruspalkka"
+
+#: class-job-postings.php:475
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Currency can be changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Valuutta voidaan muuttaa <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Asetukset-valikossa</a> ."
+
+#: class-job-postings.php:482 class-job-postings.php:1726 include/class-pdf-export.php:390 include/class-pdf-export.php:532
+#, fuzzy
+msgctxt "apply-now"
+msgid "Date posted"
+msgstr "Päivä lähetetty"
+
+#: class-job-postings.php:484
+#, fuzzy
+msgctxt "jobs-field"
+msgid "No settings for this field"
+msgstr "Tälle kentälle ei ole asetuksia"
+
+#: class-job-postings.php:490 class-job-postings.php:1794
+#, fuzzy
+msgctxt "apply-now"
+msgid "PDF Export"
+msgstr "PDF-vienti"
+
+#: class-job-postings.php:492 class-job-postings.php:1802
+#, fuzzy
+msgctxt "apply-now"
+msgid "Export as PDF"
+msgstr "Vie PDF-muodossa"
+
+#: class-job-postings.php:498 class-job-postings.php:1832
+#, fuzzy
+msgctxt "apply-now"
+msgid "Apply now"
+msgstr "Hae nyt"
+
+#: class-job-postings.php:500
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Button that open modal window"
+msgstr "Avattava moduuli-ikkuna"
+
+#: class-job-postings.php:501
+#, fuzzy
+msgctxt "jobs-field"
+msgid "If you like to change button text, just edit it below."
+msgstr "Jos haluat muuttaa painikkeen tekstiä, muokkaa sitä alla."
+
+#: class-job-postings.php:512
+msgctxt "jobs-field"
+msgid "Education"
+msgstr "Koulutus"
+
+#: class-job-postings.php:520
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Experience"
+msgstr "Kokea"
+
+#: class-job-postings.php:528
+msgctxt "jobs-field"
+msgid "Skills"
+msgstr "Osaaminen"
+
+#: class-job-postings.php:537
+msgctxt "jobs-field"
+msgid "Button"
+msgstr "Painike"
+
+#: class-job-postings.php:544
+msgctxt "jobs-field"
+msgid "Attachment"
+msgstr "Liite"
+
+#: class-job-postings.php:546
+msgctxt "jobs-field"
+msgid "File URL"
+msgstr "Tiedoston URL"
+
+#: class-job-postings.php:547
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Button name"
+msgstr "Painikkeen nimi"
+
+#: class-job-postings.php:554
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 1"
+msgstr "Mukautettu teksti 1"
+
+#: class-job-postings.php:563
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 2"
+msgstr "Mukautettu teksti 2"
+
+#: class-job-postings.php:572
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom text 3"
+msgstr "Mukautettu teksti 3"
+
+#: class-job-postings.php:587 class-job-postings.php:1765
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Valid through"
+msgstr "Voimassa läpi"
+
+#: class-job-postings.php:597
+#, fuzzy
+msgctxt "apply-now"
+msgid "Inline \"Apply now\" form"
+msgstr "Inline &quot;Hae nyt&quot; -lomake"
+
+#: class-job-postings.php:598
+#, fuzzy
+msgctxt "jobs-field"
+msgid "For editing apply form, go to plugin settings."
+msgstr "Jos haluat muokata lomaketta, siirry laajennuksen asetuksiin."
+
+#: class-job-postings.php:835
+#, fuzzy
+msgid "Position details"
+msgstr "Aseman tiedot"
+
+#: class-job-postings.php:844
+#, fuzzy
+msgid "Inactive widgets"
+msgstr "Ei-aktiiviset widgetit"
+
+#: class-job-postings.php:853
+#, fuzzy
+msgid "Entry details"
+msgstr "Merkinnät"
+
+#: class-job-postings.php:888
+#, fuzzy
+msgctxt "job-meta-box"
+msgid "Position details"
+msgstr "Aseman tiedot"
+
+#: class-job-postings.php:889
+msgctxt "job-meta-box"
+msgid "Settings"
+msgstr "Asetukset"
+
+#: class-job-postings.php:1955
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Apply now"
+msgstr "Hae nyt"
+
+#: class-job-postings.php:1958
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Position: "
+msgstr "asema:"
+
+#: class-job-postings.php:2038
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Required fields"
+msgstr "Pakolliset kentät"
+
+#: class-job-postings.php:2052
+msgctxt "jobs-modal"
+msgid "Name"
+msgstr "Nimi"
+
+#: class-job-postings.php:2053
+msgctxt "jobs-modal"
+msgid "Your name"
+msgstr "Nimesi"
+
+#: class-job-postings.php:2062
+msgctxt "jobs-modal"
+msgid "E-mail"
+msgstr "Sähköpostiosoite"
+
+#: class-job-postings.php:2063
+msgctxt "jobs-modal"
+msgid "Your e-mail address"
+msgstr "Sähköpostiosoitteesi"
+
+#: class-job-postings.php:2071
+msgctxt "jobs-modal"
+msgid "Phone"
+msgstr "Puhelin"
+
+#: class-job-postings.php:2072
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your phone number"
+msgstr "Puhelinnumerosi"
+
+#: class-job-postings.php:2085
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Letter"
+msgstr "kirjain"
+
+#: class-job-postings.php:2086
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your letter"
+msgstr "Kirjeesi"
+
+#: class-job-postings.php:2089 class-job-postings.php:2102
+msgctxt "jobs-modal"
+msgid "Add"
+msgstr "Lisää"
+
+#: class-job-postings.php:2098
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "CV & Documents"
+msgstr "CV ja asiakirjat"
+
+#: class-job-postings.php:2099
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Your CV & Documents"
+msgstr "Ansioluettelosi ja asiakirjasi"
+
+#: class-job-postings.php:2115
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Send Application"
+msgstr "Lähetä hakemus"
+
+#: class-job-postings.php:2151
+msgctxt "jobs-modal"
+msgid "Add file"
+msgstr "Lisää tiedosto"
+
+#: class-job-postings.php:2280
+#, fuzzy
+msgctxt "jobs-modal"
+msgid "Select file"
+msgstr "Valitse tiedosto"
+
+#: class-job-postings.php:2905
+msgctxt "job-modal-field"
+msgid "Name"
+msgstr "Nimi"
+
+#: class-job-postings.php:2906
+msgctxt "job-modal-field"
+msgid "E-mail"
+msgstr "Sähköpostiosoite"
+
+#: class-job-postings.php:2907
+msgctxt "job-modal-field"
+msgid "Phone"
+msgstr "Puhelin"
+
+#: class-job-postings.php:2908
+msgctxt "job-modal-field"
+msgid "Text"
+msgstr "Teksti"
+
+#: class-job-postings.php:2909
+msgctxt "job-modal-field"
+msgid "Textarea"
+msgstr "Tekstikenttä"
+
+#: class-job-postings.php:2910
+#, fuzzy
+msgctxt "job-modal-field"
+msgid "File upload"
+msgstr "Tiedoston lataaminen"
+
+#: class-job-postings.php:2911
+#, fuzzy
+msgctxt "job-modal-field"
+msgid "Multi file upload"
+msgstr "Usean tiedoston lataaminen"
+
+#: class-job-postings.php:2912
+msgctxt "job-modal-field"
+msgid "Checkbox"
+msgstr "Valintaruutu"
+
+#: class-job-postings.php:2913
+msgctxt "job-modal-field"
+msgid "Radio"
+msgstr "Valintapainike"
+
+#: include/class-bg-analytics.php:70
+#, fuzzy
+msgid "Job for WordPress"
+msgstr "Työ WordPressille"
+
+#: include/class-bg-analytics.php:72
+#, fuzzy
+msgid "We would like to collect some anonymous data about usage of the plugin. This will help us to improve the plugin in future releases. "
+msgstr "Haluamme kerätä joitain anonyymiä tietoja plugin käytöstä. Tämä auttaa meitä parantamaan laajennusta tulevissa julkaisuissa."
+
+#: include/class-bg-analytics.php:76
+#, fuzzy, php-format
+msgid "<a href=\"%s\">What info will we collect?</a>"
+msgstr "<a href=\"%s\">Mitä tietoja me keräämme?</a>"
+
+#: include/class-bg-analytics.php:79
+#, fuzzy
+msgid "<a href=\"#agree\" class=\"jobs-metrics-agree\">I agree to share anonymous data</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-agree\">Hyväksyn jakaa nimettömät tiedot</a>"
+
+#: include/class-bg-analytics.php:80
+#, fuzzy
+msgid "<a href=\"#agree\" class=\"jobs-metrics-cancel\">No, next time</a>"
+msgstr "<a href=\"#agree\" class=\"jobs-metrics-cancel\">Ei, ensi kerralla</a>"
+
+#: include/class-job-posting-helper.php:80 include/class-job-posting-helper.php:161
+#, fuzzy
+msgid "Please input template name."
+msgstr "Syötä mallin nimi."
+
+#: include/class-job-posting-helper.php:223
+#, fuzzy
+msgid "Filter by position"
+msgstr "Suodata aseman mukaan"
+
+#: include/class-job-posting-helper.php:282
+#, fuzzy
+msgid "Jobs for Wordpress - Settings"
+msgstr "Työpaikat WordPressiin - Asetukset"
+
+#: include/class-job-posting-helper.php:556
+msgid "Jobs"
+msgstr "Työpaikat"
+
+#: include/class-job-posting-helper.php:557
+msgid "Job"
+msgstr "Työpaikka"
+
+#: include/class-job-posting-helper.php:558 include/class-job-posting-helper.php:559
+#, fuzzy
+msgid "Add new position"
+msgstr "Lisää uusi sijainti"
+
+#: include/class-job-posting-helper.php:560
+#, fuzzy
+msgid "New job position"
+msgstr "Uusi työpaikka"
+
+#: include/class-job-posting-helper.php:561
+#, fuzzy
+msgid "Update job"
+msgstr "Päivitä työ"
+
+#: include/class-job-posting-helper.php:562
+#, fuzzy
+msgid "View job"
+msgstr "Näytä työ"
+
+#: include/class-job-posting-helper.php:563
+#, fuzzy
+msgid "All positions"
+msgstr "Kaikki paikat"
+
+#: include/class-job-posting-helper.php:568
+msgctxt "jobs_slug"
+msgid "job"
+msgstr "tyopaikka"
+
+#: include/class-job-posting-helper.php:598
+msgctxt "jobs_categories"
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: include/class-job-posting-helper.php:599
+msgctxt "jobs_category"
+msgid "Category"
+msgstr "Kategoria"
+
+#: include/class-job-posting-helper.php:609 include/class-job-posting-helper.php:610
+#, fuzzy
+msgid "Job entry"
+msgstr "Työn merkintä"
+
+#: include/class-job-posting-helper.php:611 include/class-job-posting-helper.php:612
+#, fuzzy
+msgid "Add new entry"
+msgstr "Lisää uusi merkintä"
+
+#: include/class-job-posting-helper.php:613
+#, fuzzy
+msgid "New job entry"
+msgstr "Uusi työpaikka"
+
+#: include/class-job-posting-helper.php:614
+#, fuzzy
+msgid "Update entry"
+msgstr "Päivitä merkintä"
+
+#: include/class-job-posting-helper.php:615
+#, fuzzy
+msgid "Job entries"
+msgstr "Työn merkinnät"
+
+#: include/class-job-posting-helper.php:620
+#, fuzzy
+msgctxt "jobs_entry_slug"
+msgid "job-entry"
+msgstr "työ-merkintä"
+
+#: include/class-job-posting-helper.php:833
+#, fuzzy
+msgctxt "job-settings"
+msgid "Logo can be added/changed in <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">Settings</a>."
+msgstr "Logo voidaan lisätä / muuttaa <a target=\"_blank\" href=\"edit.php?post_type=jobs&page=jp-help\">asetuksissa</a> ."
+
+#: include/class-job-posting-helper.php:1039
+msgctxt "jobs-field"
+msgid "Starting"
+msgstr "Alkaa"
+
+#: include/class-job-posting-helper.php:1047
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Up to"
+msgstr "Aikeissa"
+
+#: include/class-job-posting-helper.php:1091
+#, fuzzy
+msgctxt "jobs-field"
+msgid "Custom title"
+msgstr "Mukautettu otsikko"
+
+#: include/class-job-posting-helper.php:1104
+msgctxt "jobs-field"
+msgid "Hide title"
+msgstr "Piilota otsikko"
+
+#: include/class-job-posting-helper.php:1118
+msgctxt "jobs-field"
+msgid "URL"
+msgstr "URL"
+
+#: include/class-job-posting-helper.php:1129
+msgctxt "jobs-field"
+msgid "Link target"
+msgstr "Linkin kohde"
+
+#: include/class-job-posting-helper.php:1132
+#, fuzzy
+msgid "New tab/window"
+msgstr "Uusi välilehti / ikkuna"
+
+#: include/class-job-posting-helper.php:1133
+#, fuzzy
+msgid "Same tab/window"
+msgstr "Sama välilehti / ikkuna"
+
+#: include/class-job-posting-helper.php:1143
+msgctxt "jobs-field"
+msgid "Style"
+msgstr "Tyyli"
+
+#: include/class-job-posting-helper.php:1146
+msgid "Primary"
+msgstr "Ensisijainen"
+
+#: include/class-job-posting-helper.php:1147
+msgid "Secondary"
+msgstr "Toissijainen"
+
+#: include/class-job-posting-helper.php:1357
+msgctxt "job-entry-name"
+msgid "Name"
+msgstr "Nimi"
+
+#: include/class-job-posting-helper.php:1369
+msgctxt "job-entry-name"
+msgid "E-mail"
+msgstr "Sähköpostiosoite"
+
+#: include/class-job-posting-helper.php:1381
+msgctxt "job-entry-name"
+msgid "Phone"
+msgstr "Puhelin"
+
+#: include/class-job-posting-helper.php:1393
+#, fuzzy
+msgctxt "job-entry-name"
+msgid "Letter"
+msgstr "kirjain"
+
+#: include/class-job-posting-helper.php:1419
+msgctxt "job-entry-name"
+msgid "Attachment"
+msgstr "Liite"
+
+#: include/class-job-posting-helper.php:1456
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "New entry for "
+msgstr "Uusi merkintä"
+
+#: include/class-job-posting-helper.php:1457
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "Position: "
+msgstr "asema:"
+
+#: include/class-job-posting-helper.php:1598
+#, fuzzy
+msgctxt "job-entry-email"
+msgid "Job entry: "
+msgstr "Työn merkintä:"
+
+#: include/models/job-settings.php:9
+#, fuzzy
+msgctxt "apply-now-confirmation"
+msgid "<p style=\"text-align: center;\">Thank you for submitting your application. We will contact you shortly!</p>"
+msgstr "<p style=\"text-align: center;\"> Kiitos, että lähetit hakemuksesi. Ota yhteyttä sinuun pian! </p>"
+
+#: include/models/job-settings.php:18
+msgctxt "job-settings"
+msgid "Preview"
+msgstr "Esikatselu"
+
+#: include/models/job-settings.php:22 include/models/job-settings.php:28
+#, fuzzy
+msgctxt "job-settings"
+msgid "Custom excerpt"
+msgstr "Mukautettu leikkaus"
+
+#: include/models/job-settings.php:33
+msgctxt "job-settings"
+msgid "Notification"
+msgstr "Ilmoitus"
+
+#: include/models/job-settings.php:37
+#, fuzzy
+msgctxt "job-settings"
+msgid "Notification message"
+msgstr "Ilmoitusviesti"
+
+#: include/models/job-settings.php:51
+msgctxt "job-settings"
+msgid "Confirmation"
+msgstr "Vahvistus"
+
+#: include/models/job-settings.php:55
+#, fuzzy
+msgctxt "job-settings"
+msgid "Who receives confirmation?"
+msgstr "Kuka saa vahvistuksen?"
+
+#: include/models/job-settings.php:62
+#, fuzzy
+msgctxt "job-settings"
+msgid "E-mail address"
+msgstr "Sähköpostiosoite"
+
+#: templates/include/job-categories.php:29
+msgctxt "job-categories"
+msgid "All"
+msgstr "Kaikki"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Jobs for Wordpress"
+msgstr "Työpaikat Wordpressille"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid "Wordpress plugin for easily adding job postings to your companys website in a structured way."
+msgstr "Wordpress-laajennus, jonka avulla yrityksesi on helppo lisätä työpaikkailmoituksia yrityksesi verkkosivustoon jäsennellysti."
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "BlueGlass"
+msgstr "BlueGlass"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "http://blueglass.ee/en/"
+msgstr "http://blueglass.ee/en/"
+
+msgid "Apply Form"
+msgstr "Käytä lomaketta"
+
+msgid "Apply Form fields"
+msgstr "Lomakkeen kenttien"
+
+msgid "Max allowed file size"
+msgstr "Sallittu tiedostokoko"
+
+msgid "For example: <b>12</b> or <b>0.5</b>."
+msgstr "Esimerkiksi: <b>12</b> tai <b>0,5</b>."
+
+msgid "File size exceeded message"
+msgstr "Tiedoston enimmäiskoko ylitetty viesti"
+
+msgid ""
+"Use %1$s where you would like to show allowed file size. Use %2$s where you would like to show file name.<br>You can update allowed file size in \"Global options\"."
+msgstr "Käytä %1$s, jos haluat näyttää sallitun tiedostokoon. Käytä %2$s, jos haluat näyttää tiedostonimi.<br>Voit päivittää sallittu tiedostokoko ”Global asetukset”."
+
+msgid "File %2$s exceeds the allowed file size of %1$s MB."
+msgstr "Tiedoston %2$s ylittää sallitun tiedostokoon %1$s MB."
+
+msgid "Page where you list jobs"
+msgstr "Sivu, jossa voit Luettele työt"
+
+msgid "Used for propper linking of category and other functions."
+msgstr "Käytetään kannattava yhdistää luokan ja muita toimintoja."
+
+msgctxt "job-settings"
+msgid "Filters layout"
+msgstr "Suodattimien asettelu"
+
+msgid "Filters"
+msgstr "Suodattimet"
+
+msgid "This is the filters that you see when use show_filters=\"true\" on [job-postings] shortcode"
+msgstr "Tämä on suodattimet, jotka näet, kun käyttää show_filters = \"True\" on [työ-palvellut] lyhytkoodi"
+
+msgid "Jobs for Wordpress - Help"
+msgstr "Työpaikat WordPress-ohjeet"
+
+msgid "Vacancy Search"
+msgstr "Vapautuneen haku"
