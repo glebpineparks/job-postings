@@ -192,10 +192,11 @@ if( re_type != 'on' && site_key ){
 
 				if( $('.choose_file_multi_add').length ){
 					var i = 1;
+					
 					$( document ).on( "click", ".choose_file_multi_add", function(e) {
 					//$('.choose_file_multi_add').click(function(e){
-						e.preventDefault();
-
+						//e.preventDefault();
+						
 						var key_id = $(this).data('key');
 
 						var parent = $(this).parents('.modal-input-fileinput');
@@ -205,28 +206,45 @@ if( re_type != 'on' && site_key ){
 						var id =  key_id + '-'+i;
 						var key = key_id + '-key-'+i;
 
+
 						input = input.replace( '{id}', id ).replace( '{id}', id ).replace( '{id}', id );
 						input = input.replace( '{nr}', i ).replace( '{nr}', i ).replace( '{nr}', i );
 						input = input.replace( '{key}', key ).replace( '{key}', key ).replace( '{key}', key );
 
 						label = label.replace( '{id}', id ).replace( '{id}', id ).replace( '{id}', id );
 
+
 						$(input).insertBefore( $('#'+key_id+' .choose_file_multi_add') );
 						$(label).insertBefore( $('#'+key_id+' .choose_file_multi_add') );
-						//parent.prepend( input );
-						//parent.prepend( label );
+
+						var accept_msg 	= parent.find('.message').text();
+						var accept 		= parent.find('input[type=file]').attr('accept');
+						
+						accept = accept ? accept.split(','):'';
+
 						
 						$( document ).on( "change", '#'+id, function(e) {
 						//$('#'+id).change(function(e){
 							var fileName = '';
-
+							
 							validateSize(this, e, true);
 
 							if( this.files && this.files.length > 1 )
 								fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+							
 							else
 								fileName = e.target.value.split( '\\' ).pop();
 
+							
+							var ext = true;
+							if(accept) ext = validateFileExt( this, fileName, accept, accept_msg);
+
+							if( ext == false ) {
+								$('#'+id).remove();
+								$('#file-input-tpl-'+id).remove();
+								$('#label-'+id).remove();
+								return false;
+							}
 
 							if( fileName ){
 								$('#label-'+id).find('span.name').text( fileName );
@@ -234,6 +252,7 @@ if( re_type != 'on' && site_key ){
 								num = Number(num) + 1;
 								$(this).parents('.modal-input-fileinput').attr('data-files', num);
 							}
+
 						});
 
 						
@@ -254,9 +273,22 @@ if( re_type != 'on' && site_key ){
 							return false;
 						});
 
+
 						$('#'+id).click();
 
 						recalculateInputs();
+
+						$( document ).on( "mousemove", function(e) {
+							setTimeout(function(){
+								var current_obj = $('#' + id)[0];
+								if( ! current_obj.value ){
+									$('#label-'+id).find('.remove').trigger('click');
+								}
+							}, 300);
+							
+							return false;
+							
+						} );
 
 						i++;
 					});
@@ -412,7 +444,7 @@ if( re_type != 'on' && site_key ){
 
 								case 'error':
 									var messages = data.messages
-									
+									console.log(data);
 									if( $.isArray(messages) ){
 
 										$(messages).each(function(i){

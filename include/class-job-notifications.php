@@ -51,14 +51,21 @@ class JobNotifications
 			if( $post_meta ){
 
 				foreach ($post_meta as $key => $meta) {
+					$meta = isset($meta[0]) ? $meta[0] : $meta;
 					//$value = get_post_meta($entry_id, $key, true);
-					$meta = unserialize($meta[0]);
-					if( Job_Postings_Helper::is_serialized($meta) ) $meta = unserialize($meta);
+					//$meta = unserialize($meta[0]);
+
+					if( Job_Postings_Helper::is_serialized($meta) )
+						$meta = unserialize($meta);
+					
+					if( Job_Postings_Helper::is_serialized($meta) ) 
+						$meta = unserialize($meta);
+
 
 					if( $meta ){
 
-						$label = $meta['label'];
-						$value = $meta['value'];
+						$label = isset($meta['label']) ? $meta['label'] : '';
+						$value = isset($meta['value']) ? $meta['value'] : '';
 	
 						if( strpos($key, 'jobs_attachment_') !== false ){
 							// Add files to attachments
@@ -90,12 +97,12 @@ class JobNotifications
 					//if( $contact_email == '' ) $contact_email = $admin_email;
 				}
 	
-	
+				//var_dump( $attachments );
+				//die();
+
 				// Legacy support
 				$dep_contact_email 	= isset($post_meta['job_email']) ? $post_meta['job_email'][0] : '';
 				$letter = isset($post_meta['jobs_attachment_input_job_letter']) ? unserialize($post_meta['jobs_attachment_input_job_letter'][0]) : '';
-
-				
 	
 				if( $dep_contact_email || $letter ){
 					$name 	= isset($post_meta['job_fullname']) ? $post_meta['job_fullname'][0] : 'Applicant';
@@ -106,9 +113,23 @@ class JobNotifications
 					}
 					foreach ($post_meta as $key => $field) {
 						if( strpos($key, 'jobs_attachment_input_job_cv') !== false ){
-							if( Job_Postings_Helper::is_serialized($field[0]) ) $field = unserialize($field[0]);
-							$filepath = Job_Postings_Helper::getFilePath( $field['value'] );
-							$attachments[] = $filepath;
+							$field = isset($field[0]) ? $field[0] : $field;
+							if( Job_Postings_Helper::is_serialized($field) ) $field = unserialize($field);
+							if( Job_Postings_Helper::is_serialized($field) ) $field = unserialize($field);
+							//var_dump( $field );
+							switch ($file_storage) {
+								case 'media':
+									$filepath = Job_Postings_Helper::getFilePath( $field );
+									$attachments[] = $filepath;
+									break;
+								
+								default:
+									$filepath = $field['path'];
+									$attachments[] = $filepath;
+									break;
+							}
+							//$filepath = Job_Postings_Helper::getFilePath( $field['value'] );
+							//$attachments[] = $filepath;
 						}
 					}
 					if( $contact_email == '' ) $contact_email = $dep_contact_email;
@@ -172,22 +193,24 @@ class JobNotifications
 	
 		$apply_advanced 	= get_option( 'jobs_apply_advanced' );
 
-		if(!empty($apply_advanced['modal'])){
+		//if(!empty($apply_advanced['modal'])){
 			$merge_tags 	= array();
 			$merge_tags[] 	= '{all_fields}';
 			$merge_tags[] 	= '{position_title}';
 
-			foreach ($apply_advanced['modal'] as $key => $field) {
-				$field_type 	= isset($field['field_type']) ? $field['field_type'] : '';
-				$label 			= isset($field['label_'.Job_Postings::$lang]) ? $field['label_'.Job_Postings::$lang] : '';
-				$san_label 		= sanitize_title( $label );
-				$field_key 		= $field_type . '_' . $san_label;
+			if(!empty($apply_advanced['modal'])){
+				foreach ($apply_advanced['modal'] as $key => $field) {
+					$field_type 	= isset($field['field_type']) ? $field['field_type'] : '';
+					$label 			= isset($field['label_'.Job_Postings::$lang]) ? $field['label_'.Job_Postings::$lang] : '';
+					$san_label 		= sanitize_title( $label );
+					$field_key 		= $field_type . '_' . $san_label;
 
-				if( $field_type == 'name' ){
-					$field_key 	= 'job_applicant_' . $field_type;
+					if( $field_type == 'name' ){
+						$field_key 	= 'job_applicant_' . $field_type;
+					}
+					
+					$merge_tags[] = '{'.$field_key.'}';
 				}
-				
-				$merge_tags[] = '{'.$field_key.'}';
 			}
 
 			if( !empty($merge_tags) ){
@@ -209,6 +232,8 @@ class JobNotifications
 						$tag_value = '';
 						$meta = get_post_meta($entry_id, $meta_key, true);
 
+						if( Job_Postings_Helper::is_serialized($meta) )
+							$meta = unserialize($meta);
 						if( Job_Postings_Helper::is_serialized($meta) )
 							$meta = unserialize($meta);
 
@@ -244,7 +269,7 @@ class JobNotifications
 					}
 				}
 			}
-		}
+		//}
 	
 
 		return wpautop($output);
@@ -291,20 +316,20 @@ class JobNotifications
 				// die();
 
 				foreach ($post_meta as $key => $meta) {
-
+					//$meta = isset($meta[0]) ? $meta[0] : $meta;
 
 					$meta = get_post_meta($entry_id, $key, true);
 
 					if( Job_Postings_Helper::is_serialized($meta) )
 						$meta = unserialize($meta);
-					
 					if( Job_Postings_Helper::is_serialized($meta) ) 
 						$meta = unserialize($meta);
 
 					if( $meta ){
-						$label = $meta['label'];
-						$value = $meta['value'];
+						$label = isset($meta['label']) ? $meta['label'] : '';
+						$value = isset($meta['value']) ? $meta['value'] : '';
 
+						if( !$label && !$value ) continue;
 
 						if( strpos($key, 'jobs_attachment_') !== false ){
 							// // Add files to attachments

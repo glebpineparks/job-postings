@@ -26,6 +26,8 @@ if( !class_exists('JobApplyForm') ){
             $post_id = $post->ID;
         }
 
+        $name               = htmlspecialchars($name);
+        $custom_title       = htmlspecialchars($custom_title);
         //add_action('job-postings/front_enqueue_scripts', array('JobDependencies', 'reCaptchaScripts'));
 
         $out = '';
@@ -33,6 +35,7 @@ if( !class_exists('JobApplyForm') ){
         $apply_advanced 	= get_option( 'jobs_apply_advanced' );
         $confirmation 		= get_post_meta( $post_id, 'job_notification_message', true );
         $postition_title 	= apply_filters('jp-modal-position-title', get_post_meta($post_id, 'position_title', true));
+        $postition_title    = htmlspecialchars($postition_title);
         $close_img 			= apply_filters('jp-modal-close-image', '<img src="'.JOBPOSTINGSURL.'images/close.svg" alt="Close modal window">');
 
 
@@ -48,12 +51,12 @@ if( !class_exists('JobApplyForm') ){
             $out .= '<form id="jobs-modal-form" method="post" enctype="multipart/form-data">';
 
                 if( $custom_title && $name ){
-                    if($show_title) $out .= '<h3>'.apply_filters('jp-modal-header', $name).'</h3>';
+                    if($show_title) $out .= '<div class="modal-title-small">'.apply_filters('jp-modal-header', $name).'</div>';
                 }else{
-                    if($show_title) $out .= '<h3>'.apply_filters('jp-modal-header', _x('Apply now', 'jobs-modal', 'job-postings')).'</h3>';
+                    if($show_title) $out .= '<div class="modal-title-small">'.apply_filters('jp-modal-header', _x('Apply now', 'jobs-modal', 'job-postings')).'</div>';
                 }
 
-                if(!$inline) $out .= '<h4>'.apply_filters('jp-modal-position', _x('Position: ', 'jobs-modal', 'job-postings')) . $postition_title.'</h4>';
+                if(!$inline) $out .= '<div class="modal-title">'.apply_filters('jp-modal-position', _x('Position: ', 'jobs-modal', 'job-postings')) . $postition_title.'</div>';
 
                 $form = '';
                 if(!empty($apply_advanced['modal'])){
@@ -67,9 +70,9 @@ if( !class_exists('JobApplyForm') ){
                         // print_r('</pre>');
 
                         $field_type 	= isset($field['field_type']) ? $field['field_type'] : '';
-                        $label 			= isset($field['label_'.Job_Postings::$lang]) ? $field['label_'.Job_Postings::$lang] : '';
+                        $label 			= isset($field['label_'.Job_Postings::$lang]) ? htmlspecialchars($field['label_'.Job_Postings::$lang]) : '';
                         $san_label 		= sanitize_title( $label );
-                        $placeholder 	= isset($field['placeholder_'.Job_Postings::$lang]) ? $field['placeholder_'.Job_Postings::$lang] : '';
+                        $placeholder 	= isset($field['placeholder_'.Job_Postings::$lang]) ? htmlspecialchars($field['placeholder_'.Job_Postings::$lang]) : '';
                         $required 		= isset($field['required']) ? true : false;
 
                         if($required && !$has_required) $has_required = true;
@@ -83,31 +86,31 @@ if( !class_exists('JobApplyForm') ){
                         $accepted_message = null;
 
                         if( $field_type == 'checkbox' ){
-                            $options 	    = isset($field['check_options_'.Job_Postings::$lang]) ? $field['check_options_'.Job_Postings::$lang] : null;
-                            $preselected 	= isset($field['check_preselected_'.Job_Postings::$lang]) ? $field['check_preselected_'.Job_Postings::$lang] : null;
+                            $options 	    = isset($field['check_options_'.Job_Postings::$lang]) ? htmlspecialchars($field['check_options_'.Job_Postings::$lang]) : null;
+                            $preselected 	= isset($field['check_preselected_'.Job_Postings::$lang]) ? htmlspecialchars($field['check_preselected_'.Job_Postings::$lang]) : null;
                         }
 
                         if( $field_type == 'radio' ){
-                            $options 	    = isset($field['radio_options_'.Job_Postings::$lang]) ? $field['radio_options_'.Job_Postings::$lang] : null;
-                            $preselected 	= isset($field['radio_preselected_'.Job_Postings::$lang]) ? $field['radio_preselected_'.Job_Postings::$lang] : null;
+                            $options 	    = isset($field['radio_options_'.Job_Postings::$lang]) ? htmlspecialchars($field['radio_options_'.Job_Postings::$lang]) : null;
+                            $preselected 	= isset($field['radio_preselected_'.Job_Postings::$lang]) ? htmlspecialchars($field['radio_preselected_'.Job_Postings::$lang]) : null;
                         }
 
 
                         if( $field_type == 'select' ){
-                            $options 	    = isset($field['select_options_'.Job_Postings::$lang]) ? $field['select_options_'.Job_Postings::$lang] : null;
-                            $preselected 	= isset($field['select_preselected_'.Job_Postings::$lang]) ? $field['select_preselected_'.Job_Postings::$lang] : null;
+                            $options 	    = isset($field['select_options_'.Job_Postings::$lang]) ? htmlspecialchars($field['select_options_'.Job_Postings::$lang]) : null;
+                            $preselected 	= isset($field['select_preselected_'.Job_Postings::$lang]) ? htmlspecialchars($field['select_preselected_'.Job_Postings::$lang]) : null;
                         }
 
                         if( $field_type == 'file' ){
-                            $accepted 	= isset($field['files_accepted']) ? $field['files_accepted'] : null;
-                            $accepted 	= preg_replace('/\s+/', '', $accepted);
-                            $accepted_message 	= isset($field['files_accepted_message_'.Job_Postings::$lang]) ? $field['files_accepted_message_'.Job_Postings::$lang] : null;
+                            $accepted 	= isset($field['files_accepted']) ? htmlspecialchars($field['files_accepted']) : null;
+                            $accepted 	= $accepted ? preg_replace('/\s+/', '', $accepted) : '';
+                            $accepted_message 	= isset($field['files_accepted_message_'.Job_Postings::$lang]) ? htmlspecialchars($field['files_accepted_message_'.Job_Postings::$lang]) : null;
                         }
 
                         if( $field_type == 'file_multi' ){
-                            $accepted 	= isset($field['multi_files_accepted']) ? $field['multi_files_accepted'] : null;
-                            $accepted 	= preg_replace('/\s+/', '', $accepted);
-                            $accepted_message 	= isset($field['multi_files_accepted_message_'.Job_Postings::$lang]) ? $field['multi_files_accepted_message_'.Job_Postings::$lang] : null;
+                            $accepted 	= isset($field['multi_files_accepted']) ? htmlspecialchars($field['multi_files_accepted']) : null;
+                            $accepted 	= $accepted ? preg_replace('/\s+/', '', $accepted) : '';
+                            $accepted_message 	= isset($field['multi_files_accepted_message_'.Job_Postings::$lang]) ? htmlspecialchars($field['multi_files_accepted_message_'.Job_Postings::$lang]) : null;
                         }
 
 
@@ -262,7 +265,7 @@ if( !class_exists('JobApplyForm') ){
 
 
             $out .= '<div id="job-apply-confirmation">';
-                $out .= apply_filters('the_content', $confirmation);
+                $out .= wpautop($confirmation);
             $out .= '</div>';
 
             $out .= '</div>';
@@ -341,7 +344,7 @@ if( !class_exists('JobApplyForm') ){
 
                             $out .= '<label class="checkbox-label" for="input-'.$key.'-'.$san_option.'">';
                                 $out .= '<input '.$checked.' id="input-'.$key.'-'.$san_option.'" type="checkbox" name="'.$key.'__field-'.$type.'-'.$san_option.'[]" data-jobinput="'.$key.'" class="modal-input-checkbox input-'.$key.' '.$req.'" value="'.sanitize_text_field($option).'">';
-                                $out .= '<span class="checkbox-text">'.$option.'</span>';
+                                $out .= '<span class="checkbox-text">'.htmlspecialchars_decode($option).'</span>';
                             $out .= '</label>';
                             $k++;
                         }
@@ -475,8 +478,9 @@ if( !class_exists('JobApplyForm') ){
                 case 'section':
                     $out .= '<div class="jobs-section-row">';
                         if($label){
+							
                             $out .= '<div class="jobs-section-heading">';
-                                $out .= $label;
+                                $out .= htmlspecialchars_decode($label);
                             $out .= '</div>';
                         }
                     $out .= '</div>';

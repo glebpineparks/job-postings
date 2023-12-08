@@ -64,9 +64,36 @@ class Job_Postings extends Job_Postings_Helper{
 
 		add_action( 'nav_menu_css_class', array('Job_Postings', 'add_current_nav_class'), 10, 2 );
 
-		add_action( 'wp_ajax_jobs_metrics_notice_seen', array('Job_Postings', 'jobs_metrics_notice_seen') );
+		//add_action( 'wp_ajax_jobs_metrics_notice_seen', array('Job_Postings', 'jobs_metrics_notice_seen') );
 		add_action( 'wp_ajax_jobs_metrics_attachemnt_notice_seen', array('Job_Postings', 'jobs_metrics_attachemnt_notice_seen') );
-		
+
+		$jobs_selected_schema = get_option( 'jobs_selected_schema' );
+        if( !$jobs_selected_schema || empty($jobs_selected_schema) || $jobs_selected_schema == "default" ){  
+			add_filter( 'wpseo_json_ld_output', array('Job_Postings','jp_disable_yoast_seo_schema'), 10, 1 );
+		}
+        else if( $jobs_selected_schema == "yoast_seo" && is_singular( 'jobs' ) ){
+            add_filter( 'job-postings/disable_json_ld',  array('Job_Postings', 'jp_disable_job_postings_schema') );
+			add_filter( 'wpseo_json_ld_output', array('Job_Postings','jp_disable_yoast_seo_schema'), 10, 1 );
+        }
+
+		add_action('deactivated_plugin', array('Job_Postings', 'set_deafult_on_yoast_deactivation') );
+			
+	}
+
+	public static function jp_disable_yoast_seo_schema($data){
+		$data = [];
+		return $data;
+	}
+
+	public static function jp_disable_job_postings_schema(){
+		return true;
+	}
+
+	public static function set_deafult_on_yoast_deactivation($plugin) {
+		// Check if Yoast SEO plugin is deactivated
+		if ($plugin === 'wordpress-seo/wp-seo.php') {
+			update_option( 'jobs_selected_schema', 'default' );
+		}
 	}
 
 	public static function init_current_language(){
@@ -473,7 +500,7 @@ class Job_Postings extends Job_Postings_Helper{
 	}
 
 	public static function jobs_metrics_attachemnt_notice_seen(){
-		update_option('jobs_file_location_notice_seen', 'seen');
+		update_option('jobs_file_location_notice_seen_v2', 'seen');
 		echo 'ok';
 		exit();
 	}

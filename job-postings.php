@@ -4,8 +4,8 @@ Plugin Name: Jobs for Wordpress
 Plugin URI: https://wordpress.org/plugins/job-postings/
 Description: WordPress plugin that make it easy to add job postings to your company’s website in a structured way.
 Author: BlueGlass
-Version: 2.5.10.2
-Author URI: http://blueglass.ee/en/
+Version: 2.7.1
+Author URI: http://blueglass.ch/
 Text Domain: job-postings
 Domain Path: /languages
 */
@@ -13,7 +13,7 @@ Domain Path: /languages
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define('JOBPOSTINGSVERSION', '2.5.10.2');
+define('JOBPOSTINGSVERSION', '2.7.1');
 define('JOBPOSTINGSPATH', plugin_dir_path( __FILE__ ));
 define('JOBPOSTINGSURL', plugin_dir_url(__FILE__));
 define('JOBPOSTINGSFILESDIR', ABSPATH . '../jobs-dir/');
@@ -28,21 +28,9 @@ function job_postings_plugin_langs_init() {
 }
 add_action('init', 'job_postings_plugin_langs_init');
 
-
-include_once('include/class-bg-analytics.php');
-
 //do analytics
+include_once('include/class-bg-analytics.php');
 $BlueGlassAnalytics = new BG_Analytics();
-
-/*
-spl_autoload_register(function($className) {
-	$className = str_replace("\\", DIRECTORY_SEPARATOR, $className);
-	$file = JOBPOSTINGSPATH . 'include/class-' . $className . '.php';
-	if( file_exists($file) ) include_once $file;
-});
-*/
-
-include_once('verify/class-jobs-module-verify.php');
 
 include_once('include/class-job-security.php');
 

@@ -460,11 +460,13 @@ body.single-jobs .wrap{
 
 }
 
-.jobs-modal-form h3{
+.jobs-modal-form .modal-title-small{
     margin: 0 0 10px;
+    font-weight: bold;
 }
 
-.jobs-modal-form h4{
+.jobs-modal-form .modal-title{
+    font-size: 20px;
     margin: 0 0 30px;
     padding: 0;
     font-weight: bold;

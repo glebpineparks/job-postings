@@ -1,5 +1,4 @@
 
-
 body #jobs_help code{
   padding: 5px 5px 5px;
   margin: 0 1px;
@@ -1407,6 +1406,9 @@ body #jobs_help code{
     margin: 0;
 }
 
+.jobs_plugin_ads img{
+	width:100%;
+}
 
 .jobs_plugin_settings .row{
     padding: 2px 0;

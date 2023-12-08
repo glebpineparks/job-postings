@@ -105,6 +105,7 @@ class JobDependencies
 		$localized['Not_valid_phone_number']  		= __('Not valid phone number', 'job-postings');
 		$localized['Not_valid_email']  				= __('Not valid email', 'job-postings');
 		$localized['Error_sending_notification'] 	= __('Error sending notification message, but dont worry, We saved Your data securelly. Thank you.', 'job-postings');
+		$localized['Not_valid_file_type'] 	= __('Not a valid file-type selected', 'job-postings');
 		$filesize_placeholder 	    = __('File %2$s exceeds the allowed file size of %1$s MB.', 'job-postings');
 		$filesize_exceeded 		    = get_option( 'jobs_filesize_validation_'.Job_Postings::$lang );
 		$filesize_exceeded 		    = $filesize_exceeded ? $filesize_exceeded : $filesize_placeholder;

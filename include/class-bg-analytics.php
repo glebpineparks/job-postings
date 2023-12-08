@@ -19,22 +19,22 @@ class BG_Analytics{
 
 	function __construct() {
 
-		$this->metrics_notice_seen 			= get_option('jobs_metrics_notice_seen_v2');
+		//$this->metrics_notice_seen 			= get_option('jobs_metrics_notice_seen_v2');
 		$this->metrics_shareable 			= get_option('jobs_metrics_shareable');
 
-		$this->file_location_notice_seen 	= get_option('jobs_file_location_notice_seen');
+		$this->file_location_notice_seen 	= get_option('jobs_file_location_notice_seen_v2');
 
-		//var_dump($this->metrics_notice_seen);
-
-		if( !$this->metrics_notice_seen ) 
-			add_action( 'admin_notices', array($this, 'maybe_display_notice') );
+		// if( !$this->metrics_notice_seen ) 
+		// 	add_action( 'admin_notices', array($this, 'maybe_display_notice') );
 		
 		if( !$this->file_location_notice_seen ) 
 			add_action( 'admin_notices', array($this, 'maybe_display_files_notice') );
 		
-		if( $this->send_analytics_data() ){
-			$this->track_metrics();
-		}
+
+		// !!! TRACKING DEPRICATED !!!
+		// if( $this->send_analytics_data() ){
+		// 	$this->track_metrics();
+		// }
 
 		//$this->track_metrics();
 	}

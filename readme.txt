@@ -1,9 +1,9 @@
 === Jobs for WordPress ===
 Contributors: blueglassinteractive, cfoellmann
 Tags: jobs, work, google, job, recruiter, structured data, json-ld, microdata, postings, employment, career, vacancy, hr, recruitment
-Requires at least: 4.3
-Tested up to: 5.9
-Stable tag: 2.5.10.2
+Requires at least: 5.0
+Tested up to: 6.4
+Stable tag: 2.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,29 @@ Jobs for WordPress is a powerfull WordPress plugin that make it easy to add job 
 3. Use [job-postings] to print jobs listing
 
 == Changelog ==
+
+= 2.7.1 =
+* Minor Fixes
+
+= 2.7.0 =
+* Fixed a security issue concerning upload of files
+* Removed deprecated FILTER_SANITIZE_STRING
+* Improved the compatibility with Yoast SEO
+* Optimized the Job Postings for Google Jobs
+
+= 2.6.2 =
+* Minor fixes
+
+= 2.6.0 =
+* Fixed XSS vulnerability (Medium severity)
+
+= 2.5.11.2 =
+* Bug fix: Email attachments
+* Other minor fixes
+
+= 2.5.11 =
+* Fixed XSS vulnerability (Medium severity)
+* Other minor fixes
 
 = 2.5.10.2 =
 * Large file validation and submittion fix

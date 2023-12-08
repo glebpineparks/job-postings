@@ -14,7 +14,7 @@ class JobApplicationSubmit
 
     public static function ajax_submit(){
         
-        $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         $posted_data 	= isset( $_POST ) ? $_POST : array();
         $file_data 		= isset( $_FILES ) ? $_FILES : array();
@@ -33,6 +33,49 @@ class JobApplicationSubmit
         $site_key   = get_option( 'jobs_recaptcha_site_key' );
         $secret_key = get_option( 'jobs_recaptcha_secret_key' );
         $re_type    = get_option( 'jobs_recaptcha_type' );
+        $apply_advanced         = get_option( 'jobs_apply_advanced' );
+
+        if( isset( $file_data ) ){
+            $chosenFileType = [];
+            foreach( $file_data as $file ){
+                $extension = substr($file['name'], strrpos($file['name'], '.') + 1);
+                $chosenFileType[] = $extension;
+            }
+
+            if( isset($chosenFileType) ){
+                $chosenFileType = array_unique($chosenFileType);
+            }
+
+            $collectAcceptedFiles = array_map(function( $param ){
+                $setVal = '';
+                if( !empty($param['multi_files_accepted']) ){
+                    $setVal = $param['multi_files_accepted'];
+                }
+
+                if( !empty($param['files_accepted']) ){
+                    $setVal = $param['files_accepted'];
+                }
+
+                return $setVal;
+
+            }, $apply_advanced['modal']);
+
+            // Use array_filter to remove indexes with empty 'multi_files_accepted' values
+            $filteredData = array_filter($collectAcceptedFiles, function ($item) {
+                return !empty($item);
+            });
+
+            
+            if( isset($filteredData) || !empty($filteredData) ){
+                $accepted_types = implode(", ", $filteredData);
+                foreach( $chosenFileType as $type ){
+                    if( strpos($accepted_types, $type) === false ){
+                        echo json_encode( array('status' => 'error', 'messages' => array('Not_valid_file_type') ) );
+                        die();
+                    }
+                }
+            }
+        }
         
         if( $site_key && $secret_key) {
             $data = array(
@@ -52,9 +95,6 @@ class JobApplicationSubmit
             $captcha_success = json_decode($verify_response);
 
             if ( $captcha_success && $captcha_success->success == false ) {
-                //This user was not verified by recaptcha.
-                //echo 'recaptcha_not_valid';
-                //echo json_encode(array('status' => 'recaptcha_not_valid'));
                 echo json_encode( array('status' => 'error', 'messages' => array('recaptcha_not_valid') ) );
                 die();
             }
@@ -64,7 +104,7 @@ class JobApplicationSubmit
         $pre_post_id 	    = strip_tags($_POST['post_id']);
         $post_id 			= sanitize_title($pre_post_id);
 
-        $current_language = strip_tags($_POST['language']);
+        $current_language = isset($_POST['language']) ? strip_tags($_POST['language']) : 'en';
         $current_language = sanitize_title($current_language);
 
         if ( in_array( 'sitepress-multilingual-cms/sitepress.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -85,7 +125,6 @@ class JobApplicationSubmit
         );
 
 
-        $apply_advanced         = get_option( 'jobs_apply_advanced' );
         $file_storage           = get_option( 'jobs_file_storage' );
 
         $disable_notification   = apply_filters('job-entry/notification', false);
@@ -355,9 +394,10 @@ class JobApplicationSubmit
                     $response[$key]['type'] 	= $type;
                     $response[$key]['attachment_id'] = $attachment_id;
                     $response[$key]['post_id']	= $post_id;
-                    $response[$key]['label']	= $label;
 
-                    $lbl = $labels[$key];
+                    $lbl = isset($labels[$key]) ? $labels[$key] : '';
+                    
+                    $response[$key]['label']	= $lbl;
 
                     if( strpos($key, 'file_multi') !== false ){
                         $trimmed_key = preg_replace("/\d+$/","",$key);
@@ -366,7 +406,7 @@ class JobApplicationSubmit
                     }
 
                     $url = esc_url_raw($url);
-                    $entry_data = array('label' => $lbl, 'value' => $url);
+                    $entry_data = array('label' => $lbl, 'value' => $url, 'path' => $fullsize_path);
 
                     switch ($file_storage) {
                         case 'media':
@@ -473,7 +513,7 @@ class JobApplicationSubmit
                         $response[$key]['post_id']	= $post_id;
 
                         $url = esc_url_raw($url);
-                        $entry_data = array('label' => 'Attachment', 'value' => $url);
+                        $entry_data = array('label' => 'Attachment', 'value' => $url, 'path' => $fullsize_path);
 
                         switch ($file_storage) {
                             case 'media':

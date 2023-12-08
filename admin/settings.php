@@ -192,7 +192,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_hiring_organization';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 											echo '<input type="text" name="'.$option_name.'_'.$lang.'" value="'.$value.'" placeholder="'._x('Company name', 'job-settings', 'job-postings').'">';
@@ -206,7 +206,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_currency_symbol';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 											echo '<input type="text" name="'.$option_name.'_'.$lang.'" value="'.$value.'">';
@@ -220,7 +220,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_currency_position';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 										?>
@@ -239,7 +239,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_preview_cta';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 											echo '<input type="text" name="'.$option_name.'_'.$lang.'" value="'.$value.'" placeholder="'._x('View', 'job-postings', 'job-postings').'">';
@@ -254,7 +254,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 											<?php
 												$option_name = 'jobs_archive_page';
 												$value = get_option( $option_name.'_'.$lang );
-												$value = sanitize_text_field($value);
+												$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 												if(empty($value)) $value = ''; // default
 												$name = $option_name.'_'.$lang;
 											?>
@@ -291,7 +291,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_custom_slug';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 											echo '<input type="text" name="'.$option_name.'_'.$lang.'" value="'.$value.'" placeholder="'._x('Default slug: job', 'job-settings', 'job-postings').'">';
@@ -306,7 +306,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_no_jobs_message';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 											echo '<input type="text" name="'.$option_name.'_'.$lang.'" value="'.$value.'" placeholder="'._x('Currently no job offers available.', 'job-message', 'job-postings').'">';
@@ -321,7 +321,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_offer_ended_message_enabled';
 											$message_enabled = get_option( $option_name.'_'.$lang );
-											$message_enabled = sanitize_text_field($message_enabled);
+											$message_enabled = htmlspecialchars( sanitize_text_field($message_enabled) ); // prevent xss
 											if(empty($message_enabled)) $message_enabled = ''; // default
 											$name = $option_name.'_'.$lang;
 
@@ -336,7 +336,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_offer_ended_message';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 
@@ -357,7 +357,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										<?php
 											$option_name = 'jobs_filesize_validation';
 											$value = get_option( $option_name.'_'.$lang );
-											$value = sanitize_text_field($value);
+											$value = htmlspecialchars( sanitize_text_field($value) ); // prevent xss
 											if(empty($value)) $value = ''; // default
 											$name = $option_name.'_'.$lang;
 
@@ -488,7 +488,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 													foreach ($languages as $lang => $language) {
 														$val = isset($options['modal'][$key]['placeholder_'.$lang]) ? $options['modal'][$key]['placeholder_'.$lang] : '';
 														echo '<label for="placeholder-field-'.$lang.'">'.__('Placeholder', 'job-postings') . ' <b>' . strtoupper($lang).'</b></label>';
-														echo '<input id="placeholder-field-'.$lang.'"type="text" class="hg_label" name="placeholder_'.$lang.'" value="'.$val.'"/>';
+														echo '<input id="placeholder-field-'.$lang.'"type="text" class="hg_label" name="placeholder_'.$lang.'" value="'.htmlspecialchars($val).'"/>';
 													}
 												} ?>
 											</div>
@@ -510,12 +510,12 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 															$val = isset($options['modal'][$key]['check_options_'.$lang]) ? $options['modal'][$key]['check_options_'.$lang]:'';
 															echo '<label for="check-options-field-'.$lang.'">'.__('Options', 'job-postings') . ' <b>'.strtoupper($lang).'</b></label>';
-															echo '<textarea id="check-options-field-'.$lang.'" class="hg_label" name="check_options_'.$lang.'"placeholder="'.$placehold.'">'.$val.'</textarea>';
+															echo '<textarea id="check-options-field-'.$lang.'" class="hg_label" name="check_options_'.$lang.'"placeholder="'.$placehold.'">'.htmlspecialchars($val).'</textarea>';
 
 															// preselection
 															$val = isset($options['modal'][$key]['check_preselected_'.$lang]) ? $options['modal'][$key]['check_preselected_'.$lang]:'';
 															echo '<label for="check-preselected-field-'.$lang.'">'.__('Preselected checkboxes indexes, eg.: 1,3,5', 'job-postings').'</label>';
-															echo '<input id="check-preselected-field-'.$lang.'"type="text" class="hg_label" name="check_preselected_'.$lang.'" value="'.$val.'"/>';
+															echo '<input id="check-preselected-field-'.$lang.'"type="text" class="hg_label" name="check_preselected_'.$lang.'" value="'.htmlspecialchars($val).'"/>';
 
 															echo '</div>';
 														}
@@ -537,12 +537,12 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 															$val = isset($options['modal'][$key]['radio_options_'.$lang]) ? $options['modal'][$key]['radio_options_'.$lang]:'';
 															echo '<label for="radio-options-field-'.$lang.'">'.__('Options', 'job-postings') . ' <b>'.strtoupper($lang).'</b></label>';
-															echo '<textarea id="radio-options-field-'.$lang.'" class="hg_label" name="radio_options_'.$lang.'" placeholder="'.$placehold.'">'.$val.'</textarea>';
+															echo '<textarea id="radio-options-field-'.$lang.'" class="hg_label" name="radio_options_'.$lang.'" placeholder="'.$placehold.'">'.htmlspecialchars($val).'</textarea>';
 
 															// preselection
 															$val = isset($options['modal'][$key]['radio_preselected_'.$lang]) ? $options['modal'][$key]['radio_preselected_'.$lang]:'';
 															echo '<label for="radio-preselected-field-'.$lang.'">'.__('Preselected radio index, eg.: 3', 'job-postings').'</label>';
-															echo '<input id="radio-preselected-field-'.$lang.'"type="text" class="hg_label" name="radio_preselected_'.$lang.'" value="'.$val.'"/>';
+															echo '<input id="radio-preselected-field-'.$lang.'"type="text" class="hg_label" name="radio_preselected_'.$lang.'" value="'.htmlspecialchars($val).'"/>';
 
 															echo '</div>';
 														}
@@ -564,12 +564,12 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 															$val = isset($options['modal'][$key]['select_options_'.$lang]) ? $options['modal'][$key]['select_options_'.$lang]:'';
 															echo '<label for="select-options-field-'.$lang.'">'.__('Options', 'job-postings') . ' <b>'.strtoupper($lang).'</b></label>';
-															echo '<textarea id="select-options-field-'.$lang.'" class="hg_label" name="select_options_'.$lang.'" placeholder="'.$placehold.'">'.$val.'</textarea>';
+															echo '<textarea id="select-options-field-'.$lang.'" class="hg_label" name="select_options_'.$lang.'" placeholder="'.$placehold.'">'.htmlspecialchars($val).'</textarea>';
 
 															// preselection
 															$val = isset($options['modal'][$key]['select_preselected_'.$lang]) ? $options['modal'][$key]['select_preselected_'.$lang]:'';
 															echo '<label for="select-preselected-field-'.$lang.'">'.__('Preselected index, eg.: 3', 'job-postings').'</label>';
-															echo '<input id="select-preselected-field-'.$lang.'"type="text" class="hg_label" name="select_preselected_'.$lang.'" value="'.$val.'"/>';
+															echo '<input id="select-preselected-field-'.$lang.'"type="text" class="hg_label" name="select_preselected_'.$lang.'" value="'.htmlspecialchars($val).'"/>';
 
 															echo '</div>';
 														}
@@ -603,7 +603,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 															// preselection
 															$val = isset($options['modal'][$key]['files_accepted']) ? $options['modal'][$key]['files_accepted'] : '';
 															echo '<label for="files-accepted-field-'.$uniqid.'">'.__('Accepted file extensions. (Example: .jpg, .gif, .png)', 'job-postings').'</label>';
-															echo '<input id="rfiles-accepted-field-'.$uniqid.'"type="text" class="hg_label" name="files_accepted" value="'.$val.'"/>';
+															echo '<input id="rfiles-accepted-field-'.$uniqid.'"type="text" class="hg_label" name="files_accepted" value="'.htmlspecialchars($val).'"/>';
 
 														echo '</div>';
 
@@ -626,7 +626,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 																// preselection
 																$val = isset($options['modal'][$key]['multi_files_accepted_message_'.$lang]) ? $options['modal'][$key]['multi_files_accepted_message_'.$lang] : '';
 																echo '<label for="files-accepted-message-field-'.$lang.'">' .strtoupper($lang). ' '.__('Message', 'job-postings').'</label>';
-																echo '<input id="rfiles-accepted-message-field-'.$lang.'"type="text" class="hg_label" name="multi_files_accepted_message_'.$lang.'" value="'.$val.'"/>';
+																echo '<input id="rfiles-accepted-message-field-'.$lang.'"type="text" class="hg_label" name="multi_files_accepted_message_'.$lang.'" value="'.htmlspecialchars($val).'"/>';
 
 															echo '</div>';
 														}
@@ -639,7 +639,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 															// preselection
 															$val = isset($options['modal'][$key]['multi_files_accepted']) ? $options['modal'][$key]['multi_files_accepted'] : '';
 															echo '<label for="files-accepted-field-'.$uniqid.'">'.__('Accepted file extensions. (Example: .jpg, .gif, .png)', 'job-postings').'</label>';
-															echo '<input id="rfiles-accepted-field-'.$uniqid.'"type="text" class="hg_label" name="multi_files_accepted" value="'.$val.'"/>';
+															echo '<input id="rfiles-accepted-field-'.$uniqid.'"type="text" class="hg_label" name="multi_files_accepted" value="'.htmlspecialchars($val).'"/>';
 
 														echo '</div>';
 
@@ -1237,6 +1237,27 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 										</div>
 									</div>
 
+									<div class="row clearfix">
+										<label><?php echo __("SEO Schema", 'job-postings') ?></label>
+										<div class="jobs-settings-input">
+										<?php
+											$option_name = 'jobs_selected_schema';
+											$fs = get_option( $option_name );
+
+											echo '<select name="'.$option_name.'">';
+												echo '<option value="default" '.selected($fs, 'default', false).'>'.__('Default', 'job-postings').'</option>';
+												if( !class_exists('WPSEO_Admin') ){
+													$disabled = "disabled";
+												}
+												echo '<option '.$disabled.' value="yoast_seo" '.selected($fs, 'yoast_seo', false).'>'.__('Yoast SEO', 'job-postings').'</option>';
+													
+											echo '</select>';
+
+											echo '<p class="description jfw_hint">'.__("If your site uses Yoast SEO, the structured SEO Schema will follow Yoast's recommendations. Choose 'Default' if you are not sure.", 'job-postings').'</p>';
+										?>
+										</div>
+									</div>
+
 
 									<br>
 									<h3><?php echo __("File storage", 'job-postings') ?></h3>
@@ -1388,11 +1409,8 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 
 	<div class="wrap jobs_plugin_ads">
-		<a href="https://www.blueglass.ee/en/" target="_blank"><img src="<?php echo plugins_url( '../images/blueglass.jpg', __FILE__ ); ?>" alt="Plugin developed by Blueglass"></a>
-		
-		<a href="https://www.cloudways.com/en/wordpress-cloud-hosting.php?id=151244&amp;a_bid=19515e01" target="_top"><img src="//www.cloudways.com/affiliate/accounts/default1/banners/19515e01.jpg" alt="Load WordPress Sites in as fast as 37ms!" title="Load WordPress Sites in as fast as 37ms!" width="100%" height="auto" /></a>
+		<a href="https://www.blueglass.ch/websites-applikationen" target="_blank"><img src="<?php echo plugins_url( '../images/backend-settings-banner.png', __FILE__ ); ?>" alt="Plugin developed by Blueglass"></a>
 
-		<a href="https://www.cloudways.com/en/hosting-woocommerce.php?id=151244&amp;a_bid=7c9dd1c5" target="_top"><img src="//www.cloudways.com/affiliate/accounts/default1/banners/7c9dd1c5.jpg" alt="Load WooCommerce Stores in 249ms!" title="Load WooCommerce Stores in 249ms!" width="100%" height="auto" /></a>
 	</div>
 
 </div>

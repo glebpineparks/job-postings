@@ -112,41 +112,6 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 				<br>
 
 
-
-				<?php
-					$metrics_shareable 	= get_option('jobs_metrics_shareable');
-					$analytics = 'Enabled';
-
-					if ( !$metrics_shareable || $metrics_shareable == 'no' ) {
-						$analytics = 'Disabled';
-					}
-				?>
-				<h3 id="anonymous_metrics">Jobs for WordPress Analytics (Status: <span class="anonymous_metrics_status"><?php echo $analytics; ?></span>)</h3>
-
-				<?php
-					if ( !$metrics_shareable || $metrics_shareable == 'no' ) {
-						echo '<a href="#agree" class="jobs-metrics-agree insettings">' . __( 'I agree to share anonymous data', 'job-posting' ) . '</a>';
-					}else{
-						echo '<a href="#agree" class="jobs-metrics-cancel insettings">' . __( 'Stop sharing', 'job-posting' ) . '</a>';
-					}
-				?>
-				<p>
-					<b><?php echo _x('What info we collect with analytics:', 'job-postings') ?></b> <br>
-					<ul>
-						<li>Plugin version</li>
-						<li>Type of web server</li>
-						<li>PHP Version</li>
-						<li>WordPress Version</li>
-						<li>Used theme</li>
-						<li>Domain name</li>
-						<li>Language</li>
-						<li>Multisite enabled or not</li>
-						<li>Ammount of published job postings</li>
-					</ul>
-				</p>
-				<br>
-
-
 				<h3><?php echo _x('FAQ', 'job-settings', 'job-postings') ?></h3>
 				<div class="toggle">
 					<a class="trigger" href="#">
@@ -282,11 +247,7 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 
 
 	<div class="wrap jobs_plugin_ads">
-		<a href="https://www.blueglass.ee/en/" target="_blank"><img src="<?php echo plugins_url( '../images/blueglass.jpg', __FILE__ ); ?>" alt="Plugin developed by Blueglass"></a>
-	
-		<a href="https://www.cloudways.com/en/hosting-woocommerce.php?id=151244&amp;a_bid=7c9dd1c5" target="_top"><img src="//www.cloudways.com/affiliate/accounts/default1/banners/7c9dd1c5.jpg" alt="Load WooCommerce Stores in 249ms!" title="Load WooCommerce Stores in 249ms!" width="100%" height="auto" /></a>
-
-		<a href="https://www.cloudways.com/en/wordpress-cloud-hosting.php?id=151244&amp;a_bid=19515e01" target="_top"><img src="//www.cloudways.com/affiliate/accounts/default1/banners/19515e01.jpg" alt="Load WordPress Sites in as fast as 37ms!" title="Load WordPress Sites in as fast as 37ms!" width="100%" height="auto" /></a>
+		<a href="https://www.blueglass.ch/" target="_blank"><img src="<?php echo plugins_url( '../images/blueglass.jpg', __FILE__ ); ?>" alt="Plugin developed by Blueglass"></a>
 		
 	</div>
 
