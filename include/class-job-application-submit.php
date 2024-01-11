@@ -66,7 +66,7 @@ class JobApplicationSubmit
             });
 
             
-            if( isset($filteredData) || !empty($filteredData) ){
+            if( isset($filteredData) && !empty($filteredData) ){
                 $accepted_types = implode(", ", $filteredData);
                 foreach( $chosenFileType as $type ){
                     if( strpos($accepted_types, $type) === false ){

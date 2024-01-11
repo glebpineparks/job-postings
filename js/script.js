@@ -281,7 +281,7 @@ if( re_type != 'on' && site_key ){
 						$( document ).on( "mousemove", function(e) {
 							setTimeout(function(){
 								var current_obj = $('#' + id)[0];
-								if( ! current_obj.value ){
+								if( typeof current_obj !== 'undefined' && ! current_obj.value ){
 									$('#label-'+id).find('.remove').trigger('click');
 								}
 							}, 300);
