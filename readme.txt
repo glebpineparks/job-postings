@@ -3,7 +3,7 @@ Contributors: blueglassinteractive, cfoellmann
 Tags: jobs, work, google, job, recruiter, structured data, json-ld, microdata, postings, employment, career, vacancy, hr, recruitment
 Requires at least: 5.0
 Tested up to: 6.4
-Stable tag: 2.7.2
+Stable tag: 2.7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Jobs for WordPress is a powerfull WordPress plugin that make it easy to add job 
 3. Use [job-postings] to print jobs listing
 
 == Changelog ==
+
+= 2.7.3 =
+* Minor Fixes
 
 = 2.7.2 =
 * Minor Fixes (related to attachments)
