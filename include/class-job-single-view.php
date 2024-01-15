@@ -531,7 +531,7 @@ class JobSingleView
 
                                         $remote_from = apply_filters('job-postings/'.$post_id.'/remote-from-text', __('Remote work from', 'job-postings') . ': ');
 
-                                        if( $remote == 'on' && $remote_data && (count($remote_data) >= 1 && $remote_data[0]['type'] != '' && $remote_data[0]['name'] != '') ){
+                                        if( $remote == 'on' && is_array($remote_data) && (count($remote_data) >= 1 && $remote_data[0]['type'] != '' && $remote_data[0]['name'] != '') ) {
 
                                             if($remote_data){
                                                 $remote_places = array();
