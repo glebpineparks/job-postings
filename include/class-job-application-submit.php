@@ -615,7 +615,8 @@ class JobApplicationSubmit
         $file_path      = get_attached_file( $attachment_id );
         $timestamp      = time();
         $filename       = $timestamp . '-' . basename ( $file_path );
-        $new_file_location = $filedir .'/' . $filename;
+	//rtrim to fix double slashes added to meta JOBPOSTINGSFILESDIR = ABSPATH . '../jobs-dir/'
+        $new_file_location = rtrim($filedir,'/') .'/' . $filename;
 
         $entry_data['value'] = trailingslashit(get_home_url()) . 'job-postings-get-file/' . $filename;
         $entry_data['path'] = $new_file_location;
