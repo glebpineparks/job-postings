@@ -1170,8 +1170,7 @@ class JobAddEdit
 
         $fields = Job_Postings::$fields;
         if( $fields ){
-
-            //print_r( $_POST );
+			
 
             foreach ($fields as $index => $field) {
 
@@ -1180,14 +1179,16 @@ class JobAddEdit
 
                 // continue if key is missing
 				if( !$key ) continue;
-				
+
+				// echo "<pre>";
+				// print_r( $key );
+				//echo $type." - ".$key."<br>";
+
 				switch ($type) {
 					case 'checkboxes':
 						if( isset( $_POST[$key] ) ){
 							if( isset($_POST[$key]['other_input']) && !in_array('OTHER', $_POST[$key]) ) unset($_POST[$key]['other_input']);
 
-						// var_dump( $_POST );
-						// die();
 							if( !empty($_POST[$key]) ){
 								update_post_meta( $post_id, $key, $_POST[$key] );
 							}else{
@@ -1251,73 +1252,207 @@ class JobAddEdit
             }
         }
 
-		if( isset( $_POST['position_valid_through'] ) ){
-			$valid_through = strip_tags( $_POST['position_valid_through'] );
-			$valid_through = date('Y-m-d', strtotime($valid_through));
-            update_post_meta( $post_id, 'position_valid_through_date', $valid_through );
+		/**
+		 * Sanitization of all text fields in Job Position Main Form
+		 */
+		if( isset( $_POST['position_title'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_title'] );
+            update_post_meta( $post_id, 'position_title', $field_key_title );
+		}
+
+		if( isset( $_POST['position_description'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_description'], $allowed );
+			update_post_meta( $post_id, 'position_description', $sanitized_content );
         }
 
-
-        if( isset( $_POST['position_base_salary_upto'] ) ){
-            $field_key_title = sanitize_text_field( $_POST['position_base_salary_upto'] );
-            update_post_meta( $post_id, 'position_base_salary_upto', sanitize_text_field($field_key_title) );
-		}
-		
-        if( isset( $_POST['position_base_salary_unittext'] ) ){
-            $field_key_title = sanitize_text_field( $_POST['position_base_salary_unittext'] );
-            update_post_meta( $post_id, 'position_base_salary_unittext', sanitize_text_field($field_key_title) );
+		if( isset( $_POST['position_responsibilities'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_responsibilities'], $allowed );
+			update_post_meta( $post_id, 'position_responsibilities', $sanitized_content );
         }
 
+		if( isset( $_POST['position_qualifications'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_qualifications'], $allowed );
+			update_post_meta( $post_id, 'position_qualifications', $sanitized_content );
+        }
 
-        if( isset( $_POST['position_pdf_job_name'] ) ){
-            $field_key_title = sanitize_text_field( $_POST['position_pdf_job_name'] );
-            update_post_meta( $post_id, 'position_pdf_job_name', sanitize_text_field($field_key_title) );
+		if( isset( $_POST['position_job_benefits'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_job_benefits'], $allowed );
+			update_post_meta( $post_id, 'position_job_benefits', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_contacts'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_contacts'], $allowed );
+			update_post_meta( $post_id, 'position_contacts', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_logo'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_logo'] );
+            update_post_meta( $post_id, 'position_logo', $field_key_title );
 		}
+
+		if( isset( $_POST['position_hiring_organization_name'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_hiring_organization_name'] );
+            update_post_meta( $post_id, 'position_hiring_organization_name', $field_key_title );
+        }
+
 		
-		//position_job_location_remote
-		// Remote Job On/Off switch
-		$value = isset( $_POST['position_job_location_remote'] ) ? strip_tags( $_POST['position_job_location_remote'] ) : '';
-		update_post_meta( $post_id, 'position_job_location_remote', $value );
-
-		//type
-		$job_remote_data = isset( $_POST['job_remote_data'] ) ? $_POST['job_remote_data'] : '';
-		update_post_meta( $post_id, 'job_remote_data', $job_remote_data );
-
-
         if( isset( $_POST['position_job_location_streetAddress'] ) ){
             $field_key_title = sanitize_text_field( $_POST['position_job_location_streetAddress'] );
             update_post_meta( $post_id, 'position_job_location_streetAddress', sanitize_text_field($field_key_title) );
         }
+
         if( isset( $_POST['position_job_location_postalCode'] ) ){
-
-            //print_r( $_POST['position_job_location_postalCode'] );
-            //die();
-
             $field_key_title = sanitize_text_field( $_POST['position_job_location_postalCode'] );
-            update_post_meta( $post_id, 'position_job_location_postalCode', sanitize_text_field($field_key_title) );
+            update_post_meta( $post_id, 'position_job_location_postalCode', $field_key_title );
 		}
+
 		// Save city as locality
 		if( isset( $_POST['position_job_location'] ) ){
             $field_key_title = sanitize_text_field( $_POST['position_job_location'] );
-            update_post_meta( $post_id, 'position_job_location_addressLocality', sanitize_text_field($field_key_title) );
+			update_post_meta( $post_id, 'position_job_location', $field_key_title );
+            update_post_meta( $post_id, 'position_job_location_addressLocality', $field_key_title );
         }
+
         // if( isset( $_POST['position_job_location_addressLocality'] ) ){
         //     $field_key_title = sanitize_text_field( $_POST['position_job_location_addressLocality'] );
         //     update_post_meta( $post_id, 'position_job_location_addressLocality', sanitize_text_field($field_key_title) );
         // }
+
         if( isset( $_POST['position_job_location_addressRegion'] ) ){
             $field_key_title = sanitize_text_field( $_POST['position_job_location_addressRegion'] );
-            update_post_meta( $post_id, 'position_job_location_addressRegion', sanitize_text_field($field_key_title) );
-        }
-        if( isset( $_POST['position_job_location_addressCountry'] ) ){
-            $field_key_title = sanitize_text_field( $_POST['position_job_location_addressCountry'] );
-            update_post_meta( $post_id, 'position_job_location_addressCountry', sanitize_text_field($field_key_title) );
+            update_post_meta( $post_id, 'position_job_location_addressRegion', $field_key_title );
         }
 
-        if( isset( $_POST['position_hiring_organization_name'] ) ){
-            $field_key_title = sanitize_text_field( $_POST['position_hiring_organization_name'] );
-            update_post_meta( $post_id, 'position_hiring_organization_name', sanitize_text_field($field_key_title) );
+        if( isset( $_POST['position_job_location_addressCountry'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_job_location_addressCountry'] );
+            update_post_meta( $post_id, 'position_job_location_addressCountry', $field_key_title );
         }
+
+		// Remote Job On/Off switch
+		$value = isset( $_POST['position_job_location_remote'] ) ? strip_tags( sanitize_text_field($_POST['position_job_location_remote']) ) : '';
+		update_post_meta( $post_id, 'position_job_location_remote', $value );
+
+		//type
+		$job_remote_data = [];
+		if( isset($_POST['job_remote_data']) ){
+			if( count($_POST['job_remote_data']) > 0 ){
+				foreach( $_POST['job_remote_data'] as $single_remote_date ){
+					$job_remote_type = $single_remote_date['type'];
+					$job_remoate_location = sanitize_text_field($single_remote_date['name']);
+					$job_remote_data[] = [
+						'type' => $job_remote_type,
+						'name' => $job_remoate_location
+					];
+				}
+
+				update_post_meta( $post_id, 'job_remote_data', $job_remote_data );
+			}
+		}
+		
+		if( isset( $_POST['position_employment_begining'] ) ){
+            $field_key_title = sanitize_textarea_field( $_POST['position_employment_begining'] );
+            update_post_meta( $post_id, 'position_employment_begining', $field_key_title );
+        }
+
+		$position_employment_type = $_POST['position_employment_type'];
+		if( isset( $position_employment_type ) ){
+			if( count( $position_employment_type ) > 0 ){
+				foreach( $position_employment_type as $key => $single_emp_type ){
+					if( $key == "other_input" ){
+						$position_employment_type[$key] = sanitize_text_field( $single_emp_type );
+						break;
+					}
+				}
+
+				update_post_meta( $post_id, 'position_employment_type', $position_employment_type );
+			}
+		}
+
+		if( isset( $_POST['position_pdf_job'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_pdf_job'] );
+            update_post_meta( $post_id, 'position_pdf_job', $field_key_title );
+		}
+
+		if( isset( $_POST['position_pdf_job_name'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_pdf_job_name'] );
+            update_post_meta( $post_id, 'position_pdf_job_name', $field_key_title );
+		}
+
+		if( isset( $_POST['position_work_hours'] ) ){
+            $field_key_title = sanitize_textarea_field( $_POST['position_work_hours'] );
+            update_post_meta( $post_id, 'position_work_hours', $field_key_title );
+		}
+
+		if( isset( $_POST['position_industry'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_industry'] );
+            update_post_meta( $post_id, 'position_industry', $field_key_title );
+		}
+
+		if( isset( $_POST['position_employment_duration'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_employment_duration'] );
+            update_post_meta( $post_id, 'position_employment_duration', $field_key_title );
+		}
+
+		if( isset( $_POST['position_pdf_export'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_pdf_export'] );
+            update_post_meta( $post_id, 'position_pdf_export', $field_key_title );
+		}
+
+		if( isset( $_POST['position_base_salary'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_base_salary'] );
+            update_post_meta( $post_id, 'position_base_salary', $field_key_title );
+		}
+
+		if( isset( $_POST['position_base_salary_upto'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_base_salary_upto'] );
+            update_post_meta( $post_id, 'position_base_salary_upto', $field_key_title );
+		}
+
+		if( isset( $_POST['position_base_salary_unittext'] ) ){
+            $field_key_title = sanitize_text_field( $_POST['position_base_salary_unittext'] );
+            update_post_meta( $post_id, 'position_base_salary_unittext', $field_key_title );
+        }
+		
+		if( isset( $_POST['position_valid_through'] ) ){
+			$valid_through = sanitize_text_field( $_POST['position_valid_through'] );
+			update_post_meta( $post_id, 'position_valid_through', $valid_through );
+			$valid_through = date('Y-m-d', strtotime($valid_through));
+            update_post_meta( $post_id, 'position_valid_through_date', $valid_through );
+        }
+		
+		if( isset( $_POST['position_skills'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_skills'], $allowed );
+			update_post_meta( $post_id, 'position_skills', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_educationRequirements'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_educationRequirements'], $allowed );
+			update_post_meta( $post_id, 'position_educationRequirements', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_experienceRequirements'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_experienceRequirements'], $allowed );
+			update_post_meta( $post_id, 'position_experienceRequirements', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_custom_text_1'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_custom_text_1'], $allowed );
+			update_post_meta( $post_id, 'position_custom_text_1', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_custom_text_2'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_custom_text_2'], $allowed );
+			update_post_meta( $post_id, 'position_custom_text_2', $sanitized_content );
+        }
+
+		if( isset( $_POST['position_custom_text_3'] ) ){
+			$sanitized_content = wp_kses( $_POST['position_custom_text_3'], $allowed );
+			update_post_meta( $post_id, 'position_custom_text_3', $sanitized_content );
+        }
+		/**
+		 *  End - Sanitization of all text fields in Job Position Main Form
+		 */
+		
 
         // Update metrics data
         $metrics_counted = get_post_meta( $post_id, 'jobs_post_metrics_counted', true );
@@ -1334,8 +1469,6 @@ class JobAddEdit
 		}
 		
 		do_action('job-postings/save', $_POST, $post_id);
-
-
 		
         $post_type  = get_post_type( $post_id );
         $updating 	= false;

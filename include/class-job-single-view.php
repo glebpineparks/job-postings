@@ -957,6 +957,7 @@ class JobSingleView
     public static function get_json_ld( $job_id ){
 		$json_ld_keys = self::$json_ld;
 		$json_script = $json_ld_keys;
+        $current_description = '';
 		
 		/**
 		* Adding multiple tags (e.g reponsibilities, qualifications, benefits) to description as whole 
