@@ -4,7 +4,7 @@ Plugin Name: Jobs for Wordpress
 Plugin URI: https://wordpress.org/plugins/job-postings/
 Description: WordPress plugin that make it easy to add job postings to your company’s website in a structured way.
 Author: BlueGlass
-Version: 2.7.4
+Version: 2.7.5
 Author URI: http://blueglass.ch/
 Text Domain: job-postings
 Domain Path: /languages
@@ -13,7 +13,7 @@ Domain Path: /languages
 
 if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define('JOBPOSTINGSVERSION', '2.7.4');
+define('JOBPOSTINGSVERSION', '2.7.5');
 define('JOBPOSTINGSPATH', plugin_dir_path( __FILE__ ));
 define('JOBPOSTINGSURL', plugin_dir_url(__FILE__));
 define('JOBPOSTINGSFILESDIR', ABSPATH . '../jobs-dir/');

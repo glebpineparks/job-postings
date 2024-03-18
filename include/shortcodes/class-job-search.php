@@ -9,7 +9,7 @@ if( !class_exists('JobSearch') ){
             $jobs_page_permalink = get_permalink( $jobs_archive_page );
     
             $category = isset($_GET['job-category']) ? sanitize_text_field($_GET['job-category']) : '';
-            $search 	= isset($_GET['job-search']) ? strip_tags($_GET['job-search']) : '';
+            $search 	= isset($_GET['job-search']) ? sanitize_text_field($_GET['job-search']) : '';
     
             $out = '';
             $out .= '<div class="jobs-search">';
