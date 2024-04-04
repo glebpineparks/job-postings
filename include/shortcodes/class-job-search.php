@@ -14,8 +14,8 @@ if( !class_exists('JobSearch') ){
             $out = '';
             $out .= '<div class="jobs-search">';
                 $out .= '<form method="GET" action="'.$jobs_page_permalink.'">';
-                    $out .= '<input type="hidden" value="'.$category.'" name="job-category">';
-                    $out .= '<input class="job-search" type="text" placeholder="'.__('Vacancy Search', 'job-postings').'" value="'.$search.'" name="job-search">';
+                    $out .= '<input type="hidden" value="'.esc_attr($category).'" name="job-category">';
+                    $out .= '<input class="job-search" type="text" placeholder="'.__('Vacancy Search', 'job-postings').'" value="'.esc_attr($search).'" name="job-search">';
                     $out .= '<button class="job-search-submit">'.Job_Postings_Helper::getRawSvg('search.svg').'</button>';
     
                 $out .= '</form>';

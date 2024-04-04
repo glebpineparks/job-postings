@@ -120,7 +120,7 @@ class JobAddEdit
 			foreach( self::$tabs as $id => $name ){
 				$current = '';
 				if($id == 'job_form') $current = 'current';
-				$out .= '<li class="tab_'.$id.'"><a href="#'.$id.'" class="'.$current.'">'.$name.'</a> </li>';
+				$out .= '<li class="tab_'.$id.'"><a href="#'.$id.'" class="'.$current.'">'.esc_attr($name).'</a> </li>';
 			}
 			return $out;
 		}
@@ -375,10 +375,10 @@ class JobAddEdit
 
 			    $dir = plugin_dir_url(__FILE__).'../';
 
-    			echo '<div class="jobs-row clearfix type-'.$type.' job-field-'.$key.' job-field-is-'.$req.'" data-type="'.$type.'" data-need="'.$need.'">';
+    			echo '<div class="jobs-row clearfix type-'.esc_attr($type).' job-field-'.esc_attr($key).' job-field-is-'.esc_attr($req).'" data-type="'.esc_attr($type).'" data-need="'.esc_attr($need).'">';
     				echo '<div class="jobs-row-label">';
     					echo '<img class="jobs-sort-icon" src="'.$dir.'/images/sort.svg" width="15" title="Grab and sort">';
-		   		 		echo '<label for="'.$key.'">'.$name.$need_text.'</label>';
+		   		 		echo '<label for="'.esc_attr($key).'">'.$name.$need_text.'</label>';
 
 						echo '<img class="jobs-remove-icon" src="'.$dir.'/images/bin.svg" width="15" title="Disable field">';
 
@@ -387,8 +387,8 @@ class JobAddEdit
 						}
 
 
-						echo '<img class="jobs-setright" data-append="'.$append_class_2.'" src="'.$dir.'/images/set-right.svg" width="15" title="Add to right column">';
-						echo '<img class="jobs-setleft" data-append="'.$append_class_1.'" src="'.$dir.'/images/set-left.svg" width="15" title="Add to left column">';
+						echo '<img class="jobs-setright" data-append="'.esc_attr($append_class_2).'" src="'.$dir.'/images/set-right.svg" width="15" title="Add to right column">';
+						echo '<img class="jobs-setleft" data-append="'.esc_attr($append_class_1).'" src="'.$dir.'/images/set-left.svg" width="15" title="Add to left column">';
 
 					echo '</div>';
 
@@ -400,7 +400,7 @@ class JobAddEdit
 		   		 		echo '<p class="jobs-field-description">'.$description.'</p>';
 		   		 	}
 
-				    echo '<input class="item-sort-value" type="hidden" name="sort-'.$key.'" value="'.$index.'"/>';
+				    echo '<input class="item-sort-value" type="hidden" name="sort-'.esc_attr($key).'" value="'.esc_attr($index).'"/>';
 				
 				
     			switch ( $type ) {
@@ -441,22 +441,22 @@ class JobAddEdit
 								$hiring_org_img_class = '';
 							}
 
-							$out = '<img id="'.$key.'_uploaded_image" class="jobs_hiring_logo '.$hiring_org_img_class.'" src="'.$single_company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
+							$out = '<img id="'.esc_attr($key).'_uploaded_image" class="jobs_hiring_logo '.$hiring_org_img_class.'" src="'.$single_company_logo.'" alt="'.$hiring_organization.'" title="'.$hiring_organization.'">';
 
 							if( $single_company_logo == $horg_logo_placeholder ) $single_company_logo = '';
 
-							$out .= '<input id="'.$key.'_upload_file" type="text" name="'.$key.'" value="'.$single_company_logo.'" placeholder="'.$horg_logo_placeholder.'">';
-							$out .= '<input id="'.$key.'_upload_file_button" class="button button-primary" type="button" value="'.__('Upload/Select file', 'job-postings').'" />';
+							$out .= '<input id="'.esc_attr($key).'_upload_file" type="text" name="'.esc_attr($key).'" value="'.$single_company_logo.'" placeholder="'.$horg_logo_placeholder.'">';
+							$out .= '<input id="'.esc_attr($key).'_upload_file_button" class="button button-primary" type="button" value="'.__('Upload/Select file', 'job-postings').'" />';
 							$custom_uploader = '<script type="text/javascript">
 								jQuery(document).ready(function(){
-									var '.$key.'_custom_uploader;
-										jQuery("#'.$key.'_upload_file_button").click(function(e) {
+									var '.esc_js($key).'_custom_uploader;
+										jQuery("#'.esc_js($key).'_upload_file_button").click(function(e) {
 											e.preventDefault();
-											if ('.$key.'_custom_uploader) {
-												'.$key.'_custom_uploader.open();
+											if ('.esc_js($key).'_custom_uploader) {
+												'.esc_js($key).'_custom_uploader.open();
 												return;
 											}
-											'.$key.'_custom_uploader = wp.media.frames.file_frame = wp.media({
+											'.esc_js($key).'_custom_uploader = wp.media.frames.file_frame = wp.media({
 												title: "Choose Image",
 												button: {
 													text: "Choose file"
@@ -465,11 +465,8 @@ class JobAddEdit
 												frame: "post",
     											state: "insert"
 											});
-											'.$key.'_custom_uploader.on("insert", function(selection) {
-												// attachment = '.$key.'_custom_uploader.state().get("selection").first().toJSON();
-												// jQuery("#'.$key.'_upload_file").val(attachment.url);
-
-												var state = '.$key.'_custom_uploader.state();
+											'.esc_js($key).'_custom_uploader.on("insert", function(selection) {
+												var state = '.esc_js($key).'_custom_uploader.state();
 												selection = selection || state.get("selection");
 												if (! selection) return;
 												
@@ -481,10 +478,10 @@ class JobAddEdit
 												// Do something with attachment.id and/or attachment.url here
 												var imgurl = attachment.sizes[display.size].url;
 
-												jQuery("#'.$key.'_upload_file").val(imgurl);
-												jQuery("#'.$key.'_uploaded_image").attr("src", imgurl).removeClass("jobs-Recommendedno-image");
+												jQuery("#'.esc_js($key).'_upload_file").val(imgurl);
+												jQuery("#'.esc_js($key).'_uploaded_image").attr("src", imgurl).removeClass("jobs-Recommendedno-image");
 											});
-											'.$key.'_custom_uploader.open();
+											'.esc_js($key).'_custom_uploader.open();
 										});
 								});
 							</script>';
@@ -492,7 +489,7 @@ class JobAddEdit
 							
 							$out .= '<div class="hiring_organization_name">';
 							$out .= '<label>' . $name . ':</label>';
-							$out .= '<input type="text" class="jp-input" name="position_hiring_organization_name" value="'.$hiring_organization.'" placeholder="'.$horg_placeholder.'">';
+							$out .= '<input type="text" class="jp-input" name="position_hiring_organization_name" value="'.esc_attr($hiring_organization).'" placeholder="'.esc_attr($horg_placeholder).'">';
 							$out .= '</div>';
 
 				    		echo $out;
@@ -512,7 +509,7 @@ class JobAddEdit
 
 							$pdf_ico = '<img class="pdf-icon" src="'.plugin_dir_url( __FILE__ ).'../images/pdf.svg" width="15">';
 
-							echo $pdf_ico. '<input class="jp-input inline-input" list="datalist-'.$key.'" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
+							echo $pdf_ico. '<input class="jp-input inline-input" list="datalist-'.esc_attr($key).'" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
     					break;
 
     				case 'empty_apply_now':
@@ -521,8 +518,8 @@ class JobAddEdit
     						$value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : $name;
 							$value = htmlspecialchars($value);
 
-				    		echo '<input class="jp-input" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
-				    		//echo '<p>'.$placeholder.'</p>';
+				    		echo '<input class="jp-input" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
+				    		//echo '<p>'.esc_attr($placeholder).'</p>';
     					break;
 
     				case 'empty_inline_apply_now':
@@ -531,8 +528,8 @@ class JobAddEdit
     						$value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : $name;
 							$value = htmlspecialchars($value);
 
-				    		//echo '<input class="jp-input" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
-				    		//echo '<p>'.$placeholder.'</p>';
+				    		//echo '<input class="jp-input" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
+				    		//echo '<p>'.esc_attr($placeholder).'</p>';
     					break;
 
     				case 'custom_button':
@@ -542,8 +539,8 @@ class JobAddEdit
 							$value = htmlspecialchars($value);
 			    			$style 	= isset( $values[$key.'-style'] ) ? esc_attr( $values[$key.'-style'][0] ) : 'primary-style';
 
-				    		echo '<input class="jp-input '.$style.'" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
-				    		//echo '<p>'.$placeholder.'</p>';
+				    		echo '<input class="jp-input '.esc_attr($style).'" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
+				    		//echo '<p>'.esc_attr($placeholder).'</p>';
     					break;
 
     				case 'valid_through':
@@ -552,8 +549,8 @@ class JobAddEdit
     						$value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
 							$value = htmlspecialchars($value);
 
-				    		echo '<input class="jp-input js-datepicker" autocomplete="off" type="text" name="'.$key.'" id="js-datepicker" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
-				    		//echo '<p>'.$placeholder.'</p>';
+				    		echo '<input class="jp-input js-datepicker" autocomplete="off" type="text" name="'.esc_attr($key).'" id="js-datepicker" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
+				    		//echo '<p>'.esc_attr($placeholder).'</p>';
     					break;
 
 
@@ -562,7 +559,7 @@ class JobAddEdit
     						$value = isset( $values[$key] ) ? $values[$key][0] : '';
 							$value = htmlspecialchars($value);
 
-				    		echo '<textarea class="jp-textarea" resize="none" rows="2" name="'.$key.'" id="'.$key.'" placeholder="'.$placeholder.'" '.$req.'>'.$value.'</textarea>';
+				    		echo '<textarea class="jp-textarea" resize="none" rows="2" name="'.esc_attr($key).'" id="'.esc_attr($key).'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'>'.$value.'</textarea>';
     					break;
 
 
@@ -596,30 +593,30 @@ class JobAddEdit
 
 								$streetAddress = isset( $values[$key.'_streetAddress'] ) ? esc_attr( $values[$key.'_streetAddress'][0] ) : '';
 								$streetAddress = htmlspecialchars($streetAddress);
-								echo '<input class="jp-input" list="datalist-'.$key.'_streetAddress" autocomplete="off" type="text" name="'.$key.'_streetAddress" id="'.$key.'_streetAddress" value="'.$streetAddress.'" placeholder="'.$placeholder_st.'" />';
+								echo '<input class="jp-input" list="datalist-'.esc_attr($key).'_streetAddress" autocomplete="off" type="text" name="'.esc_attr($key).'_streetAddress" id="'.esc_attr($key).'_streetAddress" value="'.$streetAddress.'" placeholder="'.esc_attr($placeholder_st).'" />';
 
 
 								$postalCode = isset( $values[$key.'_postalCode'] ) ? esc_attr( $values[$key.'_postalCode'][0] ) : '';
 								$postalCode = htmlspecialchars($postalCode);
-								echo '<input class="jp-input" list="datalist-'.$key.'_postalCode" autocomplete="off" type="text" name="'.$key.'_postalCode" id="'.$key.'_postalCode" value="'.$postalCode.'" placeholder="'.$placeholder_zip.'" />';
+								echo '<input class="jp-input" list="datalist-'.esc_attr($key).'_postalCode" autocomplete="off" type="text" name="'.esc_attr($key).'_postalCode" id="'.esc_attr($key).'_postalCode" value="'.esc_attr($postalCode).'" placeholder="'.$placeholder_zip.'" />';
 
 
 								$city = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
 								$city = htmlspecialchars($city);
-								echo '<input class="jp-input" list="datalist-'.$key.'" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$city.'" placeholder="'.$placeholder.'" '.$req.'/>';
+								echo '<input class="jp-input" list="datalist-'.esc_attr($key).'" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$city.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
 
 
 								// $addressLocality = isset( $values[$key.'_addressLocality'] ) ? esc_attr( $values[$key.'_addressLocality'][0] ) : '';
-								// echo '<input class="jp-input" list="datalist-'.$key.'_addressLocality" autocomplete="off" type="text" name="'.$key.'_addressLocality" id="'.$key.'_addressLocality" value="'.$addressLocality.'" placeholder="'.$placeholder_al.'" />';
+								// echo '<input class="jp-input" list="datalist-'.esc_attr($key).'_addressLocality" autocomplete="off" type="text" name="'.esc_attr($key).'_addressLocality" id="'.esc_attr($key).'_addressLocality" value="'.$addressLocality.'" placeholder="'.$placeholder_al.'" />';
 
 
 								$addressRegion = isset( $values[$key.'_addressRegion'] ) ? esc_attr( $values[$key.'_addressRegion'][0] ) : '';
 								$addressRegion = htmlspecialchars($addressRegion);
-								echo '<input class="jp-input" list="datalist-'.$key.'_addressRegion" autocomplete="off" type="text" name="'.$key.'_addressRegion" id="'.$key.'_addressRegion" value="'.$addressRegion.'" placeholder="'.$placeholder_ar.'" />';
+								echo '<input class="jp-input" list="datalist-'.esc_attr($key).'_addressRegion" autocomplete="off" type="text" name="'.esc_attr($key).'_addressRegion" id="'.esc_attr($key).'_addressRegion" value="'.$addressRegion.'" placeholder="'.$placeholder_ar.'" />';
 
 								$addressCountry = isset( $values[$key.'_addressCountry'] ) ? esc_attr( $values[$key.'_addressCountry'][0] ) : '';
 								$addressCountry = htmlspecialchars($addressCountry);
-								echo '<input class="jp-input" list="datalist-'.$key.'_addressCountry" autocomplete="off" type="text" name="'.$key.'_addressCountry" id="'.$key.'_addressCountry" value="'.$addressCountry.'" placeholder="'.$placeholder_cc.'" />';
+								echo '<input class="jp-input" list="datalist-'.esc_attr($key).'_addressCountry" autocomplete="off" type="text" name="'.esc_attr($key).'_addressCountry" id="'.esc_attr($key).'_addressCountry" value="'.$addressCountry.'" placeholder="'.$placeholder_cc.'" />';
 
 							echo '</div>';
 
@@ -645,8 +642,8 @@ class JobAddEdit
 
 											$val = isset($job_remote_data[$key]['type']) ? $job_remote_data[$key]['type'] : '';
 											$val = htmlspecialchars($val);
-											echo '<label for="type-field-'.$key.'">'.__('Type', 'job-postings').'</label>';
-											echo '<select id="type-field-'.$key.'" name="type" class="job_remote_data_type" data-hint-country="'.__('Example: USA').'" data-hint-state="'.__('Example: Texas, USA').'">';
+											echo '<label for="type-field-'.esc_attr($key).'">'.__('Type', 'job-postings').'</label>';
+											echo '<select id="type-field-'.esc_attr($key).'" name="type" class="job_remote_data_type" data-hint-country="'.__('Example: USA').'" data-hint-state="'.__('Example: Texas, USA').'">';
 												echo '<option value="">-</option>';
 												echo '<option value="Country" '.selected($val, 'Country', false).'>Country</option>';
 												echo '<option value="State" '.selected($val, 'State', false).'>State</option>';
@@ -654,8 +651,8 @@ class JobAddEdit
 
 											$val2 = isset($job_remote_data[$key]['name']) ? $job_remote_data[$key]['name'] : '';
 											$val2 = htmlspecialchars($val2);
-											echo '<label for="name-field-'.$key.'">'.__('Location', 'job-postings').'<span class="example"></span></label>';
-											echo '<input id="name-field-'.$key.'" class="job-input-field job_remote_data_name" name="name" type="text" value="'.$val2.'">';
+											echo '<label for="name-field-'.esc_attr($key).'">'.__('Location', 'job-postings').'<span class="example"></span></label>';
+											echo '<input id="name-field-'.esc_attr($key).'" class="job-input-field job_remote_data_name" name="name" type="text" value="'.$val2.'">';
 
 											echo '<input data-repeater-delete type="button" class="button button-delete" value="Delete"/>';
 										echo '</div>';
@@ -709,11 +706,11 @@ class JobAddEdit
 
 
 
-									$html .= '<input id="'.$key.'_upload_file" class="jp-input" type="text" size="36" name="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" />';
-									$html .= '<input id="'.$key.'_upload_button_name" class="jp-input" type="text" size="36" name="'.$key.'_name" value="'.$btnname.'" placeholder="'.$placeholder_btn.'" />';
+									$html .= '<input id="'.esc_attr($key).'_upload_file" class="jp-input" type="text" size="36" name="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" />';
+									$html .= '<input id="'.esc_attr($key).'_upload_button_name" class="jp-input" type="text" size="36" name="'.esc_attr($key).'_name" value="'.esc_attr($btnname).'" placeholder="'.esc_attr($placeholder_btn).'" />';
 
 
-									$html .= '<input id="'.$key.'_upload_file_button" class="button" type="button" value="'.__('Upload/Select file', 'job-postings').'" />';
+									$html .= '<input id="'.esc_attr($key).'_upload_file_button" class="button" type="button" value="'.__('Upload/Select file', 'job-postings').'" />';
 
 
 								$html .= '</div>';
@@ -722,27 +719,27 @@ class JobAddEdit
 
 							$html .= '<script type="text/javascript">
 								jQuery(document).ready(function(){
-									var '.$key.'_custom_uploader;
-										jQuery("#'.$key.'_upload_file_button").click(function(e) {
+									var '.esc_attr($key).'_custom_uploader;
+										jQuery("#'.esc_attr($key).'_upload_file_button").click(function(e) {
 											e.preventDefault();
 											console.log("click");
-											if ('.$key.'_custom_uploader) {
-												'.$key.'_custom_uploader.open();
+											if ('.esc_attr($key).'_custom_uploader) {
+												'.esc_attr($key).'_custom_uploader.open();
 												return;
 											}
-											'.$key.'_custom_uploader = wp.media.frames.file_frame = wp.media({
+											'.esc_attr($key).'_custom_uploader = wp.media.frames.file_frame = wp.media({
 												title: "Choose Image",
 												button: {
 													text: "Choose file"
 												},
 												multiple: false
 											});
-											'.$key.'_custom_uploader.on("select", function() {
-												attachment = '.$key.'_custom_uploader.state().get("selection").first().toJSON();
-												jQuery("#'.$key.'_upload_file").val(attachment.url);
-												jQuery("#'.$key.'_upload_button_name").val(attachment.title);
+											'.esc_attr($key).'_custom_uploader.on("select", function() {
+												attachment = '.esc_attr($key).'_custom_uploader.state().get("selection").first().toJSON();
+												jQuery("#'.esc_attr($key).'_upload_file").val(attachment.url);
+												jQuery("#'.esc_attr($key).'_upload_button_name").val(attachment.title);
 											});
-											'.$key.'_custom_uploader.open();
+											'.esc_attr($key).'_custom_uploader.open();
 
 										});
 								});
@@ -763,8 +760,8 @@ class JobAddEdit
 								$option_key = htmlspecialchars($option_key);
 								$option_name = htmlspecialchars($option_name);
 								if( is_array($value) && in_array($option_key, $value) ) $checked = 'checked';
-								echo '<label for="checkbox-'.$option_key.'">';
-									echo '<input '.$checked.' class="jp-checkbox '.$style.'" type="checkbox" name="'.$key.'[]" id="checkbox-'.$option_key.'" value="'.$option_key.'" '.$req.'/>';
+								echo '<label for="checkbox-'.esc_attr($option_key).'">';
+									echo '<input '.$checked.' class="jp-checkbox '.$style.'" type="checkbox" name="'.esc_attr($key).'[]" id="checkbox-'.esc_attr($option_key).'" value="'.esc_attr($option_key).'" '.esc_attr($req).'/>';
 									echo $option_name;
 								echo '</label>';
 							}
@@ -779,7 +776,7 @@ class JobAddEdit
 							
 							echo '<label class="other_input" for="checkbox-other_input">';
 									echo __('Other', 'job-postings');
-									echo '<input class="jp-checkbox '.$style.'" type="text" name="'.$key.'[other_input]" id="checkbox-other_input" value="'.$other_input_value.'"/>';
+									echo '<input class="jp-checkbox '.$style.'" type="text" name="'.esc_attr($key).'[other_input]" id="checkbox-other_input" value="'.$other_input_value.'"/>';
 								echo '</label>';
 							echo '</div>';
 						}
@@ -828,10 +825,10 @@ class JobAddEdit
 								}
 
 								echo '<div class="job-input-field-wrap">';
-									// list="datalist-'.$key.'"
+									// list="datalist-'.esc_attr($key).'"
 									echo '<label>' . _x('Starting', 'jobs-field', 'job-postings') . ':</label>';
 									echo $currency_before;
-						    		echo '<input class="jp-input '.$input_class.'" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
+						    		echo '<input class="jp-input '.esc_attr($input_class).'" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
 									echo $currency_after;
 								echo '</div>';
 
@@ -839,14 +836,14 @@ class JobAddEdit
 								echo '<div class="job-input-field-wrap">';
 									echo '<label>' . _x('Up to', 'jobs-field', 'job-postings') . ':</label>';
 									echo $currency_before;
-						    		echo '<input class="jp-input '.$input_class.'" autocomplete="off" type="text" name="'.$key.'_upto" id="'.$key.'_upto" value="'.$upto.'" placeholder="'.$placeholder.'" '.$req.'/>';
+						    		echo '<input class="jp-input '.esc_attr($input_class).'" autocomplete="off" type="text" name="'.esc_attr($key).'_upto" id="'.esc_attr($key).'_upto" value="'.esc_attr($upto).'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
 									echo $currency_after;
 								echo '</div>';
 
 								if( !empty($unitText) ){
 									echo '<div class="job-input-field-wrap">';
-										echo '<label for="'.$key.'_unittext">' . _x('Unit', 'jobs-field', 'job-postings') . ':</label><br>';
-										echo '<select name="'.$key.'_unittext" id="'.$key.'_unittext" class="jp-select '.$input_class.'" style="width: 100%;">';
+										echo '<label for="'.esc_attr($key).'_unittext">' . _x('Unit', 'jobs-field', 'job-postings') . ':</label><br>';
+										echo '<select name="'.esc_attr($key).'_unittext" id="'.esc_attr($key).'_unittext" class="jp-select '.esc_attr($input_class).'" style="width: 100%;">';
 										echo '<option value="">'.__('None', 'job-postings').'</option>';
 										foreach ($unitText as $unit_key => $unit_name) {
 											echo '<option value="'.$unit_key.'" '.selected($unit_key, $unittext_value, false).'>'.$unit_name.'</option>';
@@ -861,7 +858,7 @@ class JobAddEdit
 							}else{
 								$value = htmlspecialchars($value);
 								echo $currency_before;
-					    		echo '<input class="jp-input '.$input_class.'" list="datalist-'.$key.'" autocomplete="off" type="text" name="'.$key.'" id="'.$key.'" value="'.$value.'" placeholder="'.$placeholder.'" '.$req.'/>';
+					    		echo '<input class="jp-input '.esc_attr($input_class).'" list="datalist-'.esc_attr($key).'" autocomplete="off" type="text" name="'.esc_attr($key).'" id="'.esc_attr($key).'" value="'.$value.'" placeholder="'.esc_attr($placeholder).'" '.esc_attr($req).'/>';
 								echo $currency_after;
 
 					    		echo  JobAddEdit::getDatalist( $key );
@@ -894,10 +891,10 @@ class JobAddEdit
     			$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-    			$out .= '<label for="'.$name.'">';
+    			$out .= '<label for="'.esc_attr($name).'">';
     				$out .= _x('Custom title', 'jobs-field', 'job-postings');
     			$out .= '</label>';
-    			$out .= '<input id="'.$name.'" type="text" name="'.$name.'" value="'.$value.'">';
+    			$out .= '<input id="'.esc_attr($name).'" type="text" name="'.esc_attr($name).'" value="'.$value.'">';
     		$out .= '</div>';
     		/**/
 
@@ -908,10 +905,10 @@ class JobAddEdit
     			$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-    			$out .= '<label for="'.$name.'">';
+    			$out .= '<label for="'.esc_attr($name).'">';
     				$out .= _x('Hide title', 'jobs-field', 'job-postings');
     			$out .= '</label>';
-				//$out .= '<input id="'.$name.'" type="checkbox" name="'.$name.'" value="on" '.checked($value, 'on', false).'>';
+				//$out .= '<input id="'.esc_attr($name).'" type="checkbox" name="'.esc_attr($name).'" value="on" '.checked($value, 'on', false).'>';
 				
 				$out .= Job_Postings_Helper::get_onoff_switch( '', $name, '', false, '' );
     		$out .= '</div>';
@@ -924,10 +921,10 @@ class JobAddEdit
 				$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-				$out .= '<label for="'.$name.'">';
+				$out .= '<label for="'.esc_attr($name).'">';
 					$out .= _x('Hide field', 'jobs-field', 'job-postings');
 				$out .= '</label>';
-				//$out .= '<input id="'.$name.'" type="checkbox" name="'.$name.'" value="on" '.checked($value, 'on', false).'>';
+				//$out .= '<input id="'.esc_attr($name).'" type="checkbox" name="'.esc_attr($name).'" value="on" '.checked($value, 'on', false).'>';
 				
 				$out .= Job_Postings_Helper::get_onoff_switch( '', $name, '', false, '' );
 
@@ -942,10 +939,10 @@ class JobAddEdit
 				$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-				$out .= '<label for="'.$name.'">';
+				$out .= '<label for="'.esc_attr($name).'">';
 					$out .= _x('Heading HTML Tag', 'jobs-field', 'job-postings');
 				$out .= '</label>';
-				$out .= '<select id="'.$name.'" name="'.$name.'">';
+				$out .= '<select id="'.esc_attr($name).'" name="'.esc_attr($name).'">';
 					$out .= '<option value="div" ' . selected( $value, 'div', false ) . '>DIV</option>';
 					$out .= '<option value="h1" ' . selected( $value, 'h1', false ) . '>H1</option>';
 					$out .= '<option value="h2" ' . selected( $value, 'h2', false ) . '>H2</option>';
@@ -963,10 +960,10 @@ class JobAddEdit
 				$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-				$out .= '<label for="'.$name.'">';
+				$out .= '<label for="'.esc_attr($name).'">';
 					$out .= _x('Content HTML Tag', 'jobs-field', 'job-postings');
 				$out .= '</label>';
-				$out .= '<select id="'.$name.'" name="'.$name.'">';
+				$out .= '<select id="'.esc_attr($name).'" name="'.esc_attr($name).'">';
 					$out .= '<option value="div" ' . selected( $value, 'div', false ) . '>DIV</option>';
 					$out .= '<option value="h1" ' . selected( $value, 'h1', false ) . '>H1</option>';
 					$out .= '<option value="h2" ' . selected( $value, 'h2', false ) . '>H2</option>';
@@ -984,10 +981,10 @@ class JobAddEdit
 				$value = get_post_meta($post_id, $name, true);
 				$value = htmlspecialchars($value);
 
-				$out .= '<label for="'.$name.'">';
+				$out .= '<label for="'.esc_attr($name).'">';
 					$out .= _x('Custom CSS class', 'jobs-field', 'job-postings');
 				$out .= '</label>';
-				$out .= '<input type="text" id="'.$name.'" name="'.$name.'" value="'.$value.'">';
+				$out .= '<input type="text" id="'.esc_attr($name).'" name="'.esc_attr($name).'" value="'.$value.'">';
 			$out .= '</div>';
 
     		switch ($key) {
@@ -998,10 +995,10 @@ class JobAddEdit
 		    			$value = get_post_meta($post_id, $name, true);
 						$value = htmlspecialchars($value);
 
-		    			$out .= '<label for="'.$name.'">';
+		    			$out .= '<label for="'.esc_attr($name).'">';
 		    				$out .= _x('URL', 'jobs-field', 'job-postings');
 		    			$out .= '</label>';
-    					$out .= '<input id="'.$name.'" type="text" name="'.$name.'" value="'.$value.'" placeholder="https://">';
+    					$out .= '<input id="'.esc_attr($name).'" type="text" name="'.esc_attr($name).'" value="'.$value.'" placeholder="https://">';
 		    		$out .= '</div>';
 
     				$out .= '<div class="field-settings-row">';
@@ -1010,10 +1007,10 @@ class JobAddEdit
 		    			$value = get_post_meta($post_id, $name, true);
 						$value = htmlspecialchars($value);
 
-		    			$out .= '<label for="'.$name.'">';
+		    			$out .= '<label for="'.esc_attr($name).'">';
 		    				$out .= _x('Link target', 'jobs-field', 'job-postings');
 		    			$out .= '</label>';
-		    			$out .= '<select id="'.$name.'" name="'.$name.'">';
+		    			$out .= '<select id="'.esc_attr($name).'" name="'.esc_attr($name).'">';
 		    				$out .= '<option value="_blank" '.selected($value, '_blank', false).'>'.__('New tab/window', 'jobs-field', 'job-postings').'</option>';
 		    				$out .= '<option value="_self" '.selected($value, '_self', false).'>'.__('Same tab/window', 'jobs-field', 'job-postings').'</option>';
 		    			$out .= '</select>';
@@ -1025,10 +1022,10 @@ class JobAddEdit
 		    			$value = get_post_meta($post_id, $name, true);
 						$value = htmlspecialchars($value);
 
-		    			$out .= '<label for="'.$name.'">';
+		    			$out .= '<label for="'.esc_attr($name).'">';
 		    				$out .= _x('Style', 'jobs-field', 'job-postings');
 		    			$out .= '</label>';
-		    			$out .= '<select id="'.$name.'" name="'.$name.'">';
+		    			$out .= '<select id="'.esc_attr($name).'" name="'.esc_attr($name).'">';
 		    				$out .= '<option value="primary-style" '.selected($value, 'primary-style', false).'>'.__('Primary', 'jobs-field', 'job-postings').'</option>';
 		    				$out .= '<option value="secondary-style" '.selected($value, 'secondary-style', false).'>'.__('Secondary', 'jobs-field', 'job-postings').'</option>';
 		    			$out .= '</select>';
@@ -1509,11 +1506,12 @@ class JobAddEdit
 		$datalists_key = apply_filters('job-postings/datalists/'.$key, true);
 
 		if( $datalists && $datalists_key ){
-			$table_name 	= $wpdb->prefix . "postmeta";
 			$out	= '';
-			$rows = $wpdb->get_results( "SELECT DISTINCT meta_value FROM $table_name WHERE meta_key = '$key' AND meta_value != ''" );
+			$rows = $wpdb->get_results( 
+				$wpdb->prepare( "SELECT DISTINCT meta_value FROM {$wpdb->prefix}postmeta WHERE meta_key = '%s' AND meta_value != ''", $key ) 
+			);
 			if( !empty($rows) ){
-				$out .= '<datalist id="datalist-'.$key.'">';
+				$out .= '<datalist id="datalist-'.esc_attr($key).'">';
 					foreach ($rows as $key => $row) {
 						$out .= '<option value="'.htmlspecialchars($row->meta_value).'" />';
 					}
