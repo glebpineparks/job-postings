@@ -461,7 +461,7 @@ class JobSingleView
                                             $icon = Job_Postings_Helper::getRawSvg( 'clock.svg' );
                                         }
 
-                                        $out .= $icon.esc_html($value);
+                                        $out .= $icon.$value;
                                         break;
 
 
@@ -562,7 +562,7 @@ class JobSingleView
                                         //$value = htmlspecialchars($value);
 
                                         //$out .= apply_filters('the_content', $value);
-                                        $tinymce_content = wpautop(esc_html($value));
+                                        $tinymce_content = wpautop($value);
 
                                         if( class_exists('WP_Embed') ) {
                                             $wpembed = new WP_Embed();
@@ -643,7 +643,7 @@ class JobSingleView
                                         $value = isset( $values[$key] ) ? esc_attr( $values[$key][0] ) : '';
                                         $value = htmlspecialchars($value);
 
-                                        $out .= esc_html($value);
+                                        $out .= $value;
                                         break;
                                 }
                             }
