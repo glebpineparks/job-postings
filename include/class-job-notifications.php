@@ -318,7 +318,7 @@ class JobNotifications
 				foreach ($post_meta as $key => $meta) {
 					//$meta = isset($meta[0]) ? $meta[0] : $meta;
 
-					$meta = get_post_meta($entry_id, $key, true);
+					$meta = get_post_meta($entry_id, $key, false);
 
 					if( Job_Postings_Helper::is_serialized($meta) )
 						$meta = unserialize($meta);
